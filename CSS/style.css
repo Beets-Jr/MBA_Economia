@@ -52,6 +52,18 @@ Version: 1.0
   --font-size-subtitle-desktop: 24px;
   --font-size-text-desktop: 18px;
 }
+/*
+  Nomenclatura
+  - Contato: ctt
+  - Curso: crs
+  - Home: hm
+  - Inscreva-se: ins
+  - Noticia: ntc
+  - Noticias: nts
+  - Sobre: sbr
+
+  Exemplo: id = ctt-title;
+*/
 
 /*Contato*/
 
