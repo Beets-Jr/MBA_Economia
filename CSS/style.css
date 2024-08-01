@@ -33,6 +33,7 @@ Version: 1.0
 :root {
   /*=========== FONTE ============*/
   --font-family: 'Inter', sans-serif;
+  --secondary-font-family: 'Poppins', sans-serif;
 
   /*=========== CORES ============*/
   --background: #090625;
@@ -52,6 +53,81 @@ Version: 1.0
   --font-size-subtitle-desktop: 24px;
   --font-size-text-desktop: 18px;
 }
+
+/*Header*/
+header {
+	width: 100%;
+	height: 80px;
+	display: block;
+	background-color: #FFFFFF;
+}
+
+header .inner_header {
+	/* Largura do conteúdo do header */
+	width: 90%;
+	height: 100%;
+	display: block;	
+	/* Centralizar horizontalmente na página */
+	margin: 0 auto;
+	background-color: red;
+}
+
+header .header_logo {
+	height: 100%;
+	display: table;
+	float: left;
+}
+
+header .header_logo a {
+	background-color: purple;
+}
+
+header .header_logo a img {
+	background-color: green;
+	width: 90%;
+}
+
+header .header_logo a {
+	height: 100%;
+		
+	/* Centralizar verticalmente o logo */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+header nav {
+	height: 100%;
+	display: table;
+	float: right;
+	background-color: blue;
+}
+
+header nav a {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	padding: 0px 20px;
+	
+	/* Estilo da fonte */
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	color: var(--white);
+	font-weight: 500;
+}
+
+header nav a:last-child{
+	/* Para o último elemento encostar no inner_header */
+	padding-right: 0;
+}
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
+/*End Header*/
+
+
 /*
   Nomenclatura
   - Contato: ctt
