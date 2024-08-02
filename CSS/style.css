@@ -7,6 +7,9 @@ Description: Tema criado para MBA Economia UFSCar
 Version: 1.0
 */
 
+/*=========== Import de fonte ============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*Reset*/
 * {
     margin: 0;
@@ -76,6 +79,96 @@ Version: 1.0
 
 
 /*Home*/
+/*Seu Futuro*/
+.hm-seu-futuro {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), 
+                                    rgba(0, 0, 0, 0.5)), 
+                                    url('../img/bg-seu-futuro.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 525px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hm-seu-futuro .hm-seu-futuro-title {
+  color: #fafafa;
+  margin-top: auto;
+  max-width: 220px;
+}
+
+.hm-seu-futuro .hm-seu-futuro-button {
+  font-family: "Poppins", sans-serif;
+  
+  color: white;
+  background-color: var(--orange-logo);
+  margin: 16px 0px 78px 0px;
+  padding: 12px 0px;
+  border-radius: 4px;
+  border: none;
+  letter-spacing: 1px;
+}
+
+.hm-seu-futuro .hm-seu-futuro-button a {
+  padding: 12px 25px;
+  color: #fafafa
+}
+
+/* Media Query para Mobile */
+@media (max-width: 767px) {
+
+  .hm-seu-futuro .hm-seu-futuro-button {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+/* Media Query para Tablet */
+@media (min-width: 768px) and (max-width: 1250px) {
+  .hm-seu-futuro .hm-seu-futuro-title {
+    font-size: 48px;
+    max-width: 500px;
+  }
+
+  .hm-seu-futuro .hm-seu-futuro-button {
+    text-transform: uppercase;
+  }
+}
+
+/* Media Query para Desktop */
+@media (min-width: 1251px) {
+  .hm-seu-futuro {
+    text-align: left;
+    align-items: start;
+    padding-left: 100px;
+    min-height: 100vh;
+  }
+
+  .hm-seu-futuro .hm-seu-futuro-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    max-width: 700px;
+    margin-top: auto;
+  }
+
+  .hm-seu-futuro .hm-seu-futuro-button {
+    font-family: var(--font-family);
+    padding: 24px 0px;
+    font-size: 20px;
+    margin-top: 32px;
+  }
+
+  .hm-seu-futuro .hm-seu-futuro-button a {
+    padding: 24px 56px;
+  }
+}
+
+/*FAQ*/
 .hm-faq {
   display: flex;
   flex-direction: column;
