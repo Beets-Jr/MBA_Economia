@@ -26,7 +26,7 @@ Version: 1.0
   body{
     font-family: var(--font-family);
     background-color: var(--background);
-    color: var(--white);
+    color: var(--black);
   }
 
 /*Variavel*/
@@ -35,14 +35,15 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
-  --subcolor: #0E0A3A;
+  --background: #FAFAFA;
+  --subcolor: #FFFFFF;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
   --blue-post: #070333;
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #0b0b0b;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
