@@ -29,7 +29,7 @@ Version: 1.0
   body{
     font-family: var(--font-family);
     background-color: var(--background);
-    color: var(--white);
+    color: var(--black);
   }
 
 /*Variavel*/
@@ -38,14 +38,15 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
-  --subcolor: #0E0A3A;
+  --background: #FFFFFF;
+  --subcolor: #FAFAFA;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
   --blue-post: #070333;
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #0b0b0b;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
@@ -179,14 +180,14 @@ Version: 1.0
 
 .hm-faq .hm-faq-title{
   font-size: var(--font-size-title-mobile);
-  color: var(--orange-logo);
+  color: var(--blue-logo);
   margin: 36px 0px;
   text-align: center;
 }
 
 .hm-faq .hm-faq-card {
   font-size: var(--font-size-text-mobile);
-  color: var(--white);
+  color: var(--blue-logo);
   font-weight: bold;
   width: auto;
   height: auto;
@@ -195,6 +196,7 @@ Version: 1.0
   margin: 18px;  
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .hm-faq .hm-faq-card-question{
@@ -210,13 +212,14 @@ Version: 1.0
   z-index: 2;
   cursor: pointer;
   gap: 16px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hm-faq .hm-faq-card-answer{
   font-size: var(--font-size-text-mobile);
   color: var(--blue-logo);
   font-weight: bold;
-  background-color: var(--white);
+  background-color: var(--subcolor);
   width: 340px;
   min-height: 48px;
   height: auto;
@@ -228,6 +231,7 @@ Version: 1.0
   align-items: center;
   margin-top: -10px;
   z-index: 1;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hm-faq .hm-faq-card-answer span{
@@ -345,12 +349,12 @@ Version: 1.0
     display: none;
   }
 
-  .hm-faq .hm-faq-card .hm-faq-arrow-blue-post {
+  .hm-faq .hm-faq-card .hm-faq-arrow-orange-desktop {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
   }
 
-  .hm-faq-card.active .hm-faq-arrow-blue-post {
+  .hm-faq-card.active .hm-faq-arrow-orange-desktop {
     transform: rotate(0deg);
   }
 }
