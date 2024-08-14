@@ -35,7 +35,7 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
+  --background: #CCCCCC;
   --subcolor: #0E0A3A;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
@@ -43,6 +43,7 @@ Version: 1.0
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #111111;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
@@ -71,6 +72,98 @@ Version: 1.0
 
 
 /*Curso*/
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+  background-color: var(--background);
+  color: var(--black);
+  margin-bottom: 1em;
+}
+
+.hero-content {
+  max-width: 60%;
+}
+
+.hero-title {
+  font-size: var(--font-size-title-desktop);
+  margin-bottom: 1em;
+}
+
+.hero-texts {
+  font-size: var(--font-size-text-desktop);
+  margin-bottom: 2.5em;
+  margin-right: 4em;
+}
+
+.hero-text {
+  margin-bottom: 0.5em;
+}
+
+.btn {
+  padding: 1em 5em;
+  background-color: var(--orange-logo);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-video {
+  display: flex;
+  align-items: center;
+  max-width: 40%;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+.details-title {
+  font-size: var(--font-size-title-desktop);
+  margin-bottom: 30px;
+  color: var(--orange-logo);
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  background-image: url('../images/background_video-infos.jpg'); /* Caminho para a sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.detail-items {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 9em;
+  padding-left: 20%;
+  text-align: center;
+  color: var(--white);
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-value {
+  display: block;
+  font-size: var(--font-size-title-desktop);
+  font-weight: bold;
+  color: var(--orange-logo);
+  margin-bottom: 5px;
+}
+
+.detail-label {
+  font-size: var(--font-size-subtitile-desktop);
+  color: var(--white);
+}
+
 
 /*End Curso*/
 
