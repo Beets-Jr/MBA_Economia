@@ -9,7 +9,7 @@ Version: 1.0
 
 /*Reset*/
 * {
-    margin: 0;
+    margin: 50;
     padding: 0;
     box-sizing: border-box;
   }
@@ -52,6 +52,39 @@ Version: 1.0
   --font-size-subtitle-desktop: 24px;
   --font-size-text-desktop: 18px;
 }
+
+/*Footer*/
+
+.footer{
+	background-color: #090625;
+	padding: 70px 0;
+}
+.container{
+	max-width: 1280;
+	background-color: #090625;
+}
+ul{
+	list-style: none;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-coluna{
+	width: 33%;
+	padding: 0 15px;
+}
+.footer-coluna h4{
+	font-size: 24px;
+}
+
+
+
+
+
+/*End Footer*/
+
+
 /*
   Nomenclatura
   - Contato: ctt
