@@ -38,7 +38,7 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
+  --background: #FFFFFF;
   --subcolor: #0E0A3A;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
@@ -145,7 +145,7 @@ Version: 1.0
     text-align: left;
     align-items: start;
     padding-left: 100px;
-    min-height: 100vh;
+    min-height: 60vh;
   }
 
   .hm-seu-futuro .hm-seu-futuro-title {
@@ -175,6 +175,7 @@ Version: 1.0
   justify-content: center;
   align-items: center;
   margin-top: 48px;
+  
 }
 
 .hm-faq .hm-faq-title{
@@ -186,7 +187,7 @@ Version: 1.0
 
 .hm-faq .hm-faq-card {
   font-size: var(--font-size-text-mobile);
-  color: var(--white);
+  color: var(--background);
   font-weight: bold;
   width: auto;
   height: auto;
@@ -198,7 +199,7 @@ Version: 1.0
 }
 
 .hm-faq .hm-faq-card-question{
-  background-color: var(--subcolor);
+  background-color: var(--orange-logo);
   width: 340px;
   min-height: 48px;
   height: auto;
@@ -210,13 +211,15 @@ Version: 1.0
   z-index: 2;
   cursor: pointer;
   gap: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .hm-faq .hm-faq-card-answer{
   font-size: var(--font-size-text-mobile);
-  color: var(--blue-logo);
+  color: black;
   font-weight: bold;
-  background-color: var(--white);
+  background-color: var(--background);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   width: 340px;
   min-height: 48px;
   height: auto;
