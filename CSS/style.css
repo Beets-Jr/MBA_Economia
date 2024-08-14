@@ -29,7 +29,7 @@ Version: 1.0
   body{
     font-family: var(--font-family);
     background-color: var(--background);
-    color: var(--white);
+    color: var(--black);
   }
 
 /*Variavel*/
@@ -38,7 +38,7 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #FFFFFF;
+  --background: #090625;
   --subcolor: #0E0A3A;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
@@ -46,6 +46,7 @@ Version: 1.0
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #0b0b0b;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
@@ -69,12 +70,93 @@ Version: 1.0
 */
 
 /*Contato*/
+/* Imagem de Cabecalho */
+.ctt-img-header {
+  background-image: url('../img/ctt-img-header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: var(--subcolor);
+  padding-left: 128px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 160px;
+}
 
+.ctt-img-header h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.ctt-img-header span {
+  font-size: var(--font-size-subtitle-desktop);
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .ctt-img-header {
+    min-height: 290px;
+    padding-left: 24px;
+    padding-bottom: 64px;
+  }
+
+  .ctt-img-header h1 {
+    font-size: var(--font-size-title-mobile); /* Ajuste o tamanho da fonte para se adequar a telas menores */
+    margin-bottom: 4px; /* Ajuste a margem inferior conforme necessário */
+  }
+
+  .ctt-img-header span {
+    font-size: var(--font-size-text-mobile); /* Defina uma variável para o tamanho da fonte em dispositivos móveis */
+    width: 340px;
+  }
+}
 /*End Contato*/
 
 
 /*Curso*/
+/* Imagem de Cabecalho */
+.crs-img-header {
+  background-image: url('../img/crs-img-header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: var(--subcolor);
+  padding-left: 128px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 160px;
+}
 
+.crs-img-header h1 {
+  font-size: 48px;
+}
+
+.crs-img-header span {
+  font-size: var(--font-size-subtitle-desktop);
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .crs-img-header {
+    min-height: 290px;
+    padding-left: 24px;
+    padding-bottom: 64px;
+  }
+
+  .crs-img-header h1 {
+    font-size: var(--font-size-title-mobile); /* Ajuste o tamanho da fonte para se adequar a telas menores */
+    margin-bottom: 4px; /* Ajuste a margem inferior conforme necessário */
+  }
+
+  .crs-img-header span {
+    font-size: var(--font-size-text-mobile); /* Defina uma variável para o tamanho da fonte em dispositivos móveis */
+    width: 340px;
+  }
+}
 /*End Curso*/
 
 
@@ -180,14 +262,14 @@ Version: 1.0
 
 .hm-faq .hm-faq-title{
   font-size: var(--font-size-title-mobile);
-  color: var(--orange-logo);
+  color: var(--blue-logo);
   margin: 36px 0px;
   text-align: center;
 }
 
 .hm-faq .hm-faq-card {
   font-size: var(--font-size-text-mobile);
-  color: var(--background);
+  color: var(--white);
   font-weight: bold;
   width: auto;
   height: auto;
@@ -196,6 +278,7 @@ Version: 1.0
   margin: 18px;  
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .hm-faq .hm-faq-card-question{
@@ -211,15 +294,13 @@ Version: 1.0
   z-index: 2;
   cursor: pointer;
   gap: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .hm-faq .hm-faq-card-answer{
   font-size: var(--font-size-text-mobile);
   color: black;
   font-weight: bold;
-  background-color: var(--background);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: var(--white);
   width: 340px;
   min-height: 48px;
   height: auto;
@@ -231,6 +312,7 @@ Version: 1.0
   align-items: center;
   margin-top: -10px;
   z-index: 1;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hm-faq .hm-faq-card-answer span{
@@ -348,12 +430,12 @@ Version: 1.0
     display: none;
   }
 
-  .hm-faq .hm-faq-card .hm-faq-arrow-blue-post {
+  .hm-faq .hm-faq-card .hm-faq-arrow-orange-desktop {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
   }
 
-  .hm-faq-card.active .hm-faq-arrow-blue-post {
+  .hm-faq-card.active .hm-faq-arrow-orange-desktop {
     transform: rotate(0deg);
   }
 }
@@ -362,20 +444,138 @@ Version: 1.0
 
 
 /*Inscreva-se*/
+/* Imagem de Cabecalho */
+.ins-img-header {
+  background-image: url('../img/ins-img-header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: var(--subcolor);
+  padding-left: 128px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 160px;
+}
 
+.ins-img-header h1 {
+  font-size: 48px;
+}
+
+.ins-img-header span {
+  font-size: var(--font-size-subtitle-desktop);
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .ins-img-header {
+    min-height: 290px;
+    padding-left: 24px;
+    padding-bottom: 64px;
+  }
+
+  .ins-img-header h1 {
+    font-size: var(--font-size-title-mobile); /* Ajuste o tamanho da fonte para se adequar a telas menores */
+    margin-bottom: 4px; /* Ajuste a margem inferior conforme necessário */
+  }
+
+  .ins-img-header span {
+    font-size: var(--font-size-text-mobile); /* Defina uma variável para o tamanho da fonte em dispositivos móveis */
+    width: 340px;
+  }
+}
 /*End Inscreva-se*/
 
 
 /*Noticia*/
+/* Imagem de Cabecalho */
+.ntc-img-header {
+  background-color: var(--blue-logo);
+  min-height: 600px;
+}
 
+@media (max-width: 767px) {
+  .ntc-img-header {
+    min-height: 350px;
+  }
+}
 /*End Noticia*/
 
 
 /*Noticias*/
+/* Imagem de Cabecalho */
+.nts-img-header {
+  background-image: url('../img/nts-img-header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: var(--subcolor);
+  padding-left: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
 
+.nts-img-header h1 {
+  font-size: 48px;
+  margin-bottom: 160px;
+}
+
+.nts-img-header span {
+  font-size: var(--font-size-subtitle-desktop);
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .nts-img-header {
+    min-height: 290px;
+    padding-left: 24px;
+    padding-bottom: 64px;
+  }
+
+  .nts-img-header h1 {
+    font-size: var(--font-size-title-mobile); /* Ajuste o tamanho da fonte para se adequar a telas menores */
+    margin-bottom: 4px; /* Ajuste a margem inferior conforme necessário */
+  }
+
+  .nts-img-header span {
+    font-size: var(--font-size-text-mobile); /* Defina uma variável para o tamanho da fonte em dispositivos móveis */
+    width: 340px;
+  }
+}
 /*End Noticias*/
 
 
 /*Sobre*/
+.sbr-img-header {
+  background-image: url('../img/sbr-img-header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: var(--subcolor);
+  padding-left: 128px;
+  padding-right: 32px;
+  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
 
+.sbr-img-header h1 {
+  font-size: 48px;
+}
+
+@media (max-width: 767px) {
+  .sbr-img-header {
+    min-height: 290px;
+    padding-left: 24px;
+    padding-bottom: 64px;
+  }
+
+  .sbr-img-header h1 {
+    font-size: var(--font-size-title-mobile); /* Ajuste o tamanho da fonte para se adequar a telas menores */
+    margin-bottom: 4px; /* Ajuste a margem inferior conforme necessário */
+  }
+}
 /*End Sobre*/
