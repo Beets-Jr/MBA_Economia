@@ -33,17 +33,17 @@ Version: 1.0
 :root {
   /*=========== FONTE ============*/
   --font-family: 'Inter', sans-serif;
-  --secondary-font-family: 'Poppins', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
-  --subcolor: #0E0A3A;
+  --background: #FAFAFA;
+  --subcolor: #FAFAFA;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
   --blue-post: #070333;
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #0b0b0b;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
@@ -60,6 +60,27 @@ header {
 	/* Altura do header */
 	height: 80px;
 	display: block;
+	background-color: rgba(0, 0, 0, 0);
+	
+	/* Header transparente no início */
+	/* Header não se sobrepondo a imagem inicial da página */
+	/* position: sticky; */
+	/*Se quiser o header sobrepondo a imagem inicial da página*/
+	position: fixed;
+	
+	top: 0;
+	transition: background-color 0.4s ease-in-out;
+}
+
+header.scrolled {
+	/* Como o header ficará depois de scrollado */
+	background-color: var(--background);
+	opacity: 0.98;
+}
+
+header.scrolled nav a{
+	/* Cor que o nav terá quando scrollado */
+	color: var(--black);
 }
 
 header .inner_header {
@@ -104,7 +125,7 @@ header nav, header nav .links_menu {
 	/* Estilo da fonte */
 	font-family: var(--secondary-font-family);
 	font-size: var(--font-size-text-desktop);
-	color: red;
+	color: var(--black);
 	font-weight: 500;
 	
 	/* Personalização do hover */
@@ -194,7 +215,7 @@ header nav a:last-child{
 .burger div {
 	width: 25px;
 	height: 3px;
-	background-color: red;
+	background-color: var(--black);
 	margin: 5px;
 	transition: all 0.3s ease;
 }
