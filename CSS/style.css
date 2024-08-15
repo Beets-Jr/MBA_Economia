@@ -89,13 +89,13 @@ header .header_logo a {
 	vertical-align: middle;
 }
 
-header nav {
+header nav, header nav .links_menu {
 	height: 100%;
 	display: table;
 	float: right;	
 }
 
-header nav a {
+.burger, header nav a {
 	display: table-cell;
 	vertical-align: middle;
 	height: 100%;
@@ -104,11 +104,16 @@ header nav a {
 	/* Estilo da fonte */
 	font-family: var(--secondary-font-family);
 	font-size: var(--font-size-text-desktop);
-	color: var(--white);
+	color: red;
 	font-weight: 500;
 	
 	/* Personalização do hover */
 	position: relative;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
 }
 
 /* Hover, active do nav */
@@ -127,7 +132,7 @@ header nav a:not(:last-child)::before, header nav a:not(:last-child)::before {
     transition: transform .3s ease-in-out;
 }
 
-header nav a:hover:not(:last-child)::before, header nav a:focus:not(:last-child)::before {
+header nav a:hover:not(:last-child)::before, header nav a:active:not(:last-child)::before {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -185,8 +190,17 @@ header nav a:last-child{
 	transform: translateY(0);
 }
 
+/* Menu mobile */
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: red;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
 /* Responsividade do header para tablet */
-@media (max-width: 950px) {
+@media screen and (max-width: 950px) {
 	/*Header*/
 	header {
 		/* Reduzir a altura do header */
@@ -216,20 +230,84 @@ header nav a:last-child{
 }
 
 /* Responsividade do header para mobile */
-@media (max-width: 700px) {
-	 * {
-		background-color: pink;
-	 }
+@media screen and (max-width: 700px) {
+	body {
+		overflow-x: hidden;
+	}
 	
+	header nav .burger {
+		/* Mostrando o burger: menu mobile */
+		display: table-cell;
+	}
+
+	header {
+		height: 90px;
+	}
+	
+	header nav .links_menu {
+		position: absolute;
+		right: 0px;
+		/* Top: Mesma altura do header, para aparecer embaixo */ 
+		top: 90px;
+		background-color: var(--white);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in; 
+		
+		
+		/* Dimensões da caixa que abre no mobile */
+		height: fit-content;
+		padding: 30px;
+	}
+	
+	header nav .links_menu a {
+		height: 50px;
+		/* Para animação, em que os links aparecem gradualmente */
+		opacity: 0; 
+		animation: navLinkFade 0.5s ease forwards;
+	}
+	
+	/* Tirar o hover no mobile */
+	header nav a:not(:last-child)::before, header nav a:not(:last-child)::before {
+		display: none;
+	}
 }
 
-::selection {
-  color: red;
-  background: yellow;
+/* Para o menu mobile aparecer */
+header nav .links_menu.nav_active {
+	transform: translateX(0%);
 }
+
+/* Animação dos links do menu mobile */
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+/* Animação menu burger para X quando aberto */
+.burger.toggle .line_1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line_2 {
+	opacity: 0;
+}
+
+.burger.toggle .line_3 {
+	transform: rotate(+45deg) translate(-5px, -6px);	
+}
+
 
 /*End Header*/
-
 
 /*
   Nomenclatura
