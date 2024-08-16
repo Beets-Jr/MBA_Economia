@@ -1,91 +1,77 @@
 /* Início Outros cursos */
-.outros_cursos {
-	margin: 0 auto;
-	height: fit-content;
-	background: linear-gradient(90deg, rgba(19,19,19,0.5) 0%, rgba(19,19,19,0.5) 100%),
+.outros_cursos_wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	background: linear-gradient(90deg, rgba(19,19,19,0.8) 0%, rgba(19,19,19,0.5) 100%),
 				url("../IMG/pessoa-estudando.jpg");
-	
+				
 	/* Posicionando a imagem no lugar desejado */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
-
-.outros_cursos_wrapper {	
-	display: flex;
-	/* Separar a seção "além mba" e "curso" */
+	
+	/* Organizando os elementos na box */
+	padding: 2% 0px 2% 5%;
 	justify-content: space-between;
-		
-	/* Estilização do texto */
-	color: var(--black);
-	font-family: var(--font-family);
-	text-align: justify;	
 	
-	/* Para ter espaço visível atrás do card */
-	padding: 40px 0px;
-	
-	/* Para afastar o conteúdo da esquerda */
-	margin-left: 8%;
+	/* Estilização da fonte */
+	text-align: justify;
 }
 
-.outros_cursos h2, .outros_cursos .alem_mba_title {
-	/* Estilização dos títulos */
-	font-family: var(--secondary-font-family);
-	color: var(--background);
-	font-size: var(--font-size-subtitle-desktop);
+.outros_cursos .alem_mba h2 {
+	/* Para o título não ficar muito separado quando responsivo */
 	text-align: start;
 }
 
-.outros_cursos .alem_mba_subtitle {
-	/* Estilização da fonte */
-	font-size: var(--font-size-text-desktop);
-	border-top: 3px solid;
-	width: fit-content;
-	line-height: 25px;
-}
-
 .outros_cursos .alem_mba {
+	width: 46vw;
+	
+	/* Posicionamento do conteúdo nessa parte */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
+	/* Separar o título da descrição */
+	gap: 10px;
 	
-	/* Dimensão horizontal da primeira parte */
-	width: 30%;
-		
-	/* Estilização da fonte */
+	/* Cor da fonte */
 	color: var(--background);
 }
 
-.outros_cursos .card_curso {
-	/* Dimensão horizontal da segunda parte */
-	width: 55%;
-			
-	/* Personalizar a caixa */
-	background: rgba(250, 250, 250, 0.9);	
-	height: fit-content;
-	border-radius: 20px 0px 0px 20px;
-}
-
-.outros_cursos .card_curso .conteudo_curso {
-	display: flex;
-	flex-direction: column;
-	width: 70%;
-	
-	/* Separar as partes do conteúdo */
-	gap: 20px;
-	
-	/* Para o conteúdo se afastar das bordas */
-	padding: 70px 0px 70px 70px;
-		
-	/* Estilização da fonte */
-	color: var(--black);
-	font-size: 14px;
-}
-
+.outros_cursos .alem_mba .alem_mba_title h2,
 .outros_cursos .conteudo_curso h2 {
-	color: var(--black);
+	/* Estilização do título */
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-title-desktop);
+}
+
+.outros_cursos .alem_mba .alem_mba_subtitle {
 	font-size: var(--font-size-subtitle-desktop);
+	font-weight: 500;
+	font-family: var(--secondary-font-family);
+	width: fit-content;
+	border-top: 2px solid var(--background);
+}
+
+.outros_cursos .alem_mba p {
+	width: 80%;
+}
+
+.outros_cursos .card_curso {
+	background: var(--background);
+	height: fit-content;
+	width: 60vw;
+	padding: 3% 0 3% 0;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.outros_cursos .conteudo_curso {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.outros_cursos .conteudo_curso p {
+	padding: 20px 0px 20px 0px;
 }
 
 .outros_cursos_button {
