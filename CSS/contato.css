@@ -7,6 +7,8 @@
 	/* Para as duas partes da seção ficarem na mesma linha */
 	display: flex;
 	justify-content: space-around;
+	
+	font-size: var(--font-size-text-desktop);
 }
 
 /* Estilização da área de contato */
@@ -25,10 +27,9 @@
 	/* Estilização do cartão */
 	background-color: #13131310;
 	padding: 2.3% 2%;
-	width: 80%;
+	width: 90%;
 	border-radius: 6px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-	
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;	
 }
 
 .ctt-container .ctt-info-card .ctt-info-img {
@@ -181,12 +182,83 @@
 	transform: translateY(0);
 }
 
-/*@media screen and (max-width: 1064px) {
-	.ctt-container .ctt-form {
-		width: 90%;
-		height: auto;
+/* Responsividade Desktop 1 */
+@media screen and (max-width: 1200px) {
+	.ctt-container {
+		width: 100%;
 	}
-}*/
+	
+	.ctt-container .ctt-info .ctt-info-card {
+		width: 100%;
+	}	
+}
+
+/* Responsividade mobile 1 */
+@media screen and (max-width: 810px) {
+	/* Início contato */
+	.ctt-container {
+		width: 100%;
+		
+		/* Para as duas partes da seção ficarem na mesma linha */
+		display: flex;
+		flex-direction: column;
+		
+		font-size: var(--font-size-text-mobile);
+	}
+	
+	.ctt-container .ctt-form .ctt-title,
+	.ctt-info h2 {
+		font-size: var(--font-size-subtitle-mobile);	
+	}
+
+	/* Estilização da área de contato */
+	.ctt-container .ctt-info {
+		width: 80vw;
+		margin: 40px auto;
+	}
+
+	.ctt-container .ctt-info .ctt-info-card {
+		gap: 20px;
+		margin-top: 15px;
+	}
+
+	.ctt-container .ctt-info-card .ctt-info-img {
+		width: 45px;
+		height: 45px;		
+	}
+
+	.ctt-container .ctt-info .ctt-info-img img {
+		/* Imagem ficando com o tamanho relativo 100% do container pai */
+		margin: 0 auto;
+		width: 100%;	
+	}
+
+	/* Estilização do formulário */
+	.ctt-container .ctt-form {
+		width: 100%;
+		padding: 2rem 2rem;
+	}
+
+	.ctt-container .ctt-input {
+		width: 80vw;
+	}		
+}
+
+/* Responsividade mobile 2 */
+@media screen and (max-width: 350px) {
+	.ctt-container .ctt-info .ctt-info-img img {
+		/* Imagem ficando com o fixo para não ser deformada */
+		width: 30px;
+	}
+	
+	.ctt-container .ctt-info .ctt-info-card {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 10px;
+		padding: 6%;
+	}
+
+}
 
 /* Fim contato */
-
