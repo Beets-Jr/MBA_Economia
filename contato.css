@@ -1,0 +1,150 @@
+/* Início contato */
+.ctt-container {
+	background-color: var(--background);
+	
+	/* Para as duas partes da seção ficarem na mesma linha */
+	display: flex;
+	justify-content: space-around;
+}
+
+.ctt-container .ctt-info {
+	width: fit-content;
+	background-color: pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ctt-container .ctt-form {
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem;
+}
+
+.ctt-container .ctt-form .ctt-title::before {
+	/* Linha em cima do título */
+	content: '';
+	display: block;
+	width: 4rem;
+	height: 0.2rem;
+	background-color: var(--blue-logo);
+	margin: 0 auto;
+	position: absolute;
+}
+
+.ctt-container .ctt-form .ctt-title {
+	/* Estilização da fonte */
+	line-height: 35px;
+	color: var(--blue-logo);
+}
+
+.ctt-container h2 {
+	font-family: var(--secondary-font-family);
+}
+
+.ctt-container .ctt-input {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem 0rem 0rem 0rem;
+			
+	/* Dimensão das caixas do formulário */
+	width: 30vw;
+}
+
+.ctt-container .ctt-input .input-box {
+	display: flex;
+	flex-direction: column;
+	/* Distância entre cada campo */
+	margin-bottom: 1.4rem;
+}
+
+.ctt-container .ctt-input .input-box input,
+.ctt-container .ctt-input textarea {
+	margin: 0.3rem 0rem 0.1rem 0;
+	padding: 0.8rem 1.2rem;
+	border: 1px solid #D2D2D2;
+	border-radius: 4px;
+	box-shadow: 1px 1px 6px #0000001c;
+	background-color: #eeeeee50;
+}
+
+.ctt-container .ctt-input .input-box input:hover {
+	background-color: #eeeeee75;
+}
+
+.ctt-container .ctt-input .input-box input:focus-visible{
+	outline: 2px solid var(--blue-logo);
+}
+
+.ctt-container .ctt-input .input-box label {
+	/* Estilização do texto em cima da box */
+}
+
+.ctt-container .ctt-input .input-box::placeholder {
+	/* Estilização do texto dentro da box*/
+}
+
+/* Estilização do botão */
+.ctt-container .ctt-btn {
+	align-items: center;
+	background-clip: padding-box;
+	background-color: var(--orange);
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	display: inline-flex;
+	
+	/* Estilização do texto */	
+	color: #FFFFFF;
+	cursor: pointer;
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	font-weight: 600;
+	
+	justify-content: center;
+	margin: 0;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	
+	/* Estilização específica para o botão do formulário */
+	width: 100%;
+	line-height: 1;
+	max-height: 2.5rem;
+	font-size: 1rem;	
+}
+
+.ctt-container .ctt-btn:hover, .ctt-container .ctt-btn:focus {
+	background-color: #fb8332;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.ctt-container .ctt-btn:hover {
+	transform: translateY(-1px);
+}
+
+.ctt-container .ctt-btn:active {
+	background-color: #c85000;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+}
+
+/*@media screen and (max-width: 1064px) {
+	.ctt-container .ctt-form {
+		width: 90%;
+		height: auto;
+	}
+}*/
+
+/* Fim contato */
+
