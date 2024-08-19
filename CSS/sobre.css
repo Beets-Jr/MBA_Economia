@@ -1,0 +1,168 @@
+/* Início admissão */
+.admissao {
+	width: 100%;
+}
+
+.admissao ol li {
+	/* Linha vertical da timeline */
+	position: relative;
+	list-style-type: none;
+	width: 6px;
+	background-color: var(--blue-logo);
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.admissao ol li::after {
+	/* Os "pontos" de cada etapa */
+	background: var(--blue-logo);
+	content: '';
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	position:absolute;
+	left:50%;
+	transform: translateX(-50%);
+	bottom: 0;
+}
+
+.admissao ol li div{
+	/* Estilização dos cards */
+	position: relative;
+	width: 400px;
+	padding: 15px;
+	border-radius: 5px;
+	bottom: 0;
+	background: #eeeeee50;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* Estilização das fontes */
+.admissao ol li h3 {
+	font-size: var(--font-size-subtitle-desktop);
+	margin-bottom: 10px;
+}
+
+.admissao ol li p {
+	font-size: 0.9rem;
+	text-align: justify;
+}
+  
+.admissao ol li:nth-child(odd) div {
+  left: 30px;
+}
+
+.admissao ol li:nth-child(even) div {
+  left: -430px;
+}
+
+/* Animações */
+.admissao ol li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+
+.admissao ol li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.admissao ol li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.admissao ol li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+  
+/* Desktop 1 */
+@media screen and (max-width: 940px) {
+	.admissao ol li div{
+		width: 340px;
+	}
+	
+	.admissao ol li:nth-child(odd) div {
+	  left: 30px;
+	}
+
+	.admissao ol li:nth-child(even) div {
+	  left: -370px;
+	}
+}  
+
+/* Mobile 1 | Tablet */
+@media screen and (max-width: 850px) {
+	.admissao ol li div{
+		width: 300px;
+	}
+	
+	.admissao ol li:nth-child(odd) div {
+	  left: 30px;
+	}
+
+	.admissao ol li:nth-child(even) div {
+	  left: -330px;
+	}
+	
+	/* Redução no tamanho da fonte */
+	.admissao ol li h3 {
+		font-size: var(--font-size-subtitle-mobile);
+	}
+
+	.admissao ol li p {
+		font-size: var(--font-size-text-mobile);
+		text-align: left;
+	}
+} 
+  
+  
+/* Mobile 2 */
+@media screen and (max-width: 730px) {	
+	.admissao ol {
+		width: 10%;
+	}
+
+	.admissao ol li:nth-child(even) div {
+		/* Para os cards ficarem do mesmo lado */
+		left: 30px;
+	}
+			
+	.admissao ol li {
+		/* Linha vertical da timeline */
+		width: 5px;
+	}
+
+	.admissao ol li::after {
+		/* Os "pontos" de cada etapa */
+		width: 20px;
+		height: 20px;
+	}
+	
+	.admissao ol li div{
+		width: 80vw;
+	}
+}
+  
+/* Fim admissão */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
