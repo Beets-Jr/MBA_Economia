@@ -1,29 +1,70 @@
 /* Início admissão */
 .admissao {
 	width: 100%;
+	padding: 3% 0 3% 0;
 }
 
+/* Estilização do texto inicial */
+.admissao .admissao_descricao h2::before {
+	/* Linha em cima do título */
+	content: '';
+	display: block;
+	width: 5rem;
+	height: 0.3rem;
+	background-color: var(--orange-logo);
+	margin: 0 auto;
+	position: absolute;
+}
+
+.admissao .admissao_descricao h2 {
+	/* Estilização da fonte */
+	line-height: 40px;
+	color: var(--orange-logo);
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-title-desktop);
+}
+
+.admissao .admissao_descricao {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 3%;
+}
+
+.admissao .admissao_descricao p {
+	width: 50%;
+}
+
+/* Estilização da linha do tempo */
 .admissao ol li {
 	/* Linha vertical da timeline */
 	position: relative;
 	list-style-type: none;
-	width: 6px;
-	background-color: var(--blue-logo);
+	width: 3px;
+	background-color: var(--black);
 	margin: 0 auto;
 	padding-top: 50px;
 }
 
+.admissao ol li:nth-child(1) {
+	/* Para a linha no início ser maior */
+	padding-top: 80px;
+}
+
 .admissao ol li::after {
 	/* Os "pontos" de cada etapa */
-	background: var(--blue-logo);
+	background: var(--black);
 	content: '';
-	width: 25px;
-	height: 25px;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
 	position:absolute;
 	left:50%;
 	transform: translateX(-50%);
 	bottom: 0;
+	border: solid 4px var(--background);
 }
 
 .admissao ol li div{
@@ -90,6 +131,14 @@
 	.admissao ol li:nth-child(even) div {
 	  left: -370px;
 	}
+
+	.admissao .admissao_descricao h2::before {
+		height: 0.2rem;
+	}
+
+	.admissao .admissao_descricao p {
+		width: 75%;
+	}
 }  
 
 /* Mobile 1 | Tablet */
@@ -110,10 +159,19 @@
 	.admissao ol li h3 {
 		font-size: var(--font-size-subtitle-mobile);
 	}
+	
+	.admissao .admissao_descricao h2 {
+		font-size: var(--font-size-title-mobile);
+	}
 
-	.admissao ol li p {
+	.admissao ol li p,
+	.admissao .admissao_descricao p {
 		font-size: var(--font-size-text-mobile);
 		text-align: left;
+	}
+
+	.admissao .admissao_descricao p {
+		width: 90%;
 	}
 } 
   
@@ -131,17 +189,28 @@
 			
 	.admissao ol li {
 		/* Linha vertical da timeline */
-		width: 5px;
+		width: 3px;
 	}
 
 	.admissao ol li::after {
 		/* Os "pontos" de cada etapa */
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 	}
 	
 	.admissao ol li div{
 		width: 80vw;
+	}
+	
+	.admissao .admissao_descricao {
+		text-align: start;
+		background-color: red:
+	}
+	
+	.admissao .admissao_descricao {
+		align-items: start;
+		padding-left: 10%;
+		
 	}
 }
   
