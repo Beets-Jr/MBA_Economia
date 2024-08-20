@@ -38,8 +38,8 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
-  --subcolor: #0E0A3A;
+  --background: #FFFFFF;
+  --subcolor: #FAFAFA;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
   --blue-post: #070333;
@@ -269,7 +269,7 @@ Version: 1.0
 
 .hm-faq .hm-faq-card {
   font-size: var(--font-size-text-mobile);
-  color: var(--white);
+  color: var(--blue-logo);
   font-weight: bold;
   width: auto;
   height: auto;
@@ -282,7 +282,7 @@ Version: 1.0
 }
 
 .hm-faq .hm-faq-card-question{
-  background-color: var(--orange-logo);
+  background-color: var(--subcolor);
   width: 340px;
   min-height: 48px;
   height: auto;
@@ -294,13 +294,14 @@ Version: 1.0
   z-index: 2;
   cursor: pointer;
   gap: 16px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hm-faq .hm-faq-card-answer{
   font-size: var(--font-size-text-mobile);
-  color: black;
+  color: var(--blue-logo);
   font-weight: bold;
-  background-color: var(--white);
+  background-color: var(--subcolor);
   width: 340px;
   min-height: 48px;
   height: auto;
@@ -688,9 +689,20 @@ Version: 1.0
     display: none;
   }
 
+  .sbr-corpo-docente-title {
+    width: 800px;
+    font-size: var(--font-size-title-desktop);
+  }
+
+  .sbr-linha-titulo {
+    width: 150px;
+  }
+
   .sbr-corpo-docente {
+    padding-top: 32px;
+    padding-bottom: 512px;
     height: 400px;
-    background-color: gray;
+    background-color: var(--white);
   }
 
   .sbr-corpo-docente-desktop {
@@ -703,11 +715,12 @@ Version: 1.0
   .sbr-card-container {
     width: 100%;
     padding-block: 5rem;
+    padding-bottom: 200px;
   }
 
   .sbr-card-content {
-    margin-inline: 1.75rem;
     overflow: hidden;
+    margin-bottom: 20px;
   }
 
   .sbr-card-article {
@@ -731,17 +744,51 @@ Version: 1.0
     position: absolute;
     z-index: 2;
     bottom: 16px;
-    left: 16px;
     color: var(--subcolor);
     box-sizing: border-box;
-    width: 300px;
+    width: 240px;
+    text-shadow: 2px 2px 2px #000000cc;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    background-size: contain; /* Ajusta a imagem ao tamanho do botão */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-prev {
+    background-image: url('../img/sbr-button-prev.svg');
   }
 
   .swiper-button-next {
-    right: -1rem;
+    background-image: url('../img/sbr-button-next.svg');
   }
-  .swiper-button-prev {
-    left: -1rem;
+
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none;
+  }
+
+  .swiper-wrapper{
+    padding-bottom: 30px;
+  }
+  
+  .swiper-pagination-bullet {
+    transform: scale(1.5);
+    margin: 0px 12px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: gray !important;
+    box-shadow: 0 0 0 2px var(--blue-logo);
+  }
+
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+      bottom: 0px !important;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
   }
 
 }

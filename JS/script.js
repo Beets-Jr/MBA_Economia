@@ -12,9 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
 // Swiper JS
 let swiperCards = new Swiper('.sbr-card-content', {
   loop: false,
-  spaceBetween: 32,
+  spaceBetween: 0,
   grabCursor: true,
   centeredSlides: true,
+  effect: 'coverflow',
+
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100, // Profundidade entre os cards
+    modifier: 1, // Intensidade da escala
+    slideShadows: false, // Sombra no slide ativo
+  },
 
   pagination: {
     el: '.swiper-pagination',
@@ -27,17 +36,11 @@ let swiperCards = new Swiper('.sbr-card-content', {
   },
 
   breakpoints: {
-    600: {
+    800: {
       slidesPerView: 2,
     },
-    900: {
-      slidesPerView: 3,
-    },
-    1200: {
+    1366: {
       slidesPerView: 4,
-    },
-    1500: {
-      slidesPerView: 5,
     },
   },
 
