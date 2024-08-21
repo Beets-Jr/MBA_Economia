@@ -7,6 +7,9 @@ Description: Tema criado para MBA Economia UFSCar
 Version: 1.0
 */
 
+/*=========== Import de fonte ============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*Reset*/
 * {
     margin: 0;
@@ -26,7 +29,7 @@ Version: 1.0
   body{
     font-family: var(--font-family);
     background-color: var(--background);
-    color: var(--white);
+    color: var(--black);
   }
 
 /*Variavel*/
@@ -35,14 +38,15 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
-  --subcolor: #0E0A3A;
+  --background: #FFFFFF;
+  --subcolor: #FAFAFA;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
   --blue-post: #070333;
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #0b0b0b;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
@@ -71,6 +75,208 @@ Version: 1.0
 
 
 /*Curso*/
+/*FAQ*/
+.hm-crs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hm-crs .hm-crs-text {
+  width: 60%;
+  text-align: left; /* Alinha o texto à esquerda */
+  font-size: var(--font-size-text-mobile);
+  color: var(--blue-logo);
+  margin: 2em 0px;
+}
+
+.hm-crs .hm-crs-card {
+  font-size: var(--font-size-text-mobile);
+  color: var(--blue-logo);
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.hm-crs .hm-crs-card-question {
+  background-color: var(--subcolor);
+  width: 340px;
+  min-height: 48px;
+  height: auto;
+  display: flex;
+  border-radius: 6px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  gap: 16px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hm-crs .hm-crs-card-question.active {
+  background-color: var(--subcolor); /* Mantém o background original */
+  color: var(--orange); /* Torna o texto laranja */
+}
+
+.hm-crs .hm-crs-card-answer {
+  display: none;
+}
+
+.hm-crs .hm-crs-card-answer.visible {
+  display: block;
+}
+
+.hm-crs .hm-crs-card-answer{
+  font-size: var(--font-size-text-mobile);
+  color: var(--blue-logo);
+  font-weight: bold;
+  background-color: var(--subcolor);
+  width: 340px;
+  min-height: 48px;
+  height: auto;
+  max-height: 1000px;
+  display: none;
+  padding: 1em;
+  border-radius: 6px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.1em;
+  z-index: 1;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hm-crs .hm-crs-card-answer span{
+  margin-top: 8px;
+}
+
+.hm-crs-card.active .hm-crs-card-answer {
+  display: flex;
+}
+
+/* Media Query para Mobile */
+@media (max-width: 767px) {
+
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange {
+    transition: transform 0.3s ease;
+  }
+
+  .hm-crs-card.active .hm-crs-arrow-orange {
+    transform: rotate(-180deg);
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
+    display: none;
+  }
+}
+
+/* Media Query para Tablets */
+@media (min-width: 768px) and (max-width: 1250px) {
+  .hm-crs .hm-crs-text {
+    font-size: var(--font-size-text-desktop);
+    margin: 3em 0px;
+  }
+  
+  .hm-crs .hm-crs-card {
+    width: auto;
+    margin: 16px;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-card-question {
+    font-size: 20px;
+    font-weight: 800;
+    width: 600px;
+    display: flex;
+    border-radius: 10px;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-card-answer {
+    font-size: 18px;
+    font-weight: bold;
+    width: 600px;
+    min-height: 48px;
+    padding: 20px 60px;
+    border-radius: 10px;
+    margin-top: 0.2em;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-card-answer span {
+    margin-top: 1em;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange {
+    transition: transform 0.3s ease;
+  }
+
+  .hm-crs-card.active .hm-crs-arrow-orange {
+    transform: rotate(-180deg);
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
+    display: none;
+  }
+}
+
+/* Media Query para Desktops */
+@media (min-width: 1251px) {
+  .hm-crs .hm-crs-text{
+    font-size: var(--font-size-text-desktop);
+    margin: 3em 0px;
+  }
+  
+  .hm-crs .hm-crs-card{
+    width: auto;
+    margin: 24px;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-card-question{
+    font-size: var(--font-size-subtitle-desktop);
+    font-weight: 800;
+    width: 960px;
+    display: flex;
+    border-radius: 10px;
+    padding: 25px 72px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hm-crs .hm-crs-card .hm-crs-card-answer{
+    font-size: var(--font-size-text-desktop);
+    font-weight: bold;
+    width: 960px;
+    min-height: 48px;
+    padding: 25px 72px;
+    border-radius: 10px;
+    margin-top: 0.2em;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-card-answer span {
+    margin-top: 20px;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange {
+    display: none;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  .hm-crs-card.active .hm-crs-arrow-orange-desktop {
+    transform: rotate(0deg);
+  }
+}
 
 /*End Curso*/
 
