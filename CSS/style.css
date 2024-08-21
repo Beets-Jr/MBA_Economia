@@ -32,6 +32,14 @@ Version: 1.0
     color: var(--black);
   }
 
+  header {
+    position: fixed; /* ou absolute, dependendo do seu layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Um valor alto para garantir que fique acima de outros elementos */
+}
+
 /*Variavel*/
 :root {
   /*=========== FONTE ============*/
