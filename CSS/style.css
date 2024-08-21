@@ -1282,10 +1282,111 @@ header nav .links_menu.nav_active {
 
 
 /*Noticia*/
-/* Imagem de Cabecalho */
-.ntc-img-header {
-  background-color: var(--blue-logo);
-  min-height: 600px;
+body {
+  background: linear-gradient(to bottom, var(--blue-logo) 25em, #FFFFFF 0);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+.container {
+  width: 80%;
+  padding: 2em;
+  box-shadow: 0 0 0.625em rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.white {
+  color: var(--white);
+}
+
+h1 {
+  font-size: var(--font-size-title-desktop);
+  margin-bottom: 1em;
+  color: var(--orange);
+}
+
+h2 {
+  font-size: var(--font-size-subtitle-desktop);
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  color: var(--background);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.875em auto;
+}
+
+p {
+  line-height: 1.125em;
+  font-size: var(--font-size-text-desktop);
+  color: var(--background);
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+hr {
+  border: none;
+  border-top: 0.125em solid #333;
+  margin: 2.5em auto;
+  width: 80%;
+  max-width: 75em;
+}
+
+.social-share {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.social-share p {
+  margin-bottom: 0.625em;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.icons a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.icons img {
+  width: 3.125em;
+  height: 3.125em;
+}
+
+.Share {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-title-mobile);
+  }
+  
+  h2 {
+    font-size: var(--font-size-subtitle-mobile);
+  }
+  
+  p {
+    font-size: var(--font-size-text-mobile);
+  }
+  
 }
 
 @media (max-width: 767px) {
