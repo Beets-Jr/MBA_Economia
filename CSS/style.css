@@ -1282,11 +1282,11 @@ header nav .links_menu.nav_active {
 
 
 /*Noticia*/
-body {
+body.ntc {
   background: linear-gradient(to bottom, var(--blue-logo) 25em, #FFFFFF 0);
 }
 
-.wrapper {
+.ntc_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1294,47 +1294,43 @@ body {
   font-family: var(--font-family);
 }
 
-.container {
+.ntc_container {
   width: 80%;
   padding: 2em;
   box-shadow: 0 0 0.625em rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
 
-.white {
-  color: var(--white);
-}
-
-h1 {
+.ntc_container h1 {
   font-size: var(--font-size-title-desktop);
   margin-bottom: 1em;
-  color: var(--orange);
-}
-
-h2 {
-  font-size: var(--font-size-subtitle-desktop);
-  margin-bottom: 0.5em;
-  margin-top: 1.5em;
   color: var(--background);
 }
 
-img {
+.ntc_container h2 {
+  font-size: var(--font-size-subtitle-desktop);
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  color: var(--black);
+}
+
+.ntc_container img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 1.875em auto;
 }
 
-p {
+.ntc_container p {
   line-height: 1.125em;
   font-size: var(--font-size-text-desktop);
-  color: var(--background);
+  color: var(--black);
   max-width: 100%;
   box-sizing: border-box;
   text-align: justify;
 }
 
-hr {
+.ntc_container hr {
   border: none;
   border-top: 0.125em solid #333;
   margin: 2.5em auto;
@@ -1342,48 +1338,48 @@ hr {
   max-width: 75em;
 }
 
-.social-share {
+.ntc_social-share {
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.social-share p {
+.ntc_social-share p {
   margin-bottom: 0.625em;
 }
 
-.icons {
+.ntc_icons {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.icons a {
+.ntc_icons a {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.icons img {
+.ntc_icons img {
   width: 3.125em;
   height: 3.125em;
 }
 
-.Share {
+.ntc_Share {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  h1 {
+  .ntc_container h1 {
     font-size: var(--font-size-title-mobile);
   }
   
-  h2 {
+  .ntc_container h2 {
     font-size: var(--font-size-subtitle-mobile);
   }
   
-  p {
+  .ntc_container p {
     font-size: var(--font-size-text-mobile);
   }
   
