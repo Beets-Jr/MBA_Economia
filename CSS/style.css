@@ -36,6 +36,8 @@ Version: 1.0
 :root {
   /*=========== FONTE ============*/
   --font-family: 'Inter', sans-serif;
+  --secondary-font-family: 'Poppins', sans-serif;
+  
 
   /*=========== CORES ============*/
   --background: #FAFAFA;
