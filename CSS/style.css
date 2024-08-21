@@ -83,7 +83,7 @@ Version: 1.0
 }
 
 .hero-content {
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .hero-title {
@@ -112,12 +112,17 @@ Version: 1.0
 .hero-video {
   display: flex;
   align-items: center;
-  max-width: 40%;
+  justify-content: center;
+  width: 30%; /* Aumente conforme necessário */
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 1em; /* Ajuste o valor conforme necessário */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
 }
 
 iframe {
   width: 100%;
-  height: auto;
+  height: 100%; /* Ajuste a altura do vídeo em relação à altura da viewport */
   border: none;
 }
 
@@ -130,7 +135,7 @@ iframe {
 
 .details {
   display: flex;
-  background-image: url('../images/background_video-infos.jpg'); /* Caminho para a sua imagem */
+  background-image: url('../images/details_background_desktop.png'); /* Caminho para a sua imagem */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
