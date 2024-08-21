@@ -80,6 +80,7 @@ Version: 1.0
   background-color: var(--background);
   color: var(--black);
   margin-bottom: 1em;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
 }
 
 .hero-content {
@@ -97,7 +98,7 @@ Version: 1.0
   margin-right: 4em;
 }
 
-.hero-text {
+.hero-text1 {
   margin-bottom: 0.5em;
 }
 
@@ -143,11 +144,10 @@ iframe {
 }
 
 .detail-items {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   padding: 9em;
-  padding-left: 20%;
   text-align: center;
   color: var(--white);
 }
@@ -167,6 +167,71 @@ iframe {
 .detail-label {
   font-size: var(--font-size-subtitile-desktop);
   color: var(--white);
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column; /* Garante que o layout seja em coluna */
+    align-items: center; /* Centraliza os elementos */
+  }
+
+  .hero-text1 {
+    order: 1 !important; /* Garante que o texto 1 fique no topo */
+  }
+
+  .hero-video {
+    order: 2 !important; /* Garante que o vídeo fique abaixo do texto 1 */
+  }
+
+  .hero-title {
+    order: 3 !important; /* Garante que o título fique abaixo do vídeo */
+  }
+
+  .hero-text2 {
+    order: 4 !important; /* Garante que o texto 2 fique por último */
+  }
+
+  .hero-title {
+    font-size: var(--font-size-title-mobile); /* Diminui o tamanho da fonte */
+  }
+
+  .hero-texts {
+    font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto */
+  }
+
+  .btn {
+    width: 100%; /* Faz o botão ocupar a largura total */
+    padding: 1em 0; /* Ajusta o padding para o botão */
+    font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto no botão */
+    order: 5; /* Coloca o texto 1 no topo */
+  }
+
+  .details-title {
+    font-size: var(--font-size-title-mobile);
+  }
+
+  .detail-items {
+    flex-direction: column; /* Altera para coluna */
+    align-items: center; /* Centraliza os itens */
+    padding: 2em; /* Ajusta o padding para mobile */
+    gap: 3em; /* Ajusta o espaço entre os itens */
+  }
+
+  .details {
+    background-image: url('../images/details_background_mobile.png');
+    background-size: cover; /* Garante que a imagem cubra o contêiner */
+    background-position: center; /* Centraliza a imagem */
+  }
+
+  .detail-value {
+    font-size: var(--font-size-title-mobile);
+  }
+
+  .detail-label {
+    font-size: var(--font-size-subtitile-mobile);
+  }
 }
 
 
