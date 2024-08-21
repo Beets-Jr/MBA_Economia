@@ -211,6 +211,247 @@ Version: 1.0
   }
 }
 
+/* Início Outros cursos */
+.outros_cursos_wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	background: linear-gradient(90deg, rgba(19,19,19,0.8) 0%, rgba(19,19,19,0.5) 100%),
+				url("../IMG/pessoa-estudando.jpg");
+				
+	/* Posicionando a imagem no lugar desejado */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	/* Organizando os elementos na box */
+	padding: 2% 0px 2% 5%;
+	justify-content: space-between;
+	
+	/* Estilização da fonte */
+	text-align: justify;
+	font-size: var(--font-size-text-desktop);
+}
+
+.outros_cursos .alem_mba h2 {
+	/* Para o título não ficar muito separado quando responsivo */
+	text-align: start;
+}
+
+.outros_cursos .alem_mba {
+	width: 46vw;
+	
+	/* Posicionamento do conteúdo nessa parte */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* Separar o título da descrição */
+	gap: 10px;
+	
+	/* Cor da fonte */
+	color: var(--background);
+}
+
+.outros_cursos .alem_mba .alem_mba_title h2,
+.outros_cursos .conteudo_curso h2 {
+	/* Estilização do título */
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-title-desktop);
+}
+
+.outros_cursos .alem_mba .alem_mba_subtitle {
+	font-size: var(--font-size-subtitle-desktop);
+	font-weight: 500;
+	font-family: var(--secondary-font-family);
+	width: fit-content;
+	border-top: 2px solid var(--background);
+}
+
+.outros_cursos .alem_mba p {
+	width: 80%;
+}
+
+.outros_cursos .card_curso {
+	background: var(--background);
+	height: fit-content;
+	width: 60vw;
+	padding: 3% 0 3% 0;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.outros_cursos .conteudo_curso {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.outros_cursos .conteudo_curso p {
+	padding: 20px 0px 20px 0px;
+}
+
+.outros_cursos_button {
+	align-items: center;
+	background-color: transparent;
+	color: var(--black);
+	cursor: pointer;
+	display: flex;
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	font-weight: 500;
+	line-height: 1.5;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+}
+
+.outros_cursos_button:before {
+	background-color: var(--background);
+	content: "";
+	display: inline-block;
+	height: 1px;
+	transition: all .42s cubic-bezier(.25,.8,.25,1);
+	width: 0;
+}
+
+.outros_cursos_button:hover:before {
+	background-color: var(--black);
+	width: 3rem;
+	margin-right: 10px;
+}
+
+/* Responsividade para Tablet */
+@media screen and (max-width: 1000px) {
+	.outros_cursos_wrapper {
+		/* Organizando os elementos na box */
+		padding: 2% 0px 2% 5%;		
+		font-size: var(--font-size-text-mobile);
+	}
+
+	.outros_cursos .alem_mba {
+		width: 46vw;
+
+		/* Separar o título da descrição */
+		gap: 10px;
+	}
+
+	.outros_cursos .alem_mba .alem_mba_subtitle {
+		font-size: var(--font-size-subtitle-mobile);
+		border-top: 2px solid var(--background);
+	}
+
+	.outros_cursos .alem_mba p {
+		width: 80%;
+	}
+
+	.outros_cursos .card_curso {
+		width: 60vw;
+		padding: 3% 0 3% 0;
+		border-radius: 15px 0px 0px 15px;
+	}
+
+	.outros_cursos .conteudo_curso {
+		width: 80%;
+	}
+
+	.outros_cursos .conteudo_curso p {
+		padding: 20px 0px 20px 0px;
+	}
+
+	.outros_cursos_button {
+		align-items: center;
+		background-color: transparent;
+		color: var(--black);
+		cursor: pointer;
+		display: flex;
+		font-family: var(--secondary-font-family);
+		font-size: var(--font-size-text-mobile);
+		font-weight: 500;
+		line-height: 1.5;
+		text-decoration: none;
+		outline: 0;
+		border: 0;
+	}
+
+	.outros_cursos_button:before {
+		background-color: var(--background);
+		content: "";
+		display: inline-block;
+		height: 1px;
+		transition: all .42s cubic-bezier(.25,.8,.25,1);
+		width: 0;
+	}
+
+	.outros_cursos_button:hover:before {
+		background-color: var(--black);
+		width: 3rem;
+		margin-right: 10px;
+	}
+}
+
+/* Responsividade para Mobile */
+@media screen and (max-width: 750px) {
+	.outros_cursos_wrapper {
+		flex-direction: column;
+		align-items: center;
+		
+		background: linear-gradient(180deg, rgba(19,19,19,0.8) 0%, rgba(19,19,19,0.5) 100%),
+					url("../IMG/pessoa-estudando.jpg");
+					
+		/* Posicionando a imagem no lugar desejado */
+		background-position: 10% 90%;
+		
+		/* Organizando os elementos na box */
+		padding: 10% 0px 10% 0%;
+		justify-content: space-between;
+		
+		/* Estilização da fonte */
+		font-size: var(--font-size-text-mobile);
+	}
+
+	.outros_cursos .alem_mba {
+		width: 90vw;
+
+		/* Separar o título da descrição */
+		gap: 30px;
+	}
+
+	.outros_cursos .alem_mba .alem_mba_title h2,
+	.outros_cursos .conteudo_curso h2 {
+		/* Estilização do título */
+		font-size: var(--font-size-title-mobile);
+	}
+
+	.outros_cursos .alem_mba .alem_mba_subtitle {
+		font-size: var(--font-size-subtitle-mobile);
+		border-top: 1px solid var(--background);
+	}
+
+	.outros_cursos .alem_mba p {
+		width: 100%;
+		
+	}
+
+	.outros_cursos .card_curso {
+		margin-top: 4%;
+		width: 90vw;
+		padding: 4% 0 4% 0;
+		border-radius: 10px;
+	}
+
+	.outros_cursos .conteudo_curso {
+		width: 90%;
+	}
+
+	.outros_cursos .conteudo_curso p {
+		padding: 20px 0px 20px 0px;
+	}
+	
+	.outros_cursos_button {
+		text-decoration: underline;
+	}
+}
+/* Fim Outros cursos */
+
+
 /*FAQ*/
 .hm-faq {
   display: flex;
