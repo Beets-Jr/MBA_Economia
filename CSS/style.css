@@ -1683,4 +1683,221 @@ body.ntc {
   }
 
 }
+
+/* Início admissão */
+.admissao {
+	width: 100%;
+	padding: 3% 0 3% 0;
+}
+
+/* Estilização do texto inicial */
+.admissao .admissao_descricao h2::before {
+	/* Linha em cima do título */
+	content: '';
+	display: block;
+	width: 5rem;
+	height: 0.3rem;
+	background-color: var(--orange-logo);
+	margin: 0 auto;
+	position: absolute;
+}
+
+.admissao .admissao_descricao h2 {
+	/* Estilização da fonte */
+	line-height: 40px;
+	color: var(--orange-logo);
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-title-desktop);
+}
+
+.admissao .admissao_descricao {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 3%;
+}
+
+.admissao .admissao_descricao p {
+	width: 50%;
+}
+
+/* Estilização da linha do tempo */
+.admissao ol li {
+	/* Linha vertical da timeline */
+	position: relative;
+	list-style-type: none;
+	width: 3px;
+	background-color: var(--black);
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.admissao ol li:nth-child(1) {
+	/* Para a linha no início ser maior */
+	padding-top: 80px;
+}
+
+.admissao ol li::after {
+	/* Os "pontos" de cada etapa */
+	background: var(--black);
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	position:absolute;
+	left:50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	border: solid 4px var(--background);
+}
+
+.admissao ol li div{
+	/* Estilização dos cards */
+	position: relative;
+	width: 400px;
+	padding: 15px;
+	border-radius: 5px;
+	bottom: 0;
+	background: #eeeeee50;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* Estilização das fontes */
+.admissao ol li h3 {
+	font-size: var(--font-size-subtitle-desktop);
+	margin-bottom: 10px;
+}
+
+.admissao ol li p {
+	font-size: 0.9rem;
+	text-align: justify;
+}
+  
+.admissao ol li:nth-child(odd) div {
+  left: 30px;
+}
+
+.admissao ol li:nth-child(even) div {
+  left: -430px;
+}
+
+/* Animações */
+.admissao ol li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+
+.admissao ol li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.admissao ol li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.admissao ol li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+  
+/* Desktop 1 */
+@media screen and (max-width: 940px) {
+	.admissao ol li div{
+		width: 340px;
+	}
+	
+	.admissao ol li:nth-child(odd) div {
+	  left: 30px;
+	}
+
+	.admissao ol li:nth-child(even) div {
+	  left: -370px;
+	}
+
+	.admissao .admissao_descricao h2::before {
+		height: 0.2rem;
+	}
+
+	.admissao .admissao_descricao p {
+		width: 75%;
+	}
+}  
+
+/* Mobile 1 | Tablet */
+@media screen and (max-width: 850px) {
+	.admissao ol li div{
+		width: 300px;
+	}
+	
+	.admissao ol li:nth-child(odd) div {
+	  left: 30px;
+	}
+
+	.admissao ol li:nth-child(even) div {
+	  left: -330px;
+	}
+	
+	/* Redução no tamanho da fonte */
+	.admissao ol li h3 {
+		font-size: var(--font-size-subtitle-mobile);
+	}
+	
+	.admissao .admissao_descricao h2 {
+		font-size: var(--font-size-title-mobile);
+	}
+
+	.admissao ol li p,
+	.admissao .admissao_descricao p {
+		font-size: var(--font-size-text-mobile);
+		text-align: left;
+	}
+
+	.admissao .admissao_descricao p {
+		width: 90%;
+	}
+} 
+  
+  
+/* Mobile 2 */
+@media screen and (max-width: 730px) {	
+	.admissao ol {
+		width: 10%;
+	}
+
+	.admissao ol li:nth-child(even) div {
+		/* Para os cards ficarem do mesmo lado */
+		left: 30px;
+	}
+			
+	.admissao ol li {
+		/* Linha vertical da timeline */
+		width: 3px;
+	}
+
+	.admissao ol li::after {
+		/* Os "pontos" de cada etapa */
+		width: 15px;
+		height: 15px;
+	}
+	
+	.admissao ol li div{
+		width: 80vw;
+	}
+	
+	.admissao .admissao_descricao {
+		text-align: start;
+	}
+	
+	.admissao .admissao_descricao {
+		align-items: start;
+		padding-left: 10%;
+		
+	}
+}
+  
+/* Fim admissão */
 /*End Sobre*/
