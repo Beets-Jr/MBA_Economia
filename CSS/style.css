@@ -38,7 +38,7 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #FFFFFF;
+  --background: #FAFAFA;
   --subcolor: #FAFAFA;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
@@ -56,6 +56,283 @@ Version: 1.0
   --font-size-subtitle-desktop: 24px;
   --font-size-text-desktop: 18px;
 }
+
+/*Header*/
+header {
+	width: 100%;
+	/* Altura do header */
+	height: 80px;
+	display: block;
+	background-color: rgba(0, 0, 0, 0);
+	
+	/* Header transparente no início */
+	/* Header não se sobrepondo a imagem inicial da página */
+	/* position: sticky; */
+	/*Se quiser o header sobrepondo a imagem inicial da página*/
+	position: fixed;
+	
+	top: 0;
+	transition: background-color 0.4s ease-in-out;
+}
+
+header.scrolled {
+	/* Como o header ficará depois de scrollado */
+	background-color: var(--background);
+	opacity: 0.98;
+}
+
+header.scrolled nav a{
+	/* Cor que o nav terá quando scrollado */
+	color: var(--black);
+}
+
+header .inner_header {
+	/* Largura do conteúdo do header */
+	width: 80%;
+	height: 100%;
+	display: block;	
+	/* Centralizar horizontalmente na página */
+	margin: 0 auto;
+}
+
+header .header_logo {
+	height: 100%;
+	display: table;
+	float: left;
+}
+
+header .header_logo a img {
+	width: 90%;
+}
+
+header .header_logo a {
+	height: 100%;
+		
+	/* Centralizar verticalmente o logo */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+header nav, header nav .links_menu {
+	height: 100%;
+	display: table;
+	float: right;	
+}
+
+.burger, header nav a {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	padding: 0px 20px;
+	
+	/* Estilo da fonte */
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	color: var(--black);
+	font-weight: 500;
+	
+	/* Personalização do hover */
+	position: relative;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+/* Hover, active do nav */
+header nav a:not(:last-child)::before, header nav a:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--orange);
+    /* Para subir a linha e não ficar tão distante dos menus */
+    bottom: 15px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+header nav a:hover:not(:last-child)::before, header nav a:active:not(:last-child)::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Estilização do botão CTA */
+header nav a:last-child{
+	/* Para o último elemento encostar no inner_header */
+	padding-right: 0;
+}
+
+.header_button_cta {
+	align-items: center;
+	background-clip: padding-box;
+	background-color: var(--orange);
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	display: inline-flex;
+	
+	/* Estilização do texto */	
+	color: #FFFFFF;
+	cursor: pointer;
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	font-weight: 600;
+	
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.header_button_cta:hover, .header_cta:focus {
+	background-color: #fb8332;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.header_button_cta:hover {
+	transform: translateY(-1px);
+}
+
+.header_button_cta:active {
+	background-color: #c85000;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+}
+
+/* Menu mobile */
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: var(--black);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+/* Responsividade do header para tablet */
+@media screen and (max-width: 950px) {
+	/*Header*/
+	header {
+		/* Reduzir a altura do header */
+		height: 70px;		
+	}
+
+	header .inner_header {
+		/* Largura do conteúdo do header */
+		width: 90%;
+	}
+	
+	header .header_logo a img {
+		/* Reduzir o tamanho da imagem */
+		width: 80%;
+	}
+
+	header nav a {
+		padding: 0px 10px;		
+		/* Reduzir o tamanho da fonte */
+		font-size: var(--font-size-text-mobile);
+	}
+
+	.header_button_cta {
+		/* Reduzir o tamanho da fonte */
+		font-size: var(--font-size-text-mobile);
+	}		
+}
+
+/* Responsividade do header para mobile */
+@media screen and (max-width: 700px) {
+	body {
+		overflow-x: hidden;
+	}
+	
+	header nav .burger {
+		/* Mostrando o burger: menu mobile */
+		display: table-cell;
+	}
+
+	header {
+		height: 90px;
+	}
+	
+	header nav .links_menu {
+		position: absolute;
+		right: 0px;
+		/* Top: Mesma altura do header, para aparecer embaixo */ 
+		top: 90px;
+		background-color: var(--white);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in; 
+		
+		
+		/* Dimensões da caixa que abre no mobile */
+		height: fit-content;
+		padding: 30px;
+	}
+	
+	header nav .links_menu a {
+		height: 50px;
+		/* Para animação, em que os links aparecem gradualmente */
+		opacity: 0; 
+		animation: navLinkFade 0.5s ease forwards;
+	}
+	
+	/* Tirar o hover no mobile */
+	header nav a:not(:last-child)::before, header nav a:not(:last-child)::before {
+		display: none;
+	}
+}
+
+/* Para o menu mobile aparecer */
+header nav .links_menu.nav_active {
+	transform: translateX(0%);
+}
+
+/* Animação dos links do menu mobile */
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+/* Animação menu burger para X quando aberto */
+.burger.toggle .line_1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line_2 {
+	opacity: 0;
+}
+
+.burger.toggle .line_3 {
+	transform: rotate(+45deg) translate(-5px, -6px);	
+}
+
+
+/*End Header*/
+
 /*
   Nomenclatura
   - Contato: ctt
