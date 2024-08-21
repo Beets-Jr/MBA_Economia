@@ -1,0 +1,327 @@
+/*
+Theme Name: MBA Economia UFSCar
+Theme URI: 
+Author: Beets Jr
+Author URI: https://www.beetsjr.com.br/
+Description: Tema criado para MBA Economia UFSCar
+Version: 1.0
+*/
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ol,
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  body{
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--white);
+  }
+
+/*Variavel*/
+:root {
+  /*=========== FONTE ============*/
+  --font-family: 'Inter', sans-serif;
+
+  /*=========== CORES ============*/
+  --background: #090625;
+  --subcolor: #0E0A3A;
+  --blue-mid-night: #191970;
+  --blue-logo: #0568AF;
+  --blue-post: #070333;
+  --orange: #E76F28;
+  --orange-logo: #E07629;
+  --white: #CCCCCC;
+
+  /*=========== TAMANHO DE FONTE ============*/
+  --font-size-title-mobile: 28px;
+  --font-size-subtitle-mobile: 21px;
+  --font-size-text-mobile: 16px;
+  --font-size-title-desktop: 32px;
+  --font-size-subtitle-desktop: 24px;
+  --font-size-text-desktop: 18px;
+}
+
+/*Footer*/
+
+
+.comentariodosalunos{
+ 
+  
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  column-gap: 3em;
+}
+.comentariodosalunos h2{
+  color: #E76F28;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+}
+.slidecontainer{
+  margin: 30px 0;
+  
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3em;
+}
+.botaocomentario{
+
+  background-color: #E76F28;
+  width: 317px;
+  height: 85px;
+
+  border-radius: 100px;
+  color: #FFFFFF;
+	cursor: pointer;
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	font-weight: 600;
+	
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.botaocomentario:hover, .header_cta:focus {
+	background-color: #fb8332;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.botaocomentario:hover {
+	transform: translateY(-1px);
+}
+
+.botaocomentario:active {
+	background-color: #c85000;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+}
+
+.card{
+  width: 430px;
+  height: 465px;
+  border-radius: 20px;
+  background-color: white;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.cardtitulo {
+align-items: end;
+}
+.card-text {
+  margin-top: 7%;
+}
+.cardtitulo h3{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color: black;
+  max-width: 435px;
+  margin: 20px 80px;
+}
+
+.card-text p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color: black;
+  max-width: 435px;
+  margin: 20px 80px;
+  
+}
+
+footer{
+  width: 100%;
+	display: block;
+	background-color: #090625;
+	margin-top: 7425px;
+}
+
+ul{
+	list-style: none;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-coluna{
+  
+	width: 33%;
+	padding: 0 15px;
+  justify-content: center;
+  text-align: center;
+}
+.footer-coluna h4{
+  
+	font-size: 24px;
+  color: #CCCCCC;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+.footer-coluna ul li{
+	margin-bottom: 10px;
+}
+.footer-coluna ul li a{
+	font-size: 18px;
+  text-transform: capitalize;
+  color: #CCCCCC;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-coluna ul li a:hover{
+  color: #CCCCCC;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+.FooterBottom{
+  margin-top: 40px;
+  height: 50px;
+  text-align: center;
+  background-color: black;
+}
+
+.container{
+	max-width: 1280px;
+	background-color: #090625;
+  margin: auto;
+}
+
+@media(max-width: 767px){
+  .footer-coluna {
+    width: 50%;
+    margin-bottom: 30px;
+    
+  }
+}
+@media(max-width: 574px){
+  .footer-coluna {
+    width: 100%;
+    
+  }
+}
+
+
+
+/*End Footer*/
+
+
+/*
+  Nomenclatura
+  - Contato: ctt
+  - Curso: crs
+  - Home: hm
+  - Inscreva-se: ins
+  - Noticia: ntc
+  - Noticias: nts
+  - Sobre: sbr
+
+  Exemplo: id = ctt-title;
+*/
+
+/*Contato*/
+
+/*End Contato*/
+
+
+/*Curso*/
+
+/*End Curso*/
+
+
+/*Home*/
+
+/*End Home*/
+
+
+/*Inscreva-se*/
+
+/*End Inscreva-se*/
+
+
+/*Noticia*/
+
+/*End Noticia*/
+
+
+/*Noticias*/
+
+/*End Noticias*/
+
+
+/*Sobre*/
+
+.secao-historia{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.historia{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.UFSCar-Sorocaba{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.PEADE{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.UFSCar-Sorocaba h1{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 25%;
+}
+.secao{
+  column-gap: 25%;
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.secaoimagem{
+  width: 570px;
+}
+.secaotext{
+  max-width: 570px;
+}
+
+/*End Sobre*/
