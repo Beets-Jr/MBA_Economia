@@ -9,7 +9,7 @@ Version: 1.0
 
 /*Reset*/
 * {
-    margin: 50;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
@@ -35,7 +35,7 @@ Version: 1.0
   --font-family: 'Inter', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
+  --background: whites;
   --subcolor: #0E0A3A;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
@@ -55,14 +55,117 @@ Version: 1.0
 
 /*Footer*/
 
-.footer{
-	background-color: #090625;
-	padding: 70px 0;
+
+.comentariodosalunos{
+ 
+  background-color: #d4d4d4;
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  column-gap: 3em;
 }
-.container{
-	max-width: 1280;
-	background-color: #090625;
+.comentariodosalunos h2{
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  margin: 10px 40px;
 }
+.card-wrapper{
+  margin: 30px 0;
+  
+  width: 100%;
+  
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3em;
+}
+.botaocomentario{
+
+  background-color: #E07629;
+  width: 317px;
+  height: 85px;
+
+  border-radius: 100px;
+  color: #FFFFFF;
+	cursor: pointer;
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	font-weight: 600;
+	
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.botaocomentario:hover, .header_cta:focus {
+	background-color: #E07629;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.botaocomentario:hover {
+	transform: translateY(-1px);
+}
+
+.botaocomentario:active {
+	background-color: #E07629;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+}
+
+.card{
+  width: 360px;
+  height: 465px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 10px 20px 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardtitulo {
+align-items: end;
+}
+.card-text {
+  margin-top: 5%;
+  border-bottom: 1px solid #343439S;
+}
+.cardtitulo h3{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color: black;
+  max-width: 435px;
+  margin: 7px 40px;
+}
+
+.card-text p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color: black;
+  max-width: 435px;
+  margin: 20px 80px;
+  
+}
+
+footer{
+  width: 100%;
+	display: block;
+	background-color: #343439;
+}
+
 ul{
 	list-style: none;
 }
@@ -71,14 +174,82 @@ ul{
 	flex-wrap: wrap;
 }
 .footer-coluna{
+  margin-top: 50px;
 	width: 33%;
 	padding: 0 15px;
+  justify-content: center;
+  text-align: center;
 }
 .footer-coluna h4{
+  
 	font-size: 24px;
+  color: #CCCCCC;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+.footer-coluna ul li{
+	margin-bottom: 10px;
+}
+.footer-coluna ul li a{
+	font-size: 18px;
+  text-transform: capitalize;
+  color: #CCCCCC;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-coluna ul li a:hover{
+  color: #CCCCCC;
+  padding-left: 10px;
+  padding-bottom: 3px;
 }
 
+.medias{
+  margin: 15px 0;
+  
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3em;
+}
 
+.FooterBottom{
+  margin-top: 40px;
+  height: 50px;
+  text-align: center;
+  background-color: black;
+}
+
+.container{
+	max-width: 1280px;
+	background-color: #343439;
+  margin: auto;
+}
+
+@media(max-width: 767px){
+  .footer-coluna {
+    width: 50%;
+    margin-bottom: 30px;
+    
+  }
+}
+@media(max-width: 574px){
+  .footer-coluna {
+    width: 100%;
+    
+  }
+}
+@media(max-width: 1200px){
+  .card-wrapper {
+   flex-direction: column;
+   row-gap: 40px;
+    
+  }
+}
 
 
 
@@ -129,5 +300,63 @@ ul{
 
 
 /*Sobre*/
+
+.secao-historia{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.historia{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.UFSCar-Sorocaba{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.PEADE{
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.UFSCar-Sorocaba h1{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 25%;
+  color: #0568AF;
+}
+.historia h1{
+  color: #0568AF;
+}
+.PEADE h1{
+  color: #0568AF;
+}
+.secao{
+  column-gap: 25%;
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.secaoimagem{
+  width: 570px;
+}
+.secaotext{
+  max-width: 570px;
+  color: black;
+}
+@media(max-width: 1200px){
+  .secao {
+   flex-direction: column;
+   row-gap: 40px;
+  }
+  
+}
 
 /*End Sobre*/
