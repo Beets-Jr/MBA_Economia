@@ -95,7 +95,6 @@ Version: 1.0
 .hero-texts {
   font-size: var(--font-size-text-desktop);
   margin-bottom: 2.5em;
-  margin-right: 4em;
 }
 
 .hero-text1 {
@@ -128,6 +127,8 @@ iframe {
 }
 
 .details-title {
+  width: 80%; /* Aumente conforme necessário */
+  margin-left: 10%;
   font-size: var(--font-size-title-desktop);
   margin-bottom: 30px;
   color: var(--orange-logo);
@@ -146,14 +147,19 @@ iframe {
 .detail-items {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  padding: 9em;
+  justify-content: space-around; /* Distribui os itens de forma uniforme */
+  align-items: center; /* Centraliza os itens verticalmente */
+  padding: 5em 0; /* Reduz o padding para ajustar a altura */
   text-align: center;
   color: var(--white);
 }
 
 .detail-item {
   text-align: center;
+}
+
+.detail-icon {
+  max-width: 4em;
 }
 
 .detail-value {
@@ -172,44 +178,49 @@ iframe {
 /* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
   .hero {
+    width: 100%;
     display: flex;
-    flex-direction: column; /* Garante que o layout seja em coluna */
-    align-items: center; /* Centraliza os elementos */
-  }
-
-  .hero-text1 {
-    order: 1 !important; /* Garante que o texto 1 fique no topo */
-  }
-
-  .hero-video {
-    order: 2 !important; /* Garante que o vídeo fique abaixo do texto 1 */
-  }
-
-  .hero-title {
-    order: 3 !important; /* Garante que o título fique abaixo do vídeo */
-  }
-
-  .hero-text2 {
-    order: 4 !important; /* Garante que o texto 2 fique por último */
-  }
-
-  .hero-title {
-    font-size: var(--font-size-title-mobile); /* Diminui o tamanho da fonte */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    text-align: center;
+    padding: 3em;
+    background-color: var(--background);
+    color: var(--black);
+    margin-bottom: 1em;
   }
 
   .hero-texts {
     font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto */
+    width: 100%;
+    padding-bottom: 1em;
+  }
+
+  .hero-content {
+    max-width: 80%;
   }
 
   .btn {
     width: 100%; /* Faz o botão ocupar a largura total */
-    padding: 1em 0; /* Ajusta o padding para o botão */
+    padding: 1em 3em; /* Ajusta o padding para o botão */
     font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto no botão */
     order: 5; /* Coloca o texto 1 no topo */
   }
 
-  .details-title {
-    font-size: var(--font-size-title-mobile);
+  .hero-video {
+    width: 80%; /* Aumente conforme necessário */
+    margin-top: 3em;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-title-desktop);
+    margin-bottom: 0.5em; /* Diminua a margem inferior */
+  }
+  
+  .hero-texts {
+    font-size: var(--font-size-text-desktop);
+    margin-bottom: 1.5em; /* Diminua a margem inferior */
+    margin-right: 4em;
   }
 
   .detail-items {
