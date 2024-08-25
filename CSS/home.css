@@ -192,5 +192,74 @@
 	background-color: rgba(5, 104, 175, 0.5);
 }        
   
+/* Responsividade para Tablet */
+@media screen and (max-width: 900px) {
+	.ultimas_noticias {
+		padding: 10% 0 10% 0;
+	}
+	
+	.ultimas_noticias h2 {
+		font-size: var(--font-size-subtitle-mobile);
+	}
+	
+	.ultimas_noticias .ultimas_noticias_descricao {
+		width: 70%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		font-size: var(--font-size-text-mobile);
+	}
+
+	.ultimas_noticias .ultimas_noticias_cards {
+		margin: 0px;
+	}
+
+	.ultimas_noticias .ultimas_noticias_wrapper .ultimas_noticias_cards .card {
+		margin: 20px;
+	}
+
+	.ultimas_noticias .card .conteudo {
+		/* Para o botão "Leia mais" ficar alinhado */
+		min-height: fit-content;
+		margin-bottom: 10px;
+		font-size: var(--font-size-text-mobile);
+	}
+
+	/* Estilização do botão */
+	.ultimas_noticias_btn {
+		font-size: var(--font-size-text-mobile);
+		margin-top: 50px;
+	}	
+}
+
+@media screen and (max-width: 500px) {
+	.ultimas_noticias .ultimas_noticias_descricao {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.ultimas_noticias .ultimas_noticias_wrapper .ultimas_noticias_cards .card {
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	.ultimas_noticias .ultimas_noticias_wrapper .ultimas_noticias_cards .card .card_img,
+	.ultimas_noticias .ultimas_noticias_wrapper .ultimas_noticias_cards .card .card_img img {
+		border-radius: 0px;
+	}
+	
+	.ultimas_noticias .ultimas_noticias_wrapper .ultimas_noticias_cards .card .conteudo {
+		margin: 20px;
+	}
+	
+	.ultimas_noticias .ultimas_noticias_wrapper .ultimas_noticias_cards .card .card_btn {
+		margin-bottom: 20px;
+		margin-left: 20px;
+	}
+	.ultimas_noticias_btn {
+		margin-top: 30px;
+	}
+}
+
 /* Fim últimas notícias */
 
