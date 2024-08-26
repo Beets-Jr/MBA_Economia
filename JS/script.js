@@ -1,4 +1,3 @@
-// Função de dropdown para os cards do FAQ
 document.addEventListener('DOMContentLoaded', function () {
   const crsCards = document.querySelectorAll('.hm-crs-card');
 
@@ -6,21 +5,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const question = card.querySelector('.hm-crs-card-question');
     const answer = card.querySelector('.hm-crs-card-answer');
 
+    // Manipulação dos cards principais
     question.addEventListener('click', function () {
-      // Verifica se o card já está ativo
       const isActive = question.classList.contains('active');
-
-      // Remove a classe 'active' de todos os cards e esconde todas as respostas
       crsCards.forEach(el => {
         el.querySelector('.hm-crs-card-question').classList.remove('active');
         el.querySelector('.hm-crs-card-answer').classList.remove('visible');
       });
-
-      // Se o card não estava ativo, ativa o card e exibe a resposta
       if (!isActive) {
         question.classList.add('active');
         answer.classList.add('visible');
       }
+    });
+
+    // Manipulação dos subcards
+    const subQuestions = card.querySelectorAll('.hm-crs-subcard-question');
+    subQuestions.forEach(subQuestion => {
+      subQuestion.addEventListener('click', function () {
+        const subAnswer = subQuestion.nextElementSibling;
+        const isSubActive = subQuestion.classList.contains('active');
+        subQuestions.forEach(sq => {
+          sq.classList.remove('active');
+          sq.nextElementSibling.classList.remove('visible');
+        });
+        if (!isSubActive) {
+          subQuestion.classList.add('active');
+          subAnswer.classList.add('visible');
+        }
+      });
     });
   });
 });

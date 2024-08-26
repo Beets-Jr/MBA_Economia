@@ -161,6 +161,62 @@ Version: 1.0
   display: flex;
 }
 
+.hm-crs-card-answer {
+  padding: 0;
+}
+
+.hm-crs-card-answer ul {
+  list-style-type: disc; /* Adiciona o marcador de lista */
+  padding-left: 20px; /* Adiciona um espaçamento à esquerda para alinhar os marcadores */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+.hm-crs-card-answer li {
+  font-size: var(--font-size-text-mobile); /* Ajusta o tamanho da fonte para a mesma dos textos */
+  color: var(--blue-logo); /* Usa a cor padrão do texto */
+  margin-bottom: 8px; /* Espaçamento inferior entre os itens da lista */
+}
+
+.hm-crs-subcard {
+  width: 100%;
+  margin-top: 0.2em;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hm-crs-subcard-question {
+  background-color: var(--subcolor);
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  border-radius: 6px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.hm-crs-subcard-answer {
+  display: none;
+  background-color: var(--subcolor);
+  padding: 16px;
+  border-radius: 6px;
+  font-size: var(--font-size-text-mobile);
+  font-weight: normal;
+}
+
+.hm-crs-subcard-question.active + .hm-crs-subcard-answer {
+  display: block;
+}
+
+.hm-crs-arrow-orange {
+  transition: transform 0.3s ease;
+}
+
+.hm-crs-subcard-question.active .hm-crs-arrow-orange {
+  transform: rotate(-180deg);
+}
+
 /* Media Query para Mobile */
 @media (max-width: 767px) {
 
@@ -174,6 +230,16 @@ Version: 1.0
 
   .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
     display: none;
+  }
+
+  .hm-crs-card-answer ul {
+    padding-left: 15px; /* Diminui o espaçamento à esquerda para se ajustar melhor em telas pequenas */
+    margin-top: 8px; /* Diminui o espaçamento superior */
+  }
+
+  .hm-crs-card-answer li {
+    font-size: var(--font-size-text-mobile); /* Tamanho de fonte adequado para dispositivos móveis */
+    margin-bottom: 6px; /* Diminui o espaçamento inferior entre os itens da lista */
   }
 }
 
@@ -225,6 +291,25 @@ Version: 1.0
   .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
     display: none;
   }
+
+  .hm-crs-card-answer ul {
+    padding-left: 20px; /* Mantém o espaçamento padrão à esquerda */
+    margin-top: 10px; /* Espaçamento superior padrão */
+  }
+
+  .hm-crs-card-answer li {
+    font-size: var(--font-size-text-tablet); /* Ajusta o tamanho da fonte para tablets */
+    margin-bottom: 8px; /* Espaçamento inferior adequado entre os itens da lista */
+  }
+
+  .hm-crs-subcard-question {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+  .hm-crs-subcard-answer {
+      padding: 20px 40px;
+  }
 }
 
 /* Media Query para Desktops */
@@ -275,6 +360,25 @@ Version: 1.0
 
   .hm-crs-card.active .hm-crs-arrow-orange-desktop {
     transform: rotate(0deg);
+  }
+
+  .hm-crs-card-answer ul {
+    padding-left: 25px; /* Aumenta o espaçamento à esquerda para telas maiores */
+    margin-top: 12px; /* Aumenta o espaçamento superior */
+  }
+
+  .hm-crs-card-answer li {
+    font-size: var(--font-size-text-desktop); /* Tamanho de fonte para desktops */
+    margin-bottom: 10px; /* Aumenta o espaçamento inferior entre os itens da lista */
+  }
+
+  .hm-crs-subcard-question {
+    font-size: 20px;
+    padding: 25px 72px;
+  }
+
+  .hm-crs-subcard-answer {
+    padding: 25px 72px;
   }
 }
 
