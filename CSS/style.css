@@ -164,6 +164,7 @@ footer{
   width: 100%;
 	display: block;
 	background-color: #343439;
+  align-items: center;
 }
 
 ul{
@@ -203,6 +204,11 @@ ul{
   color: #CCCCCC;
   padding-left: 10px;
   padding-bottom: 3px;
+}
+
+.logo img{
+  width: 250px;
+  height: auto;
 }
 
 .medias{
@@ -323,8 +329,6 @@ ul{
   flex-direction: column;
 }
 
-
-
 .UFSCar-Sorocaba h1{
   display: flex;
   flex-direction: row-reverse;
@@ -338,14 +342,19 @@ ul{
   color: #0568AF;
 }
 .secao{
+  height: 320px;
   column-gap: 25%;
   margin: 40px 40px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.secaoimagem{
-  width: 570px;
+.secaoimagem img{
+  width: 568px;
+  height: 320px;
+  border-radius: 10px;
 }
 .secaotext{
   max-width: 570px;
@@ -355,8 +364,65 @@ ul{
   .secao {
    flex-direction: column;
    row-gap: 40px;
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
   }
-  
+  .secaoimagem img{
+    width: 100%;
+    height: auto;
+  }
 }
+@media(max-width: 765px){
+  .secao-missao{
+    height: auto;
+    flex-direction: column;
+    row-gap: 10%;
+  }
+}
+
+.secao-missao{
+  margin: 30px 0;
+  height: 500px;
+  width: 100%;
+  background-color: #d4d4d4;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10%;
+}
+
+.card-missao{
+  width: 360px;
+  height: 360px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 10px 20px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.missao-text{
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: black;
+  max-width: 435px;
+  margin: 30px 40px;
+}
+.missao h2{
+  color: #E07629;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.visao h2{
+  color: #E07629;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 
 /*End Sobre*/
