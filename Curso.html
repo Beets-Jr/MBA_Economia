@@ -805,7 +805,53 @@
                 <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat mollitia corrupti ab cupiditate aperiam assumenda quod deserunt neque deleniti, at minus molestias, ratione eius suscipit tempore ipsam nihil aliquam!</span>
+                <div>
+                    <!-- Container para as abas -->
+                <div class="tab">
+                    <button class="tablinks active" onclick="openTab(event, '24x')">24x</button>
+                    <button class="tablinks" onclick="openTab(event, '18x')">18x</button>
+                    <button class="tablinks" onclick="openTab(event, '12x')">12x</button>
+                    <button class="tablinks" onclick="openTab(event, '6x')">6x</button>
+                    <button class="tablinks" onclick="openTab(event, 'Vista')">À vista</button>
+                </div>
+
+                <!-- Conteúdo das abas -->
+                <div id="24x" class="tabcontent" style="display: block;">
+                    <p><strong>Parcele em 24x</strong></p>
+                    <p>Matrícula: <strong>R$ 360,00</strong></p>
+                    <p>+ 24 parcelas de <strong>R$ 490,00*</strong></p>
+                </div>
+
+                <div id="18x" class="tabcontent" style="display: none;">
+                    <p><strong>Parcele em 18x e economize R$ 588,00 no valor do curso</strong></p>
+                    <p>Matrícula: <strong>R$ 360,00</strong></p>
+                    <p>+ 18 parcelas de <strong>R$ 620,67*</strong></p>
+                </div>
+
+                <div id="12x" class="tabcontent" style="display: none;">
+                    <p><strong>Parcele em 12x e economize R$ 1.176,00 no valor do curso</strong></p>
+                    <p>Matrícula: <strong>R$ 360,00</strong></p>
+                    <p>+ 12 parcelas de <strong>R$ 882,00*</strong></p>
+                </div>
+
+                <div id="6x" class="tabcontent" style="display: none;">
+                    <p><strong>Parcele em 6x e economize R$ 1.764,00 no valor do curso</strong></p>
+                    <p>Matrícula: <strong>R$ 360,00</strong></p>
+                    <p>+ 6 parcelas de <strong>R$ 1.666,00*</strong></p>
+                </div>
+
+                <div id="Vista" class="tabcontent" style="display: none;">
+                    <p>Pague à vista e economize R$ 2.352,00 no valor do curso</p>
+                    <div>
+                        <span>Matrícula:</span>
+                        <strong>R$ 360,00</strong>
+                    </div>
+                    <div>
+                        <span>1 parcela de</span>
+                        <strong>R$ 9.408,00*</strong>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="hm-crs-card">
