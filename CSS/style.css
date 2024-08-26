@@ -7,6 +7,9 @@ Description: Tema criado para MBA Economia UFSCar
 Version: 1.0
 */
 
+/*=========== Import de fonte ============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*Reset*/
 * {
     margin: 0;
@@ -26,23 +29,33 @@ Version: 1.0
   body{
     font-family: var(--font-family);
     background-color: var(--background);
-    color: var(--white);
+    color: var(--black);
+  }
+
+  header {
+    position: fixed; /* ou absolute, dependendo do seu layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Um valor alto para garantir que fique acima de outros elementos */
   }
 
 /*Variavel*/
 :root {
   /*=========== FONTE ============*/
   --font-family: 'Inter', sans-serif;
+  --secondary-font-family: 'Poppins', sans-serif;
 
   /*=========== CORES ============*/
-  --background: #090625;
-  --subcolor: #0E0A3A;
+  --background: #FAFAFA;
+  --subcolor: #FAFAFA;
   --blue-mid-night: #191970;
   --blue-logo: #0568AF;
   --blue-post: #070333;
   --orange: #E76F28;
   --orange-logo: #E07629;
   --white: #CCCCCC;
+  --black: #0b0b0b;
 
   /*=========== TAMANHO DE FONTE ============*/
   --font-size-title-mobile: 28px;
@@ -91,6 +104,99 @@ Version: 1.0
 
 
 /*Noticias*/
+.card-nts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+  background-color: var(--background);
+  color: var(--blue-post);
+  margin-bottom: 1em;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+}
+
+.card-nts-content {
+  position: relative;
+  max-width: 50%;
+  margin-left: 2.5em;
+}
+
+.card-nts-title {
+  font-size: var(--font-size-title-desktop);
+  margin-bottom: 1em;
+  color: var(--orange);
+}
+
+.card-nts-text {
+  font-size: var(--font-size-text-desktop);
+  margin-bottom: 2.5em;
+}
+
+.btn {
+  padding: 1em 5em;
+  background-color: var(--orange-logo);
+  color: var(--subcolor);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card-nts-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25em; /* Aumente conforme necessário */
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  border-radius: 1em; /* Ajuste o valor conforme necessário */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 975px) {
+  .card-nts {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    text-align: center;
+    padding: 2em; /* Ajusta o padding para dispositivos móveis */
+    background-color: var(--background);
+    color: var(--blue-post);
+    margin-bottom: 1em;
+  }
+
+  .card-nts-content {
+    max-width: 100%; /* Aumenta a largura máxima */
+    margin-left: 0; /* Remove a margem à esquerda */
+    margin-bottom: 2em; /* Adiciona margem inferior para separar os elementos */
+  }
+
+  .card-nts-title {
+    font-size: var(--font-size-title-mobile); /* Ajusta o tamanho da fonte */
+    margin-top: 0.5em; /* Diminui a margem inferior */
+    margin-bottom: 0.5em; /* Diminui a margem inferior */
+    color: var(--orange);
+  }
+
+  .card-nts-text {
+    font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto */
+    margin-bottom: 2em; /* Diminui a margem inferior */
+  }
+
+  .btn {
+    width: 100%; /* Faz o botão ocupar a largura total */
+    padding: 0.75em 5em; /* Ajusta o padding para o botão */
+    font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto no botão */
+    margin-top: 1em; /* Adiciona uma margem superior para separar do conteúdo */
+  }
+
+  .card-nts-imagem {
+    width: 70%; /* Aumenta conforme necessário */
+    margin-top: 2em; /* Adiciona uma margem superior para separar da imagem */
+  }
+}
 
 /*End Noticias*/
 
