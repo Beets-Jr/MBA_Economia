@@ -10,12 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Swiper JS
-/*let swiperCards = new Swiper('.sbr-card-content', {
+let swiperCards = new Swiper('.sbr-card-content', {
   loop: false,
   spaceBetween: 0,
   grabCursor: true,
   centeredSlides: true,
   effect: 'coverflow',
+  initialSlide: 2,
 
   coverflowEffect: {
     rotate: 0,
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   },
 
   slideActiveClass: 'swiper-slide-active',
-});*/
+});
 
 // Script para formatacao de data de nascimento
 document.getElementById('ins-birthday').addEventListener('input', function (e) {

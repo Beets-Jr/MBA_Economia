@@ -974,6 +974,19 @@ input:focus, textarea:focus, select:focus {
     border-radius: 10px;
   }
 
+  .sbr-icon-img {
+    width: 50px;
+    padding-right: 10px;
+  }
+
+  .sbr-card-icons {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    box-sizing: border-box;
+    width: 240px;
+  }
+
   .sbr-card-data {
     position: absolute;
     z-index: 2;
