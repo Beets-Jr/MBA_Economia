@@ -756,7 +756,6 @@ header nav .links_menu.nav_active {
   min-height: 48px;
   height: auto;
   display: none;
-  padding: 1em;
   border-radius: 6px;
   justify-content: space-between;
   align-items: center;
@@ -769,12 +768,8 @@ header nav .links_menu.nav_active {
   margin-top: 8px;
 }
 
-.hm-crs-card.active .hm-crs-card-answer {
-  display: flex;
-}
-
-.hm-crs-card-answer {
-  padding: 0;
+.hm-crs .hm-crs-card-answer-content {
+  padding: 2em;
 }
 
 .hm-crs-card-answer ul {
@@ -791,8 +786,7 @@ header nav .links_menu.nav_active {
 
 .hm-crs-subcard {
   width: 100%;
-  margin-top: 0.2em;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 0;
   border-radius: 6px;
 }
 
@@ -838,18 +832,29 @@ header nav .links_menu.nav_active {
   transform: rotate(-180deg);
 }
 
+.tabs {
+  padding: 2em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
 .tab {
   display: flex;
   justify-content: center;
-  margin-bottom: 1em;
+}
+
+.tablinks {
+  color: var(--blue-post);
 }
 
 .tab button {
   background-color: #f1f1f1;
   border: none;
+  border-top-left-radius: 0.2em,;  /* Define o raio da borda superior esquerda */
+  border-top-right-radius: 0.2em; /* Define o raio da borda superior direita */
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 0.9em 1em;
   transition: 0.3s;
   margin: 0 5px;
 }
@@ -859,15 +864,29 @@ header nav .links_menu.nav_active {
 }
 
 .tab button.active {
-  background-color: #ccc;
+  background-color: var(--orange-logo);
 }
 
 .tabcontent {
+  font-size: var(--font-size-text-mobile);
+  color: var(--blue-logo);
   display: none;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-top: none;
+  text-align: center;
+  padding: 6%;
+  border-radius: 1em;
+  border: 0.3em solid var(--orange-logo);
 }
+
+.tabcontent p,
+.tabcontent div {
+    margin-bottom: 0.75em; /* Aumenta a distância entre os elementos */
+}
+
+.tabcontent p:last-child,
+.tabcontent div:last-child {
+    margin-bottom: 0; /* Remove a margem do último elemento, se necessário */
+}
+
 
 /* Media Query para Mobile */
 @media (max-width: 767px) {
@@ -923,13 +942,7 @@ header nav .links_menu.nav_active {
     font-weight: bold;
     width: 600px;
     min-height: 48px;
-    padding: 20px 60px;
     border-radius: 10px;
-    margin-top: 0.2em;
-  }
-
-  .hm-crs .hm-crs-card .hm-crs-card-answer span {
-    margin-top: 1em;
   }
 
   .hm-crs .hm-crs-card .hm-crs-arrow-orange {
@@ -962,6 +975,22 @@ header nav .links_menu.nav_active {
   .hm-crs-subcard-answer {
       padding: 20px 40px;
   }
+
+  .tabs {
+    padding: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  .tablinks {
+    font-size: var(--font-size-text-desktop);
+    color: var(--blue-post);
+  }
+
+  .tabcontent {
+    font-size: var(--font-size-text-desktop);
+    color: var(--blue-logo);
+  }
 }
 
 /* Media Query para Desktops */
@@ -992,16 +1021,15 @@ header nav .links_menu.nav_active {
     font-weight: bold;
     width: 960px;
     min-height: 48px;
-    padding: 25px 72px;
     border-radius: 10px;
     margin-top: 0.2em;
   }
 
-  .hm-crs .hm-crs-card .hm-crs-card-answer span {
-    margin-top: 20px;
+  .hm-crs .hm-crs-card-answer-content {
+    padding: 3em;
   }
 
-  .hm-crs .hm-crs-card .hm-crs-arrow-orange {
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
     display: none;
   }
 
@@ -1031,6 +1059,22 @@ header nav .links_menu.nav_active {
 
   .hm-crs-subcard-answer {
     padding: 25px 72px;
+  }
+
+  .tabs {
+    padding: 3em;
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+
+  .tablinks {
+    font-size: var(--font-size-subtitle-desktop);
+    color: var(--blue-post);
+  }
+
+  .tabcontent {
+    font-size: var(--font-size-subtitle-desktop);
+    color: var(--blue-logo);
   }
 }
 /*End Curso*/
