@@ -76,7 +76,7 @@ Version: 1.0
 .card-wrapper{
   margin: 30px 0;
   
-  width: 100%;
+  width: 1200px;
   
   justify-content: center;
   display: flex;
@@ -308,23 +308,27 @@ ul{
 /*Sobre*/
 
 .secao-historia{
-  margin: 40px 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.historia-wrapper{
+  width: 1200px;
 }
 .historia{
-  margin: 40px 40px;
+
+ margin: 40px 0;
   display: flex;
   flex-direction: column;
 }
 .UFSCar-Sorocaba{
-  margin: 40px 40px;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
 }
 
 .PEADE{
-  margin: 40px 40px;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
 }
@@ -343,8 +347,9 @@ ul{
 }
 .secao{
   height: 320px;
+  width: 1200px;
   column-gap: 25%;
-  margin: 40px 40px;
+  margin: 40px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -360,7 +365,7 @@ ul{
   max-width: 570px;
   color: black;
 }
-@media(max-width: 1200px){
+@media(max-width: 1220px){
   .secao {
    flex-direction: column;
    row-gap: 40px;
@@ -368,17 +373,36 @@ ul{
    display: flex;
    align-items: center;
    justify-content: center;
+   width: 80%;
   }
-  .secaoimagem img{
-    width: 100%;
-    height: auto;
-  }
-}
-@media(max-width: 765px){
-  .secao-missao{
-    height: auto;
+  .historia-wrapper{
     flex-direction: column;
-    row-gap: 10%;
+    row-gap: 40px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+ 
+}
+
+
+
+@media(max-width: 800px){
+  .secao {
+    flex-direction: column;
+    row-gap: 40px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+   }
+  .secaoimagem img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
   }
 }
 
@@ -424,5 +448,17 @@ ul{
   margin-bottom: 10px;
 }
 
+@media(max-width: 815px){
+  .secao-missao {
+   flex-direction: column;
+   row-gap: 40px;
+   height: 900px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+  }
+  
+}
 
 /*End Sobre*/
