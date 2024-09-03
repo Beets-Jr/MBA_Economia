@@ -853,6 +853,7 @@ input:focus, textarea:focus, select:focus {
   flex-direction: column;
   justify-content: end;
   margin-right: 32px;
+  position: relative;
 }
 
 .sbr-slide-1 {
@@ -915,6 +916,16 @@ input:focus, textarea:focus, select:focus {
   .sbr-img-header h1 {
     font-size: var(--font-size-title-mobile);
     margin-bottom: 4px;
+  }
+
+  .sbr-card-icons{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  .sbr-card-icons img{
+    width: 50px;
   }
 }
 
