@@ -285,7 +285,7 @@ header nav a:last-child{
 		right: 0px;
 		/* Top: Mesma altura do header, para aparecer embaixo */ 
 		top: 90px;
-		background-color: var(--white);
+		background-color: var(--background);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -696,11 +696,15 @@ header nav .links_menu.nav_active {
   align-items: center;
 }
 
+.hm-crs-card-answer span, .hm-crs-card-answer ul li, .hm-crs-card-answer p,  .hm-crs-card-answer div strong{
+  color: var(--black);
+}
+
 .hm-crs .hm-crs-text {
   width: 60%;
   text-align: left; /* Alinha o texto à esquerda */
   font-size: var(--font-size-text-mobile);
-  color: var(--blue-logo);
+  color: var(--black);
   margin: 2em 0px;
 }
 
@@ -747,15 +751,16 @@ header nav .links_menu.nav_active {
   display: block;
 }
 
+
 .hm-crs .hm-crs-card-answer{
   font-size: var(--font-size-text-mobile);
   color: var(--blue-logo);
-  font-weight: bold;
   background-color: var(--subcolor);
   width: 340px;
   min-height: 48px;
   height: auto;
   display: none;
+  padding: 1em;
   border-radius: 6px;
   justify-content: space-between;
   align-items: center;
@@ -768,8 +773,13 @@ header nav .links_menu.nav_active {
   margin-top: 8px;
 }
 
-.hm-crs .hm-crs-card-answer-content {
-  padding: 2em;
+.hm-crs-card.active .hm-crs-card-answer {
+  display: flex;
+}
+
+.hm-crs-card-answer {
+  padding: 0;
+  font-weight: normal;
 }
 
 .hm-crs-card-answer ul {
@@ -786,7 +796,8 @@ header nav .links_menu.nav_active {
 
 .hm-crs-subcard {
   width: 100%;
-  margin: 0;
+  margin-top: 0.2em;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
 }
 
@@ -832,29 +843,18 @@ header nav .links_menu.nav_active {
   transform: rotate(-180deg);
 }
 
-.tabs {
-  padding: 2em;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-}
-
 .tab {
   display: flex;
   justify-content: center;
-}
-
-.tablinks {
-  color: var(--blue-post);
+  margin-bottom: 1em;
 }
 
 .tab button {
   background-color: #f1f1f1;
   border: none;
-  border-top-left-radius: 0.2em,;  /* Define o raio da borda superior esquerda */
-  border-top-right-radius: 0.2em; /* Define o raio da borda superior direita */
   outline: none;
   cursor: pointer;
-  padding: 0.9em 1em;
+  padding: 14px 16px;
   transition: 0.3s;
   margin: 0 5px;
 }
@@ -868,25 +868,11 @@ header nav .links_menu.nav_active {
 }
 
 .tabcontent {
-  font-size: var(--font-size-text-mobile);
-  color: var(--blue-logo);
   display: none;
-  text-align: center;
-  padding: 6%;
-  border-radius: 1em;
-  border: 0.3em solid var(--orange-logo);
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
-
-.tabcontent p,
-.tabcontent div {
-    margin-bottom: 0.75em; /* Aumenta a distância entre os elementos */
-}
-
-.tabcontent p:last-child,
-.tabcontent div:last-child {
-    margin-bottom: 0; /* Remove a margem do último elemento, se necessário */
-}
-
 
 /* Media Query para Mobile */
 @media (max-width: 767px) {
@@ -942,7 +928,13 @@ header nav .links_menu.nav_active {
     font-weight: bold;
     width: 600px;
     min-height: 48px;
+    padding: 20px 60px;
     border-radius: 10px;
+    margin-top: 0.2em;
+  }
+
+  .hm-crs .hm-crs-card .hm-crs-card-answer span {
+    margin-top: 1em;
   }
 
   .hm-crs .hm-crs-card .hm-crs-arrow-orange {
@@ -975,22 +967,6 @@ header nav .links_menu.nav_active {
   .hm-crs-subcard-answer {
       padding: 20px 40px;
   }
-
-  .tabs {
-    padding: 2em;
-    padding-left: 4em;
-    padding-right: 4em;
-  }
-
-  .tablinks {
-    font-size: var(--font-size-text-desktop);
-    color: var(--blue-post);
-  }
-
-  .tabcontent {
-    font-size: var(--font-size-text-desktop);
-    color: var(--blue-logo);
-  }
 }
 
 /* Media Query para Desktops */
@@ -1018,18 +994,18 @@ header nav .links_menu.nav_active {
   
   .hm-crs .hm-crs-card .hm-crs-card-answer{
     font-size: var(--font-size-text-desktop);
-    font-weight: bold;
     width: 960px;
     min-height: 48px;
+    padding: 25px 72px;
     border-radius: 10px;
     margin-top: 0.2em;
   }
 
-  .hm-crs .hm-crs-card-answer-content {
-    padding: 3em;
+  .hm-crs .hm-crs-card .hm-crs-card-answer span {
+    margin-top: 20px;
   }
 
-  .hm-crs .hm-crs-card .hm-crs-arrow-orange-desktop {
+  .hm-crs .hm-crs-card .hm-crs-arrow-orange {
     display: none;
   }
 
@@ -1059,22 +1035,6 @@ header nav .links_menu.nav_active {
 
   .hm-crs-subcard-answer {
     padding: 25px 72px;
-  }
-
-  .tabs {
-    padding: 3em;
-    padding-left: 7em;
-    padding-right: 7em;
-  }
-
-  .tablinks {
-    font-size: var(--font-size-subtitle-desktop);
-    color: var(--blue-post);
-  }
-
-  .tabcontent {
-    font-size: var(--font-size-subtitle-desktop);
-    color: var(--blue-logo);
   }
 }
 /*End Curso*/
@@ -2660,27 +2620,8 @@ body.ntc {
   flex-direction: column;
   justify-content: end;
   margin-right: 32px;
-}
-
-.sbr-slide-1 {
-  background-image: url('../img/sbr-slide-1.jpg');
+  position: relative;
   margin-left: 25px;
-}
-
-.sbr-slide-2 {
-  background-image: url('../img/sbr-slide-2.jpg');
-}
-
-.sbr-slide-3 {
-  background-image: url('../img/sbr-slide-3.jpg');
-}
-
-.sbr-slide-4 {
-  background-image: url('../img/sbr-slide-4.jpg');
-}
-
-.sbr-slide-5 {
-  background-image: url('../img/sbr-slide-5.jpg');
 }
 
 .sbr-slides::-webkit-scrollbar {
@@ -2723,6 +2664,16 @@ body.ntc {
     font-size: var(--font-size-title-mobile);
     margin-bottom: 4px;
   }
+
+  .sbr-card-icons{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  .sbr-card-icons img{
+    width: 50px;
+  }
 }
 
 @media (min-width: 1251px) {
@@ -2743,6 +2694,7 @@ body.ntc {
     padding-top: 32px;
     padding-bottom: 512px;
     height: 400px;
+    background-color: var(--background);
   }
 
   .sbr-corpo-docente-desktop {
@@ -2777,7 +2729,21 @@ body.ntc {
   
   .sbr-card-image img {
     width: 300px;
+    height: 300px;
     border-radius: 10px;
+  }
+
+  .sbr-icon-img {
+    width: 50px;
+    padding-right: 10px;
+  }
+
+  .sbr-card-icons {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    box-sizing: border-box;
+    width: 240px;
   }
 
   .sbr-card-data {
@@ -2815,6 +2781,8 @@ body.ntc {
   .swiper-pagination-bullet {
     transform: scale(1.5);
     margin: 0px 12px !important;
+    background: var(--orange-logo) !important;
+    
   }
 
   .swiper-pagination-bullet-active {
@@ -2835,23 +2803,27 @@ body.ntc {
 
 /*JV*/
 .secao-historia{
-  margin: 40px 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.historia-wrapper{
+  width: 1200px;
 }
 .historia{
-  margin: 40px 40px;
+
+ margin: 40px 0;
   display: flex;
   flex-direction: column;
 }
 .UFSCar-Sorocaba{
-  margin: 40px 40px;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
 }
 
 .PEADE{
-  margin: 40px 40px;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
 }
@@ -2870,8 +2842,8 @@ body.ntc {
 }
 .secao{
   height: 320px;
-  width: 100%;
-  margin: 40px 40px;
+  width: 1200px;
+  margin: 40px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2883,29 +2855,66 @@ body.ntc {
   height: 320px;
   border-radius: 10px;
 }
-.secaotext{
-  padding: 0px 20px;
+.secaotext, .secaoimagem{
+  max-width: 600px;
   color: black;
+  padding: 10px;
+  text-align: justify;
 }
-@media(max-width: 1200px){
+
+
+@media(max-width: 1220px){
   .secao {
    flex-direction: column;
-   row-gap: 40px;
+   row-gap: 0px;
    height: auto;
    display: flex;
    align-items: center;
    justify-content: center;
+   width: 600px;
   }
-  .secaoimagem img{
-    width: 100%;
-    height: auto;
-  }
-}
-@media(max-width: 765px){
-  .secao-missao{
-    height: auto;
+  .historia-wrapper{
     flex-direction: column;
-    row-gap: 10%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .secao-historia h1, .UFSCar-Sorocaba h1{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    margin: 0;
+  }
+
+  .secao-historia, .secao{
+    margin: 0px;
+  }
+
+  .UFSCar-Sorocaba, .historia{
+    margin: 20px;
+  }
+ 
+}
+
+@media(max-width: 600px){
+  .secao {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   }
+  .secaoimagem img{
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+  }
+   .secaotext, .peade{
+    padding: 10px;
   }
 }
 
@@ -2949,6 +2958,19 @@ body.ntc {
   font-size: 32px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+@media(max-width: 815px){
+  .secao-missao {
+   flex-direction: column;
+   row-gap: 40px;
+   height: 900px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+  }
+  
 }
 /* Início admissão */
 .admissao {
