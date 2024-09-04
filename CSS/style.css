@@ -83,11 +83,15 @@ Version: 1.0
   align-items: center;
 }
 
+.hm-crs-card-answer span, .hm-crs-card-answer ul li, .hm-crs-card-answer p,  .hm-crs-card-answer div strong{
+  color: var(--black);
+}
+
 .hm-crs .hm-crs-text {
   width: 60%;
   text-align: left; /* Alinha o texto à esquerda */
   font-size: var(--font-size-text-mobile);
-  color: var(--blue-logo);
+  color: var(--black);
   margin: 2em 0px;
 }
 
@@ -133,6 +137,7 @@ Version: 1.0
 .hm-crs .hm-crs-card-answer.visible {
   display: block;
 }
+
 
 .hm-crs .hm-crs-card-answer{
   font-size: var(--font-size-text-mobile);
@@ -246,7 +251,7 @@ Version: 1.0
 }
 
 .tab button.active {
-  background-color: #ccc;
+  background-color: var(--orange-logo);
 }
 
 .tabcontent {
