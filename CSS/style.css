@@ -141,7 +141,7 @@ align-items: end;
 }
 .card-text {
   margin-top: 5%;
-  border-bottom: 1px solid #343439S;
+  border-bottom: 1px solid #343439;
 }
 .cardtitulo h3{
   font-family: 'Poppins', sans-serif;
@@ -348,7 +348,6 @@ ul{
 .secao{
   height: 320px;
   width: 1200px;
-  column-gap: 25%;
   margin: 40px 0;
   display: flex;
   flex-direction: row;
@@ -361,48 +360,66 @@ ul{
   height: 320px;
   border-radius: 10px;
 }
-.secaotext{
-  max-width: 570px;
+.secaotext, .secaoimagem{
+  max-width: 600px;
   color: black;
+  padding: 10px;
+  text-align: justify;
 }
+
+
 @media(max-width: 1220px){
   .secao {
    flex-direction: column;
-   row-gap: 40px;
+   row-gap: 0px;
    height: auto;
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 80%;
+   width: 600px;
   }
   .historia-wrapper{
     flex-direction: column;
-    row-gap: 40px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
+  }
+
+  .secao-historia h1, .UFSCar-Sorocaba h1{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    margin: 0;
+  }
+
+  .secao-historia, .secao{
+    margin: 0px;
+  }
+
+  .UFSCar-Sorocaba, .historia{
+    margin: 20px;
   }
  
 }
 
-
-
-@media(max-width: 800px){
+@media(max-width: 600px){
   .secao {
     flex-direction: column;
-    row-gap: 40px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
    }
   .secaoimagem img{
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 10px;
+  }
+   .secaotext, .peade{
+    padding: 10px;
   }
 }
 
