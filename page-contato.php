@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | MBA Economia UFSCar</title>
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="contato.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <!-- Imagem de Cabecalho -->
+<?php
+/**
+ * Template Name: Contato
+ */
+get_header();
+?>
     <div class="ctt-img-header">
         <h1>Fale conosco!</h1>
         <span>
@@ -29,7 +19,7 @@
 			
 			<div class="ctt-info-card">
 				<div class="ctt-info-img">
-					<img src="img/ctt-mail.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>./img/ctt-mail.svg">
 				</div>
 				
 				<div class="ctt-info-content">
@@ -40,7 +30,7 @@
 			
 			<div class="ctt-info-card">
 				<div class="ctt-info-img">
-					<img src="img/ctt-phone.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>./img/ctt-phone.svg">
 				</div>
 				
 				<div class="ctt-info-content">
@@ -88,6 +78,4 @@
 		</div>
     
     </div>
-    <script src="JS/script.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

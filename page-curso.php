@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | MBA Economia UFSCar</title>
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Imagem de Cabecalho -->
+<?php
+/**
+ * Template Name: Curso
+ */
+get_header();
+?>
     <div class="crs-img-header">
         <span>
             MBA em
@@ -26,8 +18,8 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Objetivo</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -41,14 +33,14 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Ementa</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Empreendedorismo (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -85,7 +77,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Plano de Negócios (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -100,7 +92,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Tecnologia e Inovação (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -131,7 +123,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Motivação e Carreira (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -168,7 +160,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Globalização Econômica (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -203,7 +195,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Conjuntura Econômica (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -224,7 +216,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Economia Comportamental (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -247,7 +239,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Princípios em Microeconomia (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -286,7 +278,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Análise Macroeconômica (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -316,7 +308,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Microeconomia Aplicada à Tomada de Decisão (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -348,7 +340,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Macroeconomia Aplicada a Negócios (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -380,7 +372,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Estatística e Análise de Informação (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <span><ul>
@@ -395,7 +387,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Econometria Aplicada a Negócios (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -432,7 +424,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Métodos Aplicados em Economia (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -458,7 +450,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Geoprocessamento Aplicado a Negócios (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -497,7 +489,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Matemática Financeira (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -534,7 +526,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Análise de Projetos (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -572,7 +564,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Análise Financeira (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -598,7 +590,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Mercado Financeiro e Gestão de Riscos (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -630,7 +622,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Gestão de Cadeia de Suprimentos (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -668,7 +660,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Logística e Transportes (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -699,7 +691,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Negociação e Jogos (24 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -725,7 +717,7 @@
                 <div class="hm-crs-subcard">
                     <div class="hm-crs-subcard-question">
                         <span>Técnicas de Pesquisa em Economia (12 horas-aula)</span>
-                        <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
                     </div>
                     <div class="hm-crs-subcard-answer">
                         <ul>
@@ -765,8 +757,8 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Corpo Docente</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -796,8 +788,8 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Local</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -813,8 +805,8 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Periodicidade</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -827,8 +819,8 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Investimento</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="tabs">
@@ -882,8 +874,8 @@
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>In Company</span>
-                <img src="./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -895,6 +887,4 @@
             </div>
         </div>
     </div>
-    <script src="JS/curso.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

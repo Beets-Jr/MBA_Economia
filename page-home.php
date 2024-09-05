@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | MBA Economia UFSCar</title>
-    
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <header>
-		<div class="inner_header">
-			<div class="header_logo">
-				<a href="Home.html"> 
-					<img src="img/header_logo.png" alt="Logo do MBA Economia & Negócios UFSCar com uma elipse embaixo com um ponto laranja"> 
-				</a>
-			</div>
-			<nav>							
-				<div class="links_menu">
-					<a href="Sobre.html">Sobre</a>
-					<a href="Curso.html">Curso</a>
-					<a href="Noticias.html">Notícias</a>
-					<a href="Contato.html">Contato</a>
-					<a href="Inscreva-se.html"><button class="header_button_cta" role="button">Inscreva-se</button></a>
-				</div>
-
-				<!-- Burger do mobile -->
-				<div class="burger">
-					<div class="line_1"></div>
-					<div class="line_2"></div>
-					<div class="line_3"></div>				
-				</div>
-			</nav>
-		</div>
-	</header>
-    <!-- Seu Futuro -->
+<?php
+/**
+ * Template Name: Home
+ */
+get_header();
+?>
     <div class="hm-seu-futuro">
         <h2 class="hm-seu-futuro-title">Faça seu futuro acontecer</h2>
         <button type="button" class="hm-seu-futuro-button" ><a href="./Inscreva-se.html">Inscreva-se</a></button>
@@ -52,7 +18,7 @@
                     <p>Conheça o MBA que pode mudar sua vida, transformar sua carreira e fazer diferença na área de economia e negócios.</p>
                 </div>
             </div>
-            <a href="#" class="btn">Sobre o MBA</a>
+            <a href="/MBA/sobre" class="btn">Sobre o MBA</a>
         </div>
         <div class="hero-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/u9nFodo3qZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -63,22 +29,22 @@
     <section class="details">
         <div class="detail-items">
             <div class="detail-item">
-                <img src="./img/clock_icon.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/clock_icon.png" class="detail-icon"> 
                 <span class="detail-value">+360</span>
                 <span class="detail-label">Horas de aula</span>
             </div>
             <div class="detail-item">
-                <img src="./img/disciplina_icon.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/disciplina_icon.png" class="detail-icon">
                 <span class="detail-value">+22</span>
                 <span class="detail-label">Disciplinas</span>
             </div>
             <div class="detail-item">
-                <img src="./img/calendario_icon.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/calendario_icon.png" class="detail-icon">
                 <span class="detail-value">+02</span>
                 <span class="detail-label">Anos</span>
             </div>
             <div class="detail-item">
-                <img src="./img/turma.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/turma.png" class="detail-icon">
                 <span class="detail-value">12°</span>
                 <span class="detail-label">Turma</span>
             </div>
@@ -166,8 +132,8 @@
         <div class="hm-faq-card">
             <div class="hm-faq-card-question">
                 <span>O que é o MBA em Economia e Negócios da UFSCar?</span>
-                <img src="./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
             </div>
             <div class="hm-faq-card-answer">
                 <span>O MBA em Economia e Negócios da UFSCar é um curso de especialização lato sensu voltado para profissionais que desejam aprofundar seus conhecimentos em economia, finanças e gestão empresarial. O curso visa desenvolver habilidades práticas e teóricas para a tomada de decisões estratégicas em ambientes corporativos.
@@ -177,8 +143,8 @@
         <div class="hm-faq-card">
             <div class="hm-faq-card-question">
                 <span>Qual é a duração do curso?</span>
-                <img src="./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
             </div>
             <div class="hm-faq-card-answer">
 				<span>O curso tem duração de 18 meses</span>
@@ -187,8 +153,8 @@
         <div class="hm-faq-card">
             <div class="hm-faq-card-question">
                 <span>Quais são os requisitos para ingressar no curso?</span>
-                <img src="./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
             </div>
             <div class="hm-faq-card-answer">
 					<span>Para se inscrever no MBA em Economia e Negócios, é necessário possuir diploma de graduação em qualquer área do conhecimento e ter interesse em desenvolver competências na área de economia e gestão de negócios.</span>
@@ -197,8 +163,8 @@
         <div class="hm-faq-card">
             <div class="hm-faq-card-question">
                 <span>Como funciona o processo de seleção?</span>
-                <img src="./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
             </div>
             <div class="hm-faq-card-answer">
 				<span>O processo de seleção consiste na análise curricular e, em alguns casos, pode incluir uma entrevista com a coordenação do curso para melhor compreensão das expectativas e objetivos do candidato.
@@ -208,8 +174,8 @@
         <div class="hm-faq-card">
             <div class="hm-faq-card-question">
                 <span>Qual é a estrutura curricular do curso? </span>
-                <img src="./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
             </div>
             <div class="hm-faq-card-answer">
 				<span>O curso é composto por disciplinas que abrangem temas como macroeconomia, microeconomia, gestão financeira, estratégias de negócios, formação de líderes, entre outros. 
@@ -219,8 +185,8 @@
         <div class="hm-faq-card">
             <div class="hm-faq-card-question">
                 <span>O curso é oferecido na modalidade presencial ou a distância?</span>
-                <img src="./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
             </div>
             <div class="hm-faq-card-answer">
 				<span>Atualmente, o MBA em Economia e Negócios da UFSCar é oferecido na modalidade à distância, com aulas realizadas nos finais de semana para facilitar a participação de profissionais em atividade.</span>
@@ -309,64 +275,8 @@
 				
 			</div>
 		
-			<button class="ultimas_noticias_btn" role="button"><a href="Noticias.html">Ver todas as postagens</a></button>
+			<button class="ultimas_noticias_btn" role="button"><a href="/MBA/Noticias">Ver todas as postagens</a></button>
 		</div>
     
     </section>
-    <footer>
-		<div class="container">	
-			<div class="row">
-				<div class="footer-coluna">
-					<div class="logo">
-						<a href="Home.html">
-							<img src="img/header_logo.png" alt="Logo do MBA Economia & Negocios UFSCar com uma elipse embaixo com um ponto laranja">
-						</a>
-					</div>
-				</div>
-				
-				<div class="footer-coluna">
-					<div class="footerNav">
-						<h4>Contatos:</h4>
-			             <ul>
-				                 <li><a href="">+55 (15) 9.8176-0011</a></li>
-				                 <li><a href="">mbaeconomia@ufscar.br</a></li>
-				                 
-			             </ul>
-		            </div>
-		        </div>
-				<div class="footer-coluna">	
-					<div class="footerNav">
-						<h4>Links Rapidos:</h4>
-			             <ul>
-				                 <li><a href="">Sobre</a></li>
-				                 <li><a href="">Curso</a></li>
-				                 <li><a href="">Noticia</a></li>
-				                 <li><a href="">Contato</a></li>
-				                 <li><a href="">Inscreva-se</a></li>
-			             </ul>
-		            </div>
-		        </div>
-			</div>
-	    </div>
-		
-		<div class="medias">
-			<a href="">
-				<img src="img/icon-linkedin.png" alt="Icone Linkedin">
-			</a>
-			<a href="">
-				<img src="img/icon-facebook.png" alt="Icone Facebook">
-			</a>
-			<a href="">
-				<img src="img/icon-instagram.png" alt="Icone Instagram">
-			</a>			
-		</div>
-		<div class="FooterBottom">
-			<p>Copyright &copy;2024; -MBA Economia & Negocios- UFSCar | Desenvolvido por <span class="desenvolvedor">Beets Jr.</span></p>
-		</div>
-
-
-	</footer>
-    <script src="JS/script.js"></script>
-	<script src="JS/sobre.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

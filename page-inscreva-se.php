@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscreva-se | MBA Economia UFSCar</title>
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Imagem de Cabecalho -->
+<?php
+/**
+ * Template Name: Inscreva-se
+ */
+get_header();
+?>
     <div class="ins-img-header">
         <h1>Inscreva-se</h1>
         <span>
@@ -328,7 +320,4 @@
             <button class="ins-send-button">Enviar</button>
         </div>
     </div>
-    <script src="JS/inscreva-se.js"></script>
-    <script>console.log('script inline');</script>
-</body>
-</html>
+<?php get_footer(); ?>

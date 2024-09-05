@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticia | MBA Economia UFSCar</title>
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body class="ntc">
+<?php
+/**
+ * Template Name: Noticia
+ */
+get_header();
+?>
+	<div class="ntc">
     <div class="ntc_wrapper">
         <div class="ntc_container">
             <h1 class="white">Aluno do curso de Economia recebe premiação do Corecon – SP</h1>
             <p class="white">16 de Agosto de 2019</p>
-            <img src="/img/img-ntc.png" alt="Imagem Exemplo">
+            <img src="<?php echo get_template_directory_uri(); ?>./img/img-ntc.png" alt="Imagem Exemplo">
             <p>O discente Tiago Andrade da Silva, do curso de Ciências Econômicas da UFSCAR, ganhou o prêmio de Melhor Monografia do ano de 2018 no estado de São Paulo. O prêmio foi entregue ao estudante e ao seu orientador, Prof. Dr. Alexandre Lopes Gomes em cerimônia organizada pelo Conselho Regional de Economia – Corecon-SP, realizada no dia 12 de agosto. O título do trabalho premiado é INTERAÇÕES ENERGÉTICAS ENTRE O ESTADO DE SÃO PAULO E O RESTANTE DO BRASIL: UMA ANÁLISE INSUMO PRODUTO.</p>
             <p>Para conhecer um pouco sobre macroeconomia e análises regionais, matricule-se hoje mesmo no curso MBA Economia & Negócios da UFSCar.</p>
             <h2>Sobre o trabalho</h2>
@@ -27,9 +21,9 @@
             <div class="ntc_social-share">
                 <p class="ntc_Share">Siga nas redes sociais</p>
                 <div class="ntc_icons">
-                  <a href="#" class="facebook"><img src="/img/icon-facebook.png" alt="Facebook"></a>
-                  <a href="#" class="instagram"><img src="/img/icon-instagram.png" alt="Instagram"></a>
-                  <a href="#" class="linkedin"><img src="/img/icon-linkedin.png" alt="LinkedIn"></a>
+                  <a href="#" class="facebook"><img src="<?php echo get_template_directory_uri(); ?>./img/icon-facebook.png" alt="Facebook"></a>
+                  <a href="#" class="instagram"><img src="<?php echo get_template_directory_uri(); ?>./img/icon-instagram.png" alt="Instagram"></a>
+                  <a href="#" class="linkedin"><img src="<?php echo get_template_directory_uri(); ?>./img/icon-linkedin.png" alt="LinkedIn"></a>
                 </div>
             </div>                           
         </div>
@@ -40,7 +34,7 @@
 			
 			<div class="ctt-info-card">
 				<div class="ctt-info-img">
-					<img src="IMG/ctt-mail.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>./img/ctt-mail.svg">
 				</div>
 				
 				<div class="ctt-info-content">
@@ -51,7 +45,7 @@
 			
 			<div class="ctt-info-card">
 				<div class="ctt-info-img">
-					<img src="IMG/ctt-phone.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>./img/ctt-phone.svg">
 				</div>
 				
 				<div class="ctt-info-content">
@@ -99,6 +93,5 @@
 		</div>
     
     </div>
-    <script src="JS/script.js"></script>
-</body>
-</html>
+	</div>
+<?php get_footer(); ?>

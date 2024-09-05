@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticia | MBA Economia UFSCar</title>
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Imagem de Cabecalho -->
+<?php
+/**
+ * Template Name: Noticias
+ */
+get_header();
+?>
     <div class="nts-img-header">
         <span>
             BLOG
@@ -23,15 +15,13 @@
         <h2>Todas as postagens</h2>
    </div>
    <section class="card-nts">
-    <img class="card-nts-imagem" src="/img/img-ntc.png" alt="Imagem Exemplo">
+    <img class="card-nts-imagem" src="<?php echo get_template_directory_uri(); ?>./img/img-ntc.png" alt="Imagem Exemplo">
     <div class="card-nts-content">
         <h1 class="card-nts-title">Mais um aluno com publicação aprovada!</h1>
         <div class="card-nts-text">
             <p>O discente Tiago Andrade da Silva, do curso de Ciências Econômicas da UFSCAR, ganhou o prêmio de Melhor Monografia do ano de 2018 no estado de São Paulo. O prêmio foi entregue ao estudante e ao seu orientador, Prof. Dr. Alexandre Lopes Gomes...</p> 
         </div>
-        <a href="Noticia.html" class="btn">Ler mais</a>
+        <a href="/MBA/Noticia" class="btn">Ler mais</a>
     </div>
     </section>
-    <script src="JS/script.js"></script>
-</body>
-</html>
+    <?php get_footer(); ?>
