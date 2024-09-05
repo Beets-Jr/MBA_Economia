@@ -96,6 +96,75 @@ Version: 1.0
 /*Noticias*/
 
 /*End Noticias*/
+/* Início Botão WhatsApp */
+.btn_whatsapp{
+	align-items: center;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	line-height: 20px;
+	overflow: hidden;
+	text-align: center;
+	touch-action: manipulation;
+	transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	user-select: none;
+	-webkit-user-select: none;
+	vertical-align: middle;
+	padding: 8px 20px;	
+	width: 250px;
+	height: 55px;
+	
+	/* Estilo */
+	background-color: #25D366;
+	color: var(--background);
+	font-family: var(--secondary-font-family);
+	font-size: var(--font-size-text-desktop);
+	font-weight: 600;
+	border-radius: 50px;
+
+	/* Posição na página */
+	position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index:1000;
+}
+
+.btn_whatsapp img{
+    height: 35px;
+    width: 35px;
+    margin-right: 12px;
+}
+
+.btn_whatsapp:hover,
+.btn_whatsapp:focus { 
+	background-color: #1a9247;
+	color: var(--background);
+}
+
+.btn_whatsapp:active {
+	background: #1a9247;
+	color: var(--backgruond);
+}
+
+@media screen and (max-width: 800px) {
+	.btn_whatsapp{
+		padding: 8px 20px;	
+		width: 240px;
+		height: 45px;
+		
+		/* Estilo */
+		font-size: var(--font-size-text-mobile);
+		border-radius: 40px;
+	}
+
+	.btn_whatsapp img{
+		height: 30px;
+		width: 30px;
+	}
+}
+/* Final Botão WhatsApp */
 
 
 /*Sobre*/
