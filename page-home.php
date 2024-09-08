@@ -22,7 +22,7 @@ get_header();
             <a href="/MBA/sobre" class="btn">Sobre o MBA</a>
         </div>
         <div class="hero-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/u9nFodo3qZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="<?php echo esc_html(get_post_meta(get_the_ID(), 'video_introducao', true)); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -130,69 +130,25 @@ get_header();
     <!-- FAQ -->
     <div class="hm-faq" id="hm-faq">
         <h2 class="hm-faq-title">Perguntas Frequentes</h2>
-        <div class="hm-faq-card">
-            <div class="hm-faq-card-question">
-                <span>O que é o MBA em Economia e Negócios da UFSCar?</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
-            </div>
-            <div class="hm-faq-card-answer">
-                <span>O MBA em Economia e Negócios da UFSCar é um curso de especialização lato sensu voltado para profissionais que desejam aprofundar seus conhecimentos em economia, finanças e gestão empresarial. O curso visa desenvolver habilidades práticas e teóricas para a tomada de decisões estratégicas em ambientes corporativos.
-				</span>
-            </div>
-        </div>
-        <div class="hm-faq-card">
-            <div class="hm-faq-card-question">
-                <span>Qual é a duração do curso?</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
-            </div>
-            <div class="hm-faq-card-answer">
-				<span>O curso tem duração de 18 meses</span>
+        <?php
+			$perguntas_frequentes = get_post_meta(get_the_ID(), 'perguntas_frequentes', true);
+			if(isset($perguntas_frequentes) && !empty($perguntas_frequentes)) {
+				foreach($perguntas_frequentes as $pergunta) {
+		?>
+		<div class="hm-faq-card">
+			<div class="hm-faq-card-question">
+				<span><?php echo $pergunta['pergunta']; ?></span>
+				<img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
+				<img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
 			</div>
-        </div>
-        <div class="hm-faq-card">
-            <div class="hm-faq-card-question">
-                <span>Quais são os requisitos para ingressar no curso?</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
-            </div>
-            <div class="hm-faq-card-answer">
-					<span>Para se inscrever no MBA em Economia e Negócios, é necessário possuir diploma de graduação em qualquer área do conhecimento e ter interesse em desenvolver competências na área de economia e gestão de negócios.</span>
+			<div class="hm-faq-card-answer">
+				<span><?php echo $pergunta['resposta']; ?></span>
 			</div>
-        </div>
-        <div class="hm-faq-card">
-            <div class="hm-faq-card-question">
-                <span>Como funciona o processo de seleção?</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
-            </div>
-            <div class="hm-faq-card-answer">
-				<span>O processo de seleção consiste na análise curricular e, em alguns casos, pode incluir uma entrevista com a coordenação do curso para melhor compreensão das expectativas e objetivos do candidato.
-				</span>
-			</div>
-        </div>
-        <div class="hm-faq-card">
-            <div class="hm-faq-card-question">
-                <span>Qual é a estrutura curricular do curso? </span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
-            </div>
-            <div class="hm-faq-card-answer">
-				<span>O curso é composto por disciplinas que abrangem temas como macroeconomia, microeconomia, gestão financeira, estratégias de negócios, formação de líderes, entre outros. 
-				</span>
-			</div>
-        </div>
-        <div class="hm-faq-card">
-            <div class="hm-faq-card-question">
-                <span>O curso é oferecido na modalidade presencial ou a distância?</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-faq-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-faq-arrow-orange-desktop">
-            </div>
-            <div class="hm-faq-card-answer">
-				<span>Atualmente, o MBA em Economia e Negócios da UFSCar é oferecido na modalidade à distância, com aulas realizadas nos finais de semana para facilitar a participação de profissionais em atividade.</span>
-			</div>
-        </div>
+		</div>
+		<?php
+				}
+			}
+		?> 
     </div>
 
     <section class="ultimas_noticias">
