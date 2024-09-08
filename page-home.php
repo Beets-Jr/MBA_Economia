@@ -9,9 +9,10 @@ get_header();
         <button type="button" class="hm-seu-futuro-button" ><a href="./Inscreva-se.html">Inscreva-se</a></button>
     </div>
     <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">MBA Economia & Negócios</h1>
-            <div class="hero-texts">
+		<div class="hero-content">
+			<h1 class="hero-title"><?php echo esc_html(get_post_meta(get_the_ID(), 'titulo_introducao', true)); ?></h1>
+				<div class="hero-texts">
+
                 <div class="hero-text1">
                     <p>É com grande satisfação que o Departamento de Economia da Universidade Federal de São Carlos (UFSCar) apresenta o curso de especialização MBA em Economia e Negócios. Este programa inovador foi concebido para atender às demandas de profissionais que buscam uma formação de excelência em economia aplicada ao contexto empresarial.</p>				</div>
                 <div class="hero-text2">
