@@ -1237,6 +1237,7 @@ iframe {
   color: #fafafa;
   margin-top: auto;
   max-width: 220px;
+  padding-top: 50px;
 }
 
 .hm-seu-futuro .hm-seu-futuro-button {
@@ -2781,7 +2782,7 @@ body.ntc {
   .swiper-pagination-bullet {
     transform: scale(1.5);
     margin: 0px 12px !important;
-    background: var(--orange-logo) !important;
+    background: var(--blue-logo) !important;
     
   }
 
@@ -3048,7 +3049,7 @@ body.ntc {
 	padding: 15px;
 	border-radius: 5px;
 	bottom: 0;
-	background: #eeeeee50;
+	background: #e1ecf5;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -3225,6 +3226,7 @@ body.ntc {
 	font-size: var(--font-size-text-desktop);
 	font-weight: 600;
 	
+  border: 1px solid #E07629;
 	justify-content: center;
 	line-height: 1.25;
 	margin: 0;
@@ -3238,6 +3240,11 @@ body.ntc {
 	touch-action: manipulation;
 	vertical-align: baseline;
 	width: auto;
+}
+
+.botaocomentario a{
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .botaocomentario:hover, .header_cta:focus {
