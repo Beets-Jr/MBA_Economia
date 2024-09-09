@@ -30,6 +30,19 @@ function mba_styles() {
 }
 add_action('wp_enqueue_scripts', 'mba_styles');
 
+/*
+  Nomenclatura
+  - Contato: ctt
+  - Curso: crs
+  - Home: hm
+  - Inscreva-se: ins
+  - Noticia: ntc
+  - Noticias: nts
+  - Sobre: sbr
+
+  Exemplo: id = ctt-title;
+  Colocar descrição em cada campo
+*/
 
 //HOME
 add_action('cmb2_admin_init', 'cmb2_fields_home');
@@ -49,6 +62,7 @@ function cmb2_fields_home() {
         'name' => 'Título Introdução',
         'id'   => 'titulo_introducao',
         'type' => 'text',
+        'desc' => 'Título da introdução da página',
     ]);
 
     $cmb->add_field([
