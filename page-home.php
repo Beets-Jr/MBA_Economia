@@ -4,7 +4,19 @@
  */
 get_header();
 ?>
-    <div class="hm-seu-futuro">
+	<?php 
+		// Recupera a URL da imagem.
+		$bg_image = get_post_meta( get_the_ID(), 'hm_custom_bg_image', true ); 
+	?>
+
+	<style>
+		.hm-seu-futuro-img {
+		background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
+			url('<?php echo esc_url( $bg_image ); ?>');
+	}
+	</style>
+
+    <div class="hm-seu-futuro hm-seu-futuro-img">
         <h2 class="hm-seu-futuro-title">Faça seu futuro acontecer</h2>
         <button type="button" class="hm-seu-futuro-button" ><a href="./Inscreva-se.html">Inscreva-se</a></button>
     </div>
@@ -14,9 +26,10 @@ get_header();
 				<div class="hero-texts">
 
                 <div class="hero-text1">
-                    <p>É com grande satisfação que o Departamento de Economia da Universidade Federal de São Carlos (UFSCar) apresenta o curso de especialização MBA em Economia e Negócios. Este programa inovador foi concebido para atender às demandas de profissionais que buscam uma formação de excelência em economia aplicada ao contexto empresarial.</p>				</div>
+					<?php echo esc_html(get_post_meta(get_the_ID(), 'descricao_introducao_1', true)); ?>
+				</div>
                 <div class="hero-text2">
-                    <p>Conheça o MBA que pode mudar sua vida, transformar sua carreira e fazer diferença na área de economia e negócios.</p>
+					<?php echo esc_html(get_post_meta(get_the_ID(), 'descricao_introducao_2', true)); ?>
                 </div>
             </div>
             <a href="/MBA/sobre" class="btn">Sobre o MBA</a>
@@ -31,22 +44,22 @@ get_header();
         <div class="detail-items">
             <div class="detail-item">
                 <img src="<?php echo get_template_directory_uri(); ?>./img/clock_icon.png" class="detail-icon"> 
-                <span class="detail-value">+360</span>
+                <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_horas_aula', true)); ?></span>
                 <span class="detail-label">Horas de aula</span>
             </div>
             <div class="detail-item">
                 <img src="<?php echo get_template_directory_uri(); ?>./img/disciplina_icon.png" class="detail-icon">
-                <span class="detail-value">+22</span>
+                <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_num_disc', true)); ?></span>
                 <span class="detail-label">Disciplinas</span>
             </div>
             <div class="detail-item">
                 <img src="<?php echo get_template_directory_uri(); ?>./img/calendario_icon.png" class="detail-icon">
-                <span class="detail-value">+02</span>
+                <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_anos', true)); ?></span>
                 <span class="detail-label">Anos</span>
             </div>
             <div class="detail-item">
                 <img src="<?php echo get_template_directory_uri(); ?>./img/turma.png" class="detail-icon">
-                <span class="detail-value">12°</span>
+                <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_num_turma', true)); ?></span>
                 <span class="detail-label">Turma</span>
             </div>
         </div>
@@ -57,32 +70,31 @@ get_header();
 			<div class="cmt_card-wrapper">
 				<div class="cmt_card">
 					<div class="cmt_card-text">
-							<p>&quot;Uma das consequencias foi conseguir uma promocao na empresa em que trabalho. Com o aprendizado adquirido, pretendo liderar minha equipe num futuro breve!&quot;</p>
-                            
+						<p>&quot;<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_relato_1', true)); ?>&quot;</p>    
 					</div>
 					<div class="cmt_cardtitulo">
-						<h3>Heleni</h3>
-						<h3>Turma 4</h3>
+						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_name_1', true)); ?></h3>
+						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_1', true)); ?></h3>
 					</div>
 				</div>
 				<div class="cmt_card">
 					<div class="cmt_card-text">
-							<p>&quot;Uma das consequencias foi conseguir uma promocao na empresa em que trabalho. Com o aprendizado adquirido, pretendo liderar minha equipe num futuro breve!&quot;</p>
+							<p>&quot;<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_relato_2', true)); ?>&quot;</p>
                             
 					</div>
 					<div class="cmt_cardtitulo">
-						<h3>Heleni</h3>
-						<h3>Turma 4</h3>
+						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_name_2', true)); ?></h3>
+						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_2', true)); ?></h3>
 					</div>
 				</div>
 				<div class="cmt_card">
 					<div class="cmt_card-text">
-							<p>&quot;Uma das consequencias foi conseguir uma promocao na empresa em que trabalho. Com o aprendizado adquirido, pretendo liderar minha equipe num futuro breve!&quot;</p>
+							<p>&quot;<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_relato_3', true)); ?>&quot;</p>
                             
 					</div>
 					<div class="cmt_cardtitulo">
-						<h3>Heleni</h3>
-						<h3>Turma 4</h3>
+						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_name_3', true)); ?></h3>
+						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_3', true)); ?></h3>
 					</div>
 				</div>
 				
@@ -100,24 +112,15 @@ get_header();
 				</div>
 
 				<p>
-					[Além do MBA, conheça outro curso...] Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-					sed do eiusmod tempor incididunt ut labore et dolore magna 
-					aliqua.
+					<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_texto_alem_mba', true)); ?>
 				</p>
 			</div>
 			
 			<div class="card_curso">
 				<div class="conteudo_curso">				
-					<h2>Nome do curso</h2>								
+					<h2><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_nome_do_curso', true)); ?></h2>								
 					<p>
-						[Descrição do curso] Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-						sed do eiusmod tempor incididunt ut labore et dolore magna 
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-						ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit 
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-						occaecat cupidatat non proident, sunt in culpa qui officia 
-						deserunt mollit anim id est laborum.
+						<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_desc_do_curso', true)); ?>
 					</p>
 	
 					<button class="outros_cursos_button"><a href="#">Conheça o curso</a></button>

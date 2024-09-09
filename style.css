@@ -1220,9 +1220,6 @@ iframe {
 
 /*Seu Futuro*/
 .hm-seu-futuro {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.3), 
-                                    rgba(0, 0, 0, 0.5)), 
-                                    url('../img/bg-seu-futuro.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

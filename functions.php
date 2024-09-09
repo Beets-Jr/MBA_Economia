@@ -30,19 +30,6 @@ function mba_styles() {
 }
 add_action('wp_enqueue_scripts', 'mba_styles');
 
-/*
-  Nomenclatura
-  - Contato: ctt
-  - Curso: crs
-  - Home: hm
-  - Inscreva-se: ins
-  - Noticia: ntc
-  - Noticias: nts
-  - Sobre: sbr
-
-  Exemplo: id = ctt-title;
-  Colocar descrição em cada campo
-*/
 
 //HOME
 add_action('cmb2_admin_init', 'cmb2_fields_home');
@@ -58,23 +45,178 @@ function cmb2_fields_home() {
         ],
     ]);
 
+    $cmb->add_field( array(
+        'name' => __( 'Imagem de fundo', 'cmb2' ),
+        'id'   => 'hm_custom_bg_image',
+        'type' => 'file',
+        'desc' => 'Imagem que aparece ao fundo da Hero Section',
+        'options' => array(
+            'url' => false,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium',
+    ));
+
     $cmb->add_field([
         'name' => 'Título Introdução',
         'id'   => 'titulo_introducao',
         'type' => 'text',
-        'desc' => 'Título da introdução da página',
+        'desc' => 'Título que aparece logo no início da página',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Descrição Introdução 1',
+        'id'   => 'descricao_introducao_1',
+        'type' => 'textarea',
+        'desc' => 'Descrição que aparece logo no início da página',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Descrição Introdução 2',
+        'id'   => 'descricao_introducao_2',
+        'type' => 'textarea_small',
+        'desc' => 'Descrição que aparece logo no início da página (pode ser usado para chamada)',
     ]);
 
     $cmb->add_field([
         'name' => 'Video Introdução',
         'id'   => 'video_introducao',
-        'type' => 'text',
+        'type' => 'oembed',
+        'desc' => 'Link do vídeo que aparece na introdução',
     ]);
+
+    $cmb->add_field([
+        'name' => 'Horas de Aula',
+        'id'   => 'hm_horas_aula',
+        'type' => 'text',
+        'desc' => 'Aparecerá nos ícones',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Número de Disciplinas',
+        'id'   => 'hm_num_disc',
+        'type' => 'text',
+        'desc' => 'Aparecerá nos ícones',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Anos de curso',
+        'id'   => 'hm_anos',
+        'type' => 'text',
+        'desc' => 'Aparecerá nos ícones',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Número da turma',
+        'id'   => 'hm_num_turma',
+        'type' => 'text',
+        'desc' => 'Aparecerá nos ícones',
+    ]);
+
+    // RELATOS
+    // Aluno 1
+    $cmb->add_field([
+        'name' => 'Relato 1',
+        'id'   => 'hm_relato_1',
+        'type' => 'textarea',
+        'desc' => 'Texto de relato do aluno',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Nome aluno 1',
+        'id'   => 'hm_name_1',
+        'type' => 'text',
+        'desc' => 'Nome do aluno',
+    ]);
+    
+    $cmb->add_field([
+        'name' => 'Turma aluno 1',
+        'id'   => 'hm_turma_1',
+        'type' => 'text',
+        'desc' => 'Turma do aluno',
+    ]);
+
+    // Aluno 2
+    $cmb->add_field([
+        'name' => 'Relato 2',
+        'id'   => 'hm_relato_2',
+        'type' => 'textarea',
+        'desc' => 'Texto de relato do aluno',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Nome aluno 2',
+        'id'   => 'hm_name_2',
+        'type' => 'text',
+        'desc' => 'Nome do aluno',
+    ]);
+    
+    $cmb->add_field([
+        'name' => 'Turma aluno 2',
+        'id'   => 'hm_turma_2',
+        'type' => 'text',
+        'desc' => 'Turma do aluno',
+    ]);
+
+    // Aluno 3
+    $cmb->add_field([
+        'name' => 'Relato 3',
+        'id'   => 'hm_relato_3',
+        'type' => 'textarea',
+        'desc' => 'Texto de relato do aluno',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Nome aluno 3',
+        'id'   => 'hm_name_3',
+        'type' => 'text',
+        'desc' => 'Nome do aluno',
+    ]);
+    
+    $cmb->add_field([
+        'name' => 'Turma aluno 3',
+        'id'   => 'hm_turma_3',
+        'type' => 'text',
+        'desc' => 'Turma do aluno',
+    ]);
+
+
+    // ALÉM DO MBA
+    $cmb->add_field([
+        'name' => 'Texto Além do MBA',
+        'id'   => 'hm_texto_alem_mba',
+        'type' => 'textarea',
+        'desc' => 'Texto que aparecerá na seção "Além do MBA"',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Nome do curso',
+        'id'   => 'hm_nome_do_curso',
+        'type' => 'text',
+        'desc' => 'Nome do curso divulgado',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Descrição do curso',
+        'id'   => 'hm_desc_do_curso',
+        'type' => 'textarea',
+        'desc' => 'Descrição do curso divulgado',
+    ]);
+
 
     $perguntas_frequentes = $cmb->add_field([
         'name' => 'Perguntas Frequentes',
         'id' => 'perguntas_frequentes',
         'type' => 'group',
+        'desc' => 'Campos de perguntas frequentes',
         'repeatable' => true,
         'options' => [
           'group_title' => 'Pergunta {#}',
@@ -88,97 +230,99 @@ function cmb2_fields_home() {
         'name' => 'Pergunta',
         'id' => 'pergunta',
         'type' => 'text',
+        'desc' => 'Insira a pergunta',
       ]);
 
       $cmb->add_group_field($perguntas_frequentes, [
         'name' => 'Resposta',
         'id' => 'resposta',
         'type' => 'textarea_small',
+        'desc' => 'Insira a resposta da pergunta',
       ]);
 }
 
-//HEADER
-add_action('cmb2_admin_init', 'cmb2_fields_header');
+// //HEADER
+// add_action('cmb2_admin_init', 'cmb2_fields_header');
 
-function cmb2_fields_header() {
-    $cmb = new_cmb2_box([
-        'id'           => 'header_box',
-        'title'        => 'Header',
-        'object_types' => ['page'],
-        'show_on'      => [
-            'key'   => 'page-template',
-            'value' => 'page-home.php',
-        ],
-    ]);
+// function cmb2_fields_header() {
+//     $cmb = new_cmb2_box([
+//         'id'           => 'header_box',
+//         'title'        => 'Header',
+//         'object_types' => ['page'],
+//         'show_on'      => [
+//             'key'   => 'page-template',
+//             'value' => 'page-home.php',
+//         ],
+//     ]);
 
-    $cmb->add_field([
-        'name' => 'Título Introdução',
-        'id'   => 'titulo_introducao',
-        'type' => 'text',
-    ]);
-}
+//     $cmb->add_field([
+//         'name' => 'Título Introdução',
+//         'id'   => 'titulo_introducao',
+//         'type' => 'text',
+//     ]);
+// }
 
-//FOOTER
-add_action('cmb2_admin_init', 'cmb2_fields_footer');
+// //FOOTER
+// add_action('cmb2_admin_init', 'cmb2_fields_footer');
 
-function cmb2_fields_footer() {
-    $cmb = new_cmb2_box([
-        'id'           => 'footer_box',
-        'title'        => 'Footer',
-        'object_types' => ['page'],
-        'show_on'      => [
-            'key'   => 'page-template',
-            'value' => 'page-home.php',
-        ],
-    ]);
+// function cmb2_fields_footer() {
+//     $cmb = new_cmb2_box([
+//         'id'           => 'footer_box',
+//         'title'        => 'Footer',
+//         'object_types' => ['page'],
+//         'show_on'      => [
+//             'key'   => 'page-template',
+//             'value' => 'page-home.php',
+//         ],
+//     ]);
 
-    $cmb->add_field([
-        'name' => 'Título Introdução',
-        'id'   => 'titulo_introducao',
-        'type' => 'text',
-    ]);
-}
+//     $cmb->add_field([
+//         'name' => 'Título Introdução',
+//         'id'   => 'titulo_introducao',
+//         'type' => 'text',
+//     ]);
+// }
 
-//SOBRE
-add_action('cmb2_admin_init', 'cmb2_fields_sobre');
+// //SOBRE
+// add_action('cmb2_admin_init', 'cmb2_fields_sobre');
 
-function cmb2_fields_sobre() {
-    $cmb = new_cmb2_box([
-        'id'           => 'sobre_box',
-        'title'        => 'Sobre',
-        'object_types' => ['page'],
-        'show_on'      => [
-            'key'   => 'page-template',
-            'value' => 'page-sobre.php',
-        ],
-    ]);
+// function cmb2_fields_sobre() {
+//     $cmb = new_cmb2_box([
+//         'id'           => 'sobre_box',
+//         'title'        => 'Sobre',
+//         'object_types' => ['page'],
+//         'show_on'      => [
+//             'key'   => 'page-template',
+//             'value' => 'page-sobre.php',
+//         ],
+//     ]);
 
-    $cmb->add_field([
-        'name' => 'Título Introdução',
-        'id'   => 'titulo_introducao',
-        'type' => 'text',
-    ]);
-}
+//     $cmb->add_field([
+//         'name' => 'Título Introdução',
+//         'id'   => 'titulo_introducao',
+//         'type' => 'text',
+//     ]);
+// }
 
-//CURSO
-add_action('cmb2_admin_init', 'cmb2_fields_curso');
+// //CURSO
+// add_action('cmb2_admin_init', 'cmb2_fields_curso');
 
-function cmb2_fields_curso() {
-    $cmb = new_cmb2_box([
-        'id'           => 'curso_box',
-        'title'        => 'Curso',
-        'object_types' => ['page'],
-        'show_on'      => [
-            'key'   => 'page-template',
-            'value' => 'page-curso.php',
-        ],
-    ]);
+// function cmb2_fields_curso() {
+//     $cmb = new_cmb2_box([
+//         'id'           => 'curso_box',
+//         'title'        => 'Curso',
+//         'object_types' => ['page'],
+//         'show_on'      => [
+//             'key'   => 'page-template',
+//             'value' => 'page-curso.php',
+//         ],
+//     ]);
 
-    $cmb->add_field([
-        'name' => 'Título Introdução',
-        'id'   => 'titulo_introducao',
-        'type' => 'text',
-    ]);
+//     $cmb->add_field([
+//         'name' => 'Título Introdução',
+//         'id'   => 'titulo_introducao',
+//         'type' => 'text',
+//     ]);
 
-}
-?>
+// }
+// ?>
