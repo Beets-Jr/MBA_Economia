@@ -14,7 +14,7 @@ get_header();
         </span>
     </div>
     <div class="hm-crs" id="hm-crs">
-        <p class="hm-crs-text">O MBA Economia & Negócios é um curso de especialização lato sensu oferecido pelo Departamento de Economia da Universidade Federal de São Carlos (UFSCar) no campus Sorocaba, cidade localizada a cerca de 90 km de São Paulo.</p>
+        <p class="hm-crs-text"><?php echo esc_html(get_post_meta(get_the_ID(), 'crs_introducao-text', true)); ?></p>
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Objetivo</span>
@@ -23,10 +23,10 @@ get_header();
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
-                    <p style="padding: 5px 0px;"><strong>Formação de Líderes Econômicos: </strong>Capacitar os alunos para compreender e influenciar os ambientes econômicos, tanto em nível local quanto global.</p>
-                    <p style="padding: 5px 0px;"><strong>Análise Econômica Aplicada: </strong>Desenvolver a capacidade analítica para interpretar dados econômicos e utilizá-los na formulação de estratégias empresariais.</p>
-                    <p style="padding: 5px 0px;"><strong>Tomada de Decisão Estratégica: </strong>Preparar os alunos para enfrentar os desafios da gestão de negócios, utilizando princípios econômicos sólidos.</p>
-                    <p style="padding: 5px 0px;"><strong>Integração Teoria e Prática: </strong>Proporcionar uma experiência de aprendizado que alia a sólida formação teórica à aplicação prática no mundo dos negócios.</p>
+                    <?php
+                        $texto_objetivo = get_post_meta(get_the_ID(), 'crs_objetivo_texto', true);
+                        echo nl2br(esc_html($texto_objetivo));
+                    ?>
                 </div>
             </div>
         </div>
@@ -37,721 +37,31 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Empreendedorismo (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. Empreendedorismo e Inovação</strong>
-                                <ul>
-                                    <li>1.1 Introdução ao empreendedorismo e inovação</li>
-                                    <li>1.2 Conceitos de empreendedorismo e inovação</li>
-                                    <li>1.3 Características, tipos e habilidades do empreendedor</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. Empreendedorismo no Brasil</strong>
-                                <ul>
-                                    <li>2.1 Cenário do empreendedorismo e inovação no Brasil</li>
-                                    <li>2.2 Meios de apoio ao empreendedorismo e inovação no Brasil</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Conceitos e Práticas Empreendedoras</strong>
-                                <ul>
-                                    <li>3.1 Lean Startup</li>
-                                    <li>3.2 Business Model Canvas</li>
-                                    <li>3.3 Value Proposition Design</li>
-                                </ul>
-                            </li>
-                            <li><strong>4. Práticas Importantes</strong>
-                                <ul>
-                                    <li>4.1 Minimum Viable Product</li>
-                                    <li>4.2 Customer Development</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Alexandre Álvaro</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Plano de Negócios (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. O Conceito do Plano de Negócios</strong></li>
-                            <li><strong>2. Estrutura do Plano de Negócios</strong></li>
-                            <li><strong>3.Etapas de Elaboração do Plano de Negócios</strong></li>
-                            <li><strong>4. Elaborando na Prática um Plano de Negócios</strong></li>
-                        </ul>
-                        <span>Prof. Alexandre Álvaro</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Tecnologia e Inovação (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. Inovação</strong>
-                                <ul>
-                                    <li>1.1 Definição</li>
-                                    <li>1.2 Conceitos</li>
-                                    <li>1.3 Perspectivas</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. O processo de Inovação</strong>
-                                <ul>
-                                    <li>2.1 Conceito</li>
-                                    <li>2.2 Fases</li>
-                                    <li>2.3 Gerenciamento</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Trabalho Criativo</strong>
-                                <ul>
-                                    <li>3.1 Contexto da Mudança</li>
-                                    <li>3.2 Processos Decisórios</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. José Roselino</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Motivação e Carreira (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. Apresentação da disciplina</strong>
-                                <ul>
-                                    <li>1.1 Conceitos preliminares</li>
-                                    <li>1.2 Objetivos</li>
-                                    <li>1.3 Aplicações</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. Motivação para o trabalho</strong>
-                                <ul>
-                                    <li>2.1 Teoria e Prática</li>
-                                    <li>2.2 Discussões em grupo</li>
-                                    <li>2.3 Apresentação</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Liderança</strong>
-                                <ul>
-                                    <li>3.1 Teoria e Prática</li>
-                                </ul>
-                            </li>
-                            <li><strong>4. arreiras</strong>
-                                <ul>
-                                    <li>4.1 Evolução, significado e experiências</li>
-                                    <li>4.2 Estudos de caso</li>
-                                    <li>4.3 Elaboração do plano de carreira</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Maria Tereza Gomes</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Globalização Econômica (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. Conceitos Fundamentais</strong>
-                                <ul>
-                                    <li>1.1 Câmbio</li>
-                                    <li>1.2 Balanço de Pagamentos</li>
-                                    <li>1.3 Sistema Monetário Internacional</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. Globalização</strong>
-                                <ul>
-                                    <li>2.1 As Faces da Globalização Produtiva e Financeira</li>
-                                    <li>2.2 Integração Regional</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Formas e Estratégias de Internacionalização Empresarial</strong>
-                                <ul>
-                                    <li>3.1 Teorias do Investimento Externo</li>
-                                    <li>3.2 Redes Produtivas Globais</li>
-                                </ul>
-                            </li>
-                            <li><strong>4. Desglobalização</strong>
-                                <ul>
-                                    <li>4.1 O Novo Paradigma Tecnoeconômico</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. José Roselino</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Conjuntura Econômica (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. O Desenvolvimento Industrial</strong></li>
-                            <li><strong>2. Comportamento das Variáveis Macroeconômicas</strong>
-                                <ul>
-                                    <li>2.1 Inflação</li>
-                                    <li>2.2 Taxa de Juros</li>
-                                    <li>2.3 Impostos</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Determinantes do Crescimento Econômico</strong></li>
-                            <li><strong>4. Análise das Políticas Econômicas adotadas no Brasil</strong></li>
-                        </ul>
-                        <span>Prof. José Adrian Payeras</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Economia Comportamental (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. A perspectiva comportamental do consumo</strong>
-                                <ul>
-                                    <li>1.1 Princípios básicos para uma análise funcional do comportamento do consumidor e do empreendedor</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. Economia comportamental</strong>
-                                <ul>
-                                    <li>2.1 Marketing comportamental</li>
-                                    <li>2.2 Abordagem comportamental da escolha e tomada de decisão</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Estudos empíricos sobre comportamento do consumidor e do empreendedor</strong></li>
-                        </ul>
-                        <span>Prof. Luciano de Sousa Cunha</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Princípios em Microeconomia (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. Introdução à Microeconomia</strong>
-                                <ul>
-                                    <li>1.1 Determinação da função de demanda</li>
-                                    <li>1.2 Determinação da função de oferta</li>
-                                    <li>1.3 Equilíbrio no mercado competitivo</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. Análise de Elasticidades</strong>
-                                <ul>
-                                    <li>2.1 Elasticidade-preço da demanda</li>
-                                    <li>2.2 Elasticidade-renda da demanda</li>
-                                    <li>2.3 Elasticidades cruzadas da demanda</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. Teoria da Firma</strong>
-                                <ul>
-                                    <li>3.1 Determinação da função de produção</li>
-                                    <li>3.2 Estágios de Produção</li>
-                                    <li>3.3 Maximização do Lucro</li>
-                                </ul>
-                            </li>
-                            <li><strong>4. Custos de Produção</strong>
-                                <ul>
-                                    <li>4.1 Tipos de Custos</li>
-                                    <li>4.2 Custos de Curto e Longo Prazo</li>
-                                    <li>4.3 Minimização dos Custos</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Alexandre Lopes Gomes</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Análise Macroeconômica (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1. O Mercado de Bens e Serviços</strong>
-                                <ul>
-                                    <li>1.1 Mensuração do Produto</li>
-                                    <li>1.2 Fluxo Circular da Renda</li>
-                                    <li>1.3 Variáveis Macroeconômicas que alteram o Produto</li>
-                                </ul>
-                            </li>
-                            <li><strong>2. O Mercado Monetário</strong>
-                                <ul>
-                                    <li>2.1 Mensuração da Demanda por Moeda</li>
-                                    <li>2.2 Equilíbrio no Mercado Monetário</li>
-                                </ul>
-                            </li>
-                            <li><strong>3. O Modelo ISLM</strong>
-                                <ul>
-                                    <li>3.1 Determinação do Modelo</li>
-                                    <li>3.2 Efeitos de Políticas Econômicas</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Alexandre Lopes Gomes</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Microeconomia Aplicada à Tomada de Decisão (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Fundamentos Econômicos do Poder de Mercado</strong>
-                                <ul>
-                                    <li>1.1 Eficiência em competição perfeita</li>
-                                    <li>1.2 Poder de mercado em monopólio</li>
-                                    <li>1.3 Estruturas de custo e eficiência econômica</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Modelos de Organização Industrial</strong>
-                                <ul>
-                                    <li>2.1 Modelo Estrutura-Conduta-Desempenho</li>
-                                    <li>2.2 Modelo da Escola de Chicago</li>
-                                    <li>2.3 Medidas de Estrutura de Mercado</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Condutas e Estratégias Oligopolistas</strong>
-                                <ul>
-                                    <li>3.1 Teoria dos Jogos</li>
-                                    <li>3.2 Estratégias de Preço</li>
-                                    <li>3.3 Otimização de Promoções</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Danilo Rolim Dias de Aguiar</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Macroeconomia Aplicada a Negócios (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Macroeconomia Aberta</strong>
-                                <ul>
-                                    <li>1.1 Vantagens Comparativas</li>
-                                    <li>1.2 O Modelo Heckscher-Ohlin</li>
-                                    <li>1.3 Hierarquia monetária, câmbio e juros</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Economia Brasileira Recente</strong>
-                                <ul>
-                                    <li>2.1 Resumo dos últimos governos e os grandes temas econômicos</li>
-                                    <li>2.2 O Sistema de Metas de Inflação</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Economia do Setor Público</strong>
-                                <ul>
-                                    <li>3.1 Atribuições Econômicas do Estado</li>
-                                    <li>3.2 Determinantes do tamanho do Estado</li>
-                                    <li>3.3 Conflito e Coordenação</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Aplicando os conhecimentos no ambiente de negócios</strong></li>
-                        </ul>
-                        <span>Prof. Rodrigo Vilela Rodrigues</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Estatística e Análise de Informação (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <span><ul>
-                            <li><strong>1 Teoria da probabilidade</strong></li>
-                            <li><strong>2 Variáveis Aleatórias</strong></li>
-                            <li><strong>3 Amostragem e Distribuições Amostrais</strong></li>
-                            <li><strong>4 Testes de Hipótese</strong></li>
-                        </ul>
-                        <span>Prof. José Adrian Payeras</span></span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Econometria Aplicada a Negócios (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 A Natureza dos Métodos Quantitativos</strong>
-                                <ul>
-                                    <li>1.1 Tipos de Análise e Inferência</li>
-                                    <li>1.2 Causalidade</li>
-                                    <li>1.3 Tipos de banco de dados (painel, série temporal ou corte transversal)</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Análise de Regressão</strong>
-                                <ul>
-                                    <li>2.1 Simples</li>
-                                    <li>2.2 Múltipla</li>
-                                    <li>2.3 Linear ou não-linear</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Variáveis Binárias</strong>
-                                <ul>
-                                    <li>3.1 Descrição de Informações Qualitativas</li>
-                                    <li>3.2 Como utilizar</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Avaliando os Modelos e Interpretando os Resultados</strong>
-                                <ul>
-                                    <li>4.1 Testes de significância, forma funcional, heterocedasticidade e grau de ajustamento</li>
-                                    <li>4.2 Aplicando corretamente os modelos no ambiente de negócios</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. José Adrian Payeras</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Métodos Aplicados em Economia (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Metodologia de Pesquisa</strong>
-                                <ul>
-                                    <li>1.1 Utilizando a internet de maneira correta</li>
-                                    <li>1.2 Amostragem e sorteio</li>
-                                    <li>1.3 Tabulação de dados</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Calculando e utilizando indicadores</strong>
-                                <ul>
-                                    <li>2.1 Números-Índice e Deflacionamento</li>
-                                    <li>2.2 Taxas de Crescimento</li>
-                                    <li>2.3 Índices de Desigualdade</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Aprofundando os conhecimentos</strong></li>
-                        </ul>
-                        <span>Prof. Adriano Provezano Gomes</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Geoprocessamento Aplicado a Negócios (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Entendendo os Conceitos Iniciais</strong>
-                                <ul>
-                                    <li>1.1 Sistemas de Informação Geográfica</li>
-                                    <li>1.2 Cartografia</li>
-                                    <li>1.3 Banco de Dados</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Encontrando e Coletando Dados Econômicos e Geográficos</strong>
-                                <ul>
-                                    <li>2.1 Dados Espaciais</li>
-                                    <li>2.2 Malhas Digitais</li>
-                                    <li>2.3 Outras Fontes de Dados</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Desenvolvendo Aplicações Práticas</strong>
-                                <ul>
-                                    <li>3.1 Criando Meus Primeiros Mapas</li>
-                                    <li>3.2 Editando, Visualizando e Analisando as Camadas Vetoriais</li>
-                                    <li>3.3 Criando Buffers, Mapas de Calor e Áreas de Influência para Fenômenos Socioeconômicos</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Realizando Análises Avançadas</strong>
-                                <ul>
-                                    <li>4.1 Identificando o Comportamento dos Vizinhos</li>
-                                    <li>4.2 Medindo o Impacto dos Vizinhos no Meu Modelo Econométrico</li>
-                                    <li>4.3 Propondo Avanços Dentro do Ambiente Empresarial</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Raphael Roberto de Góes Reis</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Matemática Financeira (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Juros e Regime de Capitalização</strong>
-                                <ul>
-                                    <li>1.1 Juros Simples</li>
-                                    <li>1.2 Juros Compostos</li>
-                                    <li>1.3 Taxa equivalente, nominal e efetiva</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Inflação e Taxa de Juros Over</strong>
-                                <ul>
-                                    <li>2.1 Índices de preço</li>
-                                    <li>2.2 Operações Financeiras (spread)</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Fluxo de Caixa</strong>
-                                <ul>
-                                    <li>3.1 Criação e utilização</li>
-                                    <li>3.2 Valor Presente e Valor Futuro</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Sistemas de Amortização</strong>
-                                <ul>
-                                    <li>4.1 Sistema Amortização Constante (SAC)</li>
-                                    <li>4.2 Sistema de Prestação Constante (SPC)</li>
-                                    <li>4.3 Sistema Amortização Misto (SAM)</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Daniel Pacífico</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Análise de Projetos (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Etapas de Elaboração de um Projeto</strong>
-                                <ul>
-                                    <li>1.1 Tipos de Projetos</li>
-                                    <li>1.2 Processo de tomada de decisão</li>
-                                    <li>1.3 Critérios</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Principais Indicadores de Atratividade</strong>
-                                <ul>
-                                    <li>2.1 Valor Presente Líquido</li>
-                                    <li>2.2 Taxa Interna de Retorno</li>
-                                    <li>2.3 Payback</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Estruturando o Fluxo de Caixa</strong>
-                                <ul>
-                                    <li>3.1 Importância dos Dados</li>
-                                    <li>3.2 Analisando o fluxo</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Análises Adicionais</strong>
-                                <ul>
-                                    <li>4.1 Análise de Cenário</li>
-                                    <li>4.2 Análise de Sensibilidade</li>
-                                    <li>4.3 Análise de Risco</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Daniel Pacífico</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Análise Financeira (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Entendendo as Demonstrações Contábeis Brasileiras</strong>
-                                <ul>
-                                    <li>1.1 Análise das Demonstrações Financeiras</li>
-                                    <li>1.2 Análise das Demonstrações Financeiras – Aplicações Práticas</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Desempenho Corporativo</strong>
-                                <ul>
-                                    <li>2.1 Desempenho Operacional</li>
-                                    <li>2.2 Desempenho Financeiro</li>
-                                    <li>2.3 Custo de Capital</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Medidas de Criação de Valor</strong></li>
-                            <li><strong>4 Metodologia Básica de Avaliação de Empresas</strong></li>
-                        </ul>
-                        <span>Prof. Flávio Leonel de Carvalho</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Mercado Financeiro e Gestão de Riscos (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 O Risco</strong>
-                                <ul>
-                                    <li>1.1 Categorias de Risco</li>
-                                    <li>1.2 A aversão ao risco</li>
-                                    <li>1.3 Escopo para Gestão de Riscos</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Medindo o Risco</strong>
-                                <ul>
-                                    <li>2.1 Medidas de volatilidade e correlação</li>
-                                    <li>2.2 Value at Risk (V@R)</li>
-                                    <li>2.3 Otimização de Carteira</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Derivativos</strong>
-                                <ul>
-                                    <li>3.1 Contratos futuros e contratos a termo</li>
-                                    <li>3.2 Swap</li>
-                                    <li>3.3 Opções</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Daniel Pacífico</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Gestão de Cadeia de Suprimentos (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 A Logística Empresarial</strong>
-                                <ul>
-                                    <li>1.1 Conceitos e Principais componentes de um sistema logístico típico</li>
-                                    <li>1.2 Principais atividades de suprimento e de distribuição</li>
-                                    <li>1.3 Principais atividades de controle do sistema logístico</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Cadeia de Suprimentos</strong>
-                                <ul>
-                                    <li>2.1 Fatores que influenciam o modelo de Cadeias de Suprimentos</li>
-                                    <li>2.2 Gestão da demanda e dos estoques na Cadeia de Suprimento</li>
-                                    <li>2.3 Posicionamento de estoques (centralização X descentralização)</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Desenvolvendo Estratégias</strong>
-                                <ul>
-                                    <li>3.1 Estratégias e movimentos na Cadeia de Suprimento</li>
-                                    <li>3.2 Planejamento de operações de vendas (S&OP)</li>
-                                    <li>3.3 Coordenação e integração da Cadeia de Suprimento</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Aplicando os Conhecimentos</strong>
-                                <ul>
-                                    <li>4.1 Medição de desempenho na Cadeia de Suprimento</li>
-                                    <li>4.2 Estudos de Caso Práticos</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Carlos Eduardo Osório Xavier</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Logística e Transportes (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 A Logística</strong>
-                                <ul>
-                                    <li>1.1 Definição e Características</li>
-                                    <li>1.2 Relevância econômica da Logística no Brasil</li>
-                                    <li>1.3 Como as empresas enxergam a logística</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Desenvolvendo os Conceitos</strong>
-                                <ul>
-                                    <li>2.1 Produto Logístico</li>
-                                    <li>2.2 Nível e serviço e geração de valor pela logística</li>
-                                    <li>2.3 Transporte, Estoque e Armazenagem</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Refletindo e Aplicando os Conhecimentos</strong>
-                                <ul>
-                                    <li>3.1 Contextualização da “macro-logística” brasileira</li>
-                                    <li>3.2 Aplicações e Estudos de Casos Práticos</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. Carlos Eduardo Osório Xavier</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Negociação e Jogos (24 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 Noções Básicas Sobre Simuladores Organizacionais e Jogos de Empresas</strong>
-                                <ul>
-                                    <li>1.1 Entendendo o que são Jogos de Empresas</li>
-                                    <li>1.2 Objetivo da Simulação Gerencial</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Apresentação do Simulador GREGOMIX</strong>
-                                <ul>
-                                    <li>2.1 Descrição de Caso Simulado e Regras do GREGOMIX</li>
-                                    <li>2.2 O Ambiente da simulação</li>
-                                    <li>2.3 As condições e restrições do caso Simulado</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 Decisões e Análise dos Resultados</strong></li>
-                            <li><strong>4 Compartilhando o Aprendizado</strong></li>
-                        </ul>
-                        <span>Prof. Murilo Alvarenga Oliveira</span>
-                    </div>
-                </div>
-                <div class="hm-crs-subcard">
-                    <div class="hm-crs-subcard-question">
-                        <span>Técnicas de Pesquisa em Economia (12 horas-aula)</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                    </div>
-                    <div class="hm-crs-subcard-answer">
-                        <ul>
-                            <li><strong>1 O que é uma Monografia</strong>
-                                <ul>
-                                    <li>1.1 Trabalhando Tipos de Conhecimento</li>
-                                    <li>1.2 Maneiras de Desenvolver o Conhecimento</li>
-                                </ul>
-                            </li>
-                            <li><strong>2 Como Desenvolver um Projeto de Pesquisa</strong>
-                                <ul>
-                                    <li>2.1 Temas e Critério para Escolha</li>
-                                    <li>2.2 Delimitação do Problema</li>
-                                    <li>2.3 Organização</li>
-                                </ul>
-                            </li>
-                            <li><strong>3 A Escrita Científica</strong>
-                                <ul>
-                                    <li>3.1 Regras Práticas</li>
-                                    <li>3.2 Padronização das Citações</li>
-                                    <li>3.3 Encontrando Referências</li>
-                                </ul>
-                            </li>
-                            <li><strong>4 Aplicações Práticas</strong>
-                                <ul>
-                                    <li>4.1 Desenvolvendo meu Projeto</li>
-                                    <li>4.2 Testando a Importância de meu tema</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <span>Prof. José Roselino</span>
-                    </div>
-                </div>
-                
+                <?php
+                $disciplinas = get_post_meta(get_the_ID(), 'crs_disciplinas', true);
+
+                // Verifique se $disciplinas é um array
+                if (is_array($disciplinas) && !empty($disciplinas)) {
+                    foreach ($disciplinas as $disciplina) {
+                        echo '<div class="hm-crs-subcard">';
+                        echo '<div class="hm-crs-subcard-question">';
+                        echo '<span>' . esc_html($disciplina['crs_disciplina_nome_horas']) . '</span>';
+                        echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+                        echo '</div>';
+                        echo '<div class="hm-crs-subcard-answer">';
+                        
+                        // Adicionar quebras de linha e formatação HTML
+                        $topicos_formatados = nl2br(esc_html($disciplina['crs_disciplina_topicos']));
+                        echo '<p>' . $topicos_formatados . '</p>';
+                        
+                        echo '<span>' . esc_html($disciplina['crs_disciplina_professor']) . '</span>';
+                        echo '</div>'; // .hm-crs-subcard-answer
+                        echo '</div>'; // .hm-crs-subcard
+                    }
+                } else {
+                    echo '<p>Nenhuma disciplina cadastrada.</p>';
+                }
+                ?>
             </div>
         </div>
         <div class="hm-crs-card">
@@ -762,26 +72,17 @@ get_header();
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
-                    <span>Contamos com um corpo docente altamente qualificado, composto por mestres e doutores nas melhores universidades do país e do exterior. Além disso, nossos professores possuem vasta experiência profissional, tanto na atuação no mercado quanto no setor de pesquisa em diversas áreas do conhecimento econômico.</span>
+                    <p><?php echo esc_html(get_post_meta(get_the_ID(), 'crs_corpo_docente_texto', true)); ?></p>
                     <ul>
-                        <li>Adelson Figueiredo</li>
-                        <li>Adriana Estela Sanjuan Motebello</li>
-                        <li>Alexandre Lopes Gomes</li>
-                        <li>Alex Souza Bertoldi</li>
-                        <li>Aniela Carrara</li>
-                        <li>Antonio Carlos Diegues</li>
-                        <li>Danilo Rolim Dias de Aguiar</li>
-                        <li>José Adrian Payeras</li>
-                        <li>Jose Eduardo de S. Roselino Junior</li>
-                        <li>Luciano de Souza Cunha</li>
-                        <li>Naja B Santana</li>
-                        <li>Paulo Camargo</li>
-                        <li>Ricardo Coser Mergulhão</li>
-                        <li>Rodrigo V. Rodrigues</li>
-                        <li>Rogério Aparecido</li>
-                        <li>Rosane N. de Faria</li>
-                        <li>Tiago Almeida</li>
-                    </ul>                    
+                        <?php
+                        $professores = get_post_meta(get_the_ID(), 'crs_corpo_docente_lista', true);
+                        if (!empty($professores) && is_array($professores)) {
+                            foreach ($professores as $professor) {
+                                echo '<li>' . esc_html($professor) . '</li>';
+                            }
+                        }
+                        ?>
+                    </ul>
                 </div>
             </div>              
         </div>
@@ -793,11 +94,10 @@ get_header();
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
-                    <span>
-                        As aulas online são ministradas ao vivo pelos professores através da Plataforma Zoom.<br><br>
-                        Os alunos podem tirar dúvidas, trazer contribuições práticas do ambiente de mercado e interagir com os colegas.<br><br>
-                        Os alunos são alunos UFSCar, contam também com disponibilidade de consulta na Biblioteca e suporte do corpo docente.
-                    </span>
+                    <?php
+                        $texto_local = get_post_meta(get_the_ID(), 'crs_local_texto', true);
+                        echo nl2br(esc_html($texto_local));
+                    ?>
                 </div>
             </div>
         </div>
@@ -810,9 +110,10 @@ get_header();
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
-                    <span>
-                        As aulas são ministradas, preferencialmente com frequência semanal, aos sábados das 09hs às 12hs. O calendário de aulas é previamente definido e divulgado no início de cada semestre.
-                    </span>
+                    <?php
+                        $texto_periodicidade = get_post_meta(get_the_ID(), 'crs_periodicidade_texto', true);
+                        echo nl2br(esc_html($texto_periodicidade));
+                    ?>
                 </div>
             </div>
         </div>
@@ -835,39 +136,38 @@ get_header();
 
                     <!-- Conteúdo das abas -->
                     <div id="24x" class="tabcontent" style="display: block;">
-                        <p><strong>Parcele em 24x</strong></p>
-                        <p>Matrícula: <strong>R$ 360,00</strong></p>
-                        <p>+ 24 parcelas de <strong>R$ 490,00*</strong></p>
+                        <?php
+                            $texto = get_post_meta(get_the_ID(), 'crs_investimento_24', true);
+                            echo nl2br(esc_html($texto));
+                        ?>
                     </div>
 
                     <div id="18x" class="tabcontent" style="display: none;">
-                        <p><strong>Parcele em 18x e economize R$ 588,00 no valor do curso</strong></p>
-                        <p>Matrícula: <strong>R$ 360,00</strong></p>
-                        <p>+ 18 parcelas de <strong>R$ 620,67*</strong></p>
+                        <?php
+                            $texto = get_post_meta(get_the_ID(), 'crs_investimento_18', true);
+                            echo nl2br(esc_html($texto));
+                        ?>
                     </div>
 
                     <div id="12x" class="tabcontent" style="display: none;">
-                        <p><strong>Parcele em 12x e economize R$ 1.176,00 no valor do curso</strong></p>
-                        <p>Matrícula: <strong>R$ 360,00</strong></p>
-                        <p>+ 12 parcelas de <strong>R$ 882,00*</strong></p>
+                        <?php
+                            $texto = get_post_meta(get_the_ID(), 'crs_investimento_12', true);
+                            echo nl2br(esc_html($texto));
+                        ?>
                     </div>
 
                     <div id="6x" class="tabcontent" style="display: none;">
-                        <p><strong>Parcele em 6x e economize R$ 1.764,00 no valor do curso</strong></p>
-                        <p>Matrícula: <strong>R$ 360,00</strong></p>
-                        <p>+ 6 parcelas de <strong>R$ 1.666,00*</strong></p>
+                        <?php
+                            $texto = get_post_meta(get_the_ID(), 'crs_investimento_6', true);
+                            echo nl2br(esc_html($texto));
+                        ?>
                     </div>
 
                     <div id="Vista" class="tabcontent" style="display: none;">
-                        <p>Pague à vista e economize R$ 2.352,00 no valor do curso</p>
-                        <div>
-                            <span>Matrícula:</span>
-                            <strong>R$ 360,00</strong>
-                        </div>
-                        <div>
-                            <span>1 parcela de</span>
-                            <strong>R$ 9.408,00*</strong>
-                        </div>
+                        <?php
+                            $texto = get_post_meta(get_the_ID(), 'crs_investimento_vista', true);
+                            echo nl2br(esc_html($texto));
+                        ?>
                     </div>
                 </div>
             </div>
@@ -879,10 +179,10 @@ get_header();
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
-                    <span>
-                        O corpo docente do curso MBA Economia & Negócios tem qualificação para a criação de cursos sob demanda, atendendo às necessidades de sua empresa.<br><br>
-                        Consulte-nos através do formulário de contato para avaliarmos a viabilidade da criação de módulos e turmas específicas para os gestores e demais funcionários de sua empresa.
-                    </span>
+                    <<?php
+                        $texto = get_post_meta(get_the_ID(), 'crs_incompany_texto', true);
+                        echo nl2br(esc_html($texto));
+                    ?>
                 </div>
             </div>
         </div>
