@@ -32,6 +32,11 @@ Version: 1.0
     color: var(--black);
   }
 
+  body, html {
+    overflow-x: hidden !important;
+  }
+
+
 /*Variavel*/
 :root {
   /*=========== FONTE ============*/
