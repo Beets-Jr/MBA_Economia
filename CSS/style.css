@@ -2323,6 +2323,11 @@ input:focus, textarea:focus, select:focus {
   font-weight: 700;
 }
 
+.italico {
+  font-style: italic;
+  font-weight: 500;
+}
+
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -3011,6 +3016,7 @@ body.ntc {
   color: black;
   max-width: 435px;
   margin: 30px 40px;
+  text-align: justify;
 }
 .missao h2{
   color: #E07629;
