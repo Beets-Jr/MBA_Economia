@@ -325,4 +325,76 @@ function cmb2_fields_home() {
 //     ]);
 
 // }
+
+//CONTATO
+add_action('cmb2_admin_init', 'cmb2_fields_contato');
+
+function cmb2_fields_contato() {
+    $cmb = new_cmb2_box([
+        'id'           => 'contato_box',
+        'title'        => 'Contato',
+        'object_types' => ['page'],
+        'show_on'      => [
+            'key'   => 'page-template',
+            'value' => 'page-contato.php',
+        ],
+    ]);
+
+    $cmb->add_field( array(
+        'name' => __( 'Imagem de fundo', 'cmb2' ),
+        'id'   => 'ctt_custom_bg_image',
+        'type' => 'file',
+        'desc' => 'Imagem que aparece ao fundo da primeira seção',
+        'options' => array(
+            'url' => false,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium',
+    ));
+
+    $cmb->add_field([
+        'name' => 'Título',
+        'id'   => 'ctt_page_title',
+        'type' => 'text',
+        'desc' => 'Título para a página'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Subtítulo1',
+        'id'   => 'ctt_page_subtitle1',
+        'type' => 'textarea_small',
+        'desc' => 'Subtítulo para a página (texto embaixo do título)'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Subtítulo2',
+        'id'   => 'ctt_page_subtitle2',
+        'type' => 'textarea_small',
+        'desc' => 'Subtítulo para a página (texto embaixo do título)'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Email de contato',
+        'id'   => 'ctt_email',
+        'type' => 'text',
+        'desc' => 'E-mail disponível para contato'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Telefone de contato',
+        'id'   => 'ctt_phone',
+        'type' => 'text',
+        'desc' => 'Telefone disponível para contato'
+    ]);
+}
+
+
 // ?>
