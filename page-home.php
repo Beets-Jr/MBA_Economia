@@ -162,73 +162,34 @@ get_header();
 			
 			<p class="ultimas_noticias_descricao">Mantenha-se atualizado com as mais recentes novidades e conteúdos publicados em nosso blog.</p>
 			
-			<div class="ultimas_noticias_cards">
+			<div class="ultimas_noticias_cards">			
 				
-				<div class="card">					
-					<div class="card_img">
-						<img src="img/img-ntc.png" alt="">
-						<div class="card_img_data">
-							<p class="dia">28</p>
-							<p class="dia_semana">Seg</p>
+				<?php $posts = get_posts("numberposts=3"); ?>
+				<?php if($posts) : ?>
+					<?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
+					
+						<div class="card">					
+							<div class="card_img">
+								<img src="img/img-ntc.png" alt="">
+								<div class="card_img_data">
+									<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>
+									<p class="dia_semana"> <?php echo get_the_date('M', $post); ?> </p>
+								</div>
+							</div>
+								
+							<div class="conteudo">
+								<h2> <?php echo $post->post_title; ?> </h2>
+								
+								<p>
+									<?php the_excerpt(); ?>	
+								</p>	
+							</div>
+								
+							<a href=" <?php echo get_permalink($post->ID); ?> "><button class="card_btn" role="button">Leia mais</button></a>					
 						</div>
-					</div>
-					
-					<div class="conteudo">
-						<h2>Título do post</h2>
-						
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nunc nulla nibh, efficitur ac pretium sit amet, mattis eu 
-							ipsum. Donec elementum commodo lectus a scelerisque.
-						</p>	
-					</div>
-					
-					<a href="#"><button class="card_btn" role="button">Leia mais</button></a>					
-				</div>
-				
-				<div class="card">					
-					<div class="card_img">
-						<img src="img/img-ntc.png" alt="">
-						<div class="card_img_data">
-							<p class="dia">28</p>
-							<p class="dia_semana">Seg</p>
-						</div>
-					</div>
-					
-					<div class="conteudo">
-						<h2>Título do post</h2>
-						
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nunc nulla nibh, efficitur ac pretium sit amet, mattis eu 
-							ipsum. Donec elementum commodo lectus a scelerisque.
-						</p>	
-					</div>
-					
-					<a href="#"><button class="card_btn" role="button">Leia mais</button></a>							
-				</div>
-				
-				<div class="card">					
-					<div class="card_img">
-						<img src="img/img-ntc.png" alt="">
-						<div class="card_img_data">
-							<p class="dia">28</p>
-							<p class="dia_semana">Seg</p>
-						</div>
-					</div>
-					
-					<div class="conteudo">
-						<h2>Título do post</h2>
-						
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nunc nulla nibh, efficitur ac pretium sit amet, mattis eu 
-							ipsum.
-						</p>	
-					</div>	
-					
-					<a href="#"><button class="card_btn" role="button">Leia mais</button></a>				
-				</div>
+
+					<?php endforeach; ?>
+				<?php endif; ?>
 				
 			</div>
 		
