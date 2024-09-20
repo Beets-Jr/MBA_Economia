@@ -21,129 +21,25 @@ get_header();
      <div class="sbr-corpo-docente">
          <div class="sbr-corpo-docente-title">
              <div class="sbr-linha-titulo"></div>
-             <h2>Corpo Docente</h2>
+             <h2><?php echo get_post_meta(get_the_ID(), 'titulo_introducao', true); ?></h2>
         </div>
         <div class="sbr-corpo-docente-mobile">
             <div class="sbr-slides">
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/adelson-figueiredo-87b98496/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/2582161065438214"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Adelson Figueiredo</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-adriana.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/adriana-estela-sanjuan-montebello-293a4028a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/4326971138357942"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Adriana Estela Sanjuan Montebello</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-alexandre.jpg');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/alg-ufscar/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/5002157193962189"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Alexandre Lopes Gomes</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-alex.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/7475225668934101"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Alex Souza Bertoldi</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-aniela.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/aniela-carrara-9a33a13a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/2348376949393246"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Aniela Carrara</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-antonio.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/danilo-r-d-aguiar-8402ab8a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/0594188577645269"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Antonio Carlos Diegues</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-danilo.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/danilo-r-d-aguiar-8402ab8a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/1889207481986151"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Danilo Rolim Dias de Aguiar</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/2402036389717756"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">José Adrian Payeras</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-jose-r.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/7410971805108456"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Jose Eduardo Roselino Junior</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-luciano.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/4036587963497533"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Luciano de Souza Cunha</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-naja.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/4950197164940762"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Naja B Santana</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-paulo.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/patamaca/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/6712098199182560"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Paulo Camargo</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-ricardo.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/rcmergulhao/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/0598720328915137"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Ricardo Coser Mergulhão</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-rodrigo.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/7066100737307566"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Rodrigo V. Rodrigues</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-rogerio.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/5602653417743793"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Rogério Aparecido</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-rosane.png');">
-                    <div class="sbr-card-icons">
-                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/1172221536399083"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Rosane N. de Faria</h3>
-                </div>
-                <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>./img/prof-tiago.png');">
-                    <div class="sbr-card-icons">
-                        <a href="https://www.linkedin.com/in/talmeida-ufscar/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                        <a href="http://lattes.cnpq.br/5368680512020633"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
-                    </div>
-                    <h3 style="padding-bottom: 10px;">Tiago Almeida</h3>
-                </div>
+                <?php
+                   $corpodocente = get_fieldsobre('corpodocente');
+                   if(isset($corpodocente)) {foreach ($corpodocente as $docente) {
+                 ?>
+                 
+                   <div class="sbr-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png');">
+                       <div class="sbr-card-icons">
+                           <a href=<?php echo $docente['linkedindoprof']; ?>><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
+                           <a href=<?php echo $docente['lattesdoprof']; ?>><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
+                       </div>
+                       <h3 style="padding-bottom: 10px;"><?php echo $docente['nomedoprof']; ?></h3>
+                   </div>
+               
+                <?php } } ?>
+                
             </div>   
         </div>
 

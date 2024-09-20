@@ -94,11 +94,15 @@ function cmb2_fields_home() {
         'name' => 'Resposta',
         'id' => 'resposta',
         'type' => 'textarea_small',
-      ]);
+      ]);S
 }
 
 //HEADER
 add_action('cmb2_admin_init', 'cmb2_fields_header');
+function get_fieldheader($key, $page_id = 0) {
+    $id = $page_id !== 0 ? $page_id : get_the_ID();
+    return get_post_meta($id, $key, true);
+ }
 
 function cmb2_fields_header() {
     $cmb = new_cmb2_box([
@@ -116,10 +120,41 @@ function cmb2_fields_header() {
         'id'   => 'titulo_introducao',
         'type' => 'text',
     ]);
+
+    $links_menu = $cmb->add_field([
+        'name' => 'Links do Menu',
+        'id'   => 'links_menu',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+                'group_title' => 'Link {#}',
+                'add_button' => 'Adicionar Link',
+                'remove_button' => 'Remover Link',
+                'sortable' => true,
+        ]
+    ]); 
+
+    $cmb->add_group_field($links_menu, [
+        'name' => 'Nome',
+        'id'   => 'nomedolink',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_group_field($links_menu, [
+        'name' => 'Link',
+        'id'   => 'link',
+        'type' => 'text_url',
+    ]);
+
 }
 
 //FOOTER
 add_action('cmb2_admin_init', 'cmb2_fields_footer');
+
+function get_fieldfooter($key, $page_id = 0) {
+    $id = $page_id !== 0 ? $page_id : get_the_ID();
+    return get_post_meta($id, $key, true);
+ }
 
 function cmb2_fields_footer() {
     $cmb = new_cmb2_box([
@@ -137,10 +172,60 @@ function cmb2_fields_footer() {
         'id'   => 'titulo_introducao',
         'type' => 'text',
     ]);
+
+    $links_footer = $cmb->add_field([
+        'name' => 'Links do Footer',
+        'id'   => 'links_footer',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+                'group_title' => 'Link {#}',
+                'add_button' => 'Adicionar Link',
+                'remove_button' => 'Remover Link',
+                'sortable' => true,
+        ]
+    ]); 
+
+    $cmb->add_group_field($links_footer, [
+        'name' => 'Nome Footer',
+        'id'   => 'nomedolink_footer',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_group_field($links_footer, [
+        'name' => 'Link Footer',
+        'id'   => 'linkfooter',
+        'type' => 'text_url',
+    ]);
+
+    $contato_footer = $cmb->add_field([
+        'name' => 'Contato do Footer',
+        'id'   => 'contato_footer',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+                'group_title' => 'Contato {#}',
+                'add_button' => 'Adicionar Contato',
+                'remove_button' => 'Remover Contato',
+                'sortable' => true,
+        ]
+    ]); 
+
+    $cmb->add_group_field($contato_footer, [
+        'name' => 'Contato Footer',
+        'id'   => 'contato_do_footer',
+        'type' => 'text',
+    ]);
+
 }
 
 //SOBRE
 add_action('cmb2_admin_init', 'cmb2_fields_sobre');
+
+function get_fieldsobre($key, $page_id = 0) {
+   $id = $page_id !== 0 ? $page_id : get_the_ID();
+   return get_post_meta($id, $key, true);
+}
 
 function cmb2_fields_sobre() {
     $cmb = new_cmb2_box([
@@ -158,6 +243,72 @@ function cmb2_fields_sobre() {
         'id'   => 'titulo_introducao',
         'type' => 'text',
     ]);
+
+    $conteudo = $cmb->add_field([
+        'name' => 'Conteúdo',
+        'id'   => 'conteudo',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+                'group_title' => 'Conteúdo {#}',
+                'add_button' => 'Adicionar Conteúdo',
+                'remove_button' => 'Remover Conteúdo',
+                'sortable' => true,
+        ]
+    ]); 
+
+    $cmb->add_group_field($conteudo, [
+        'name' => 'Título Conteúdo',
+        'id'   => 'titulo_conteudo',
+        'type' => 'text',
+    ]);
+    
+    $cmb->add_group_field($conteudo, [
+        'name' => 'Texto Conteúdo',
+        'id'   => 'texto_conteudo',
+        'type' => 'textarea',
+    ]);
+
+    $corpodocente = $cmb->add_field([
+        'name' => 'Corpo Docente',
+        'id'   => 'corpodocente',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+                'group_title' => 'Professor {#}',
+                'add_button' => 'Adicionar Professor',
+                'remove_button' => 'Remover Professor',
+                'sortable' => true,
+        ]
+    ]); 
+
+    $cmb->add_group_field($corpodocente, [
+        'name' => 'Imagem do Professor',
+        'id'   => 'imagemdoprof',
+        'type' => 'file',
+        'options' => [
+                'url' => false,
+        ]
+    ]);
+
+    $cmb->add_group_field($corpodocente, [
+        'name' => 'Link do Linkedin do Professor',
+        'id'   => 'linkedindoprof',
+        'type' => 'text_url',
+    ]);
+
+    $cmb->add_group_field($corpodocente, [
+        'name' => 'Link do Lattes do Professor',
+        'id'   => 'lattesdoprof',
+        'type' => 'text_url',
+    ]);
+    
+    $cmb->add_group_field($corpodocente, [
+        'name' => 'Nome do Professor',
+        'id'   => 'nomedoprof',
+        'type' => 'text',
+    ]);
+    
 }
 
 //CURSO
