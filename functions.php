@@ -94,7 +94,7 @@ function cmb2_fields_home() {
         'name' => 'Resposta',
         'id' => 'resposta',
         'type' => 'textarea_small',
-      ]);S
+      ]);
 }
 
 //HEADER
