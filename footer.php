@@ -13,8 +13,8 @@
 					<div class="footerNav">
 						<h4>Contatos:</h4>
 			             <ul>
-				                 <li><a href="">+55 (15) 9.8176-0011</a></li>
-				                 <li><a href="">mbaeconomia@ufscar.br</a></li>
+				                 <li><p><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_phone', true)); ?></p></li>
+				                 <li><p><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_email', true)); ?></p></li>
 				                 
 			             </ul>
 		            </div>

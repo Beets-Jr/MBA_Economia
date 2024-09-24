@@ -3,14 +3,25 @@
  * Template Name: Contato
  */
 get_header();
-?>
-    <div class="ctt-img-header">
-        <h1>Fale conosco!</h1>
+?>	
+
+	<?php 
+		// Recupera a URL da imagem.
+		$bg_image = get_post_meta( get_the_ID(), 'ctt_custom_bg_image', true ); 
+	?>
+	<style>
+		.ctt-img-cmb2 {
+			background-image: url('<?php echo esc_url( $bg_image ); ?>');
+		}
+	</style>
+
+    <div class="ctt-img-header ctt-img-cmb2">
+        <h1><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_page_title', true)); ?></h1>
         <span>
-            Tem alguma dúvida, recado ou sugestão para nosso curso?
+			<?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_page_subtitle1', true)); ?>
         </span>
         <span>
-            Conte-nos no formulário abaixo.
+			<?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_page_subtitle2', true)); ?>
         </span>
     </div>
     <div class="ctt-container">
@@ -24,7 +35,7 @@ get_header();
 				
 				<div class="ctt-info-content">
 					<h3>Email</h3>
-					<p>mbaeconomia@ufscar.br</p>
+					<p><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_email', true)); ?></p>
 				</div>
 			</div>
 			
@@ -35,7 +46,7 @@ get_header();
 				
 				<div class="ctt-info-content">
 					<h3>Telefone</h3>
-					<p>(15) 98176-0011</p>				
+					<p><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_phone', true)); ?></p>				
 				</div>
 			</div>
 		</div>
