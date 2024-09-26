@@ -4,16 +4,36 @@
  */
 get_header();
 ?>
-	<div class="ntc">
-    <div class="ntc_wrapper">
+
+<div class = "ntc">
+	<!-- Parte da notícia -->
+	<article class="ntc_wrapper">
         <div class="ntc_container">
-            <h1 class="white"> <?php the_title(); ?></h1>
-            <p class="white"> <?php echo get_the_date('j \d\e F \d\e Y'); ?> </p>
-            <img src="<?php echo get_template_directory_uri(); ?>./img/img-ntc.png" alt="Imagem Exemplo">
-             
-            <?php the_content(); ?>
+            
+			<div class="ntc_content">			
+				
+				<!-- Título e data do post -->
+				<div class="ntc_post_header_infos">
+					<h1 class="white"> <?php the_title(); ?></h1>
+					<p class="white"> <?php echo get_the_date('j \d\e F \d\e Y'); ?> </p>
+				</div>
+			
+				<!-- Thumbnail do post -->
+				<div class="ntc_post_thumb">
+					<?php if(has_post_thumbnail( )): ?>
+					<?php the_post_thumbnail('medium_large'); ?>
+					<?php else: ?>
+						<img alt="" src="<?php echo get_template_directory_uri() ?>/images/thumbnail-default.jpg" />
+					<?php endif; ?>
+				</div>
+				
+				<!-- Conteúdo do post -->
+				<?php the_content(); ?>
+            
+            </div>
              
             <hr>
+            
             <div class="ntc_social-share">
                 <p class="ntc_Share">Siga nas redes sociais</p>
                 <div class="ntc_icons">
@@ -22,9 +42,12 @@ get_header();
                   <a href="#" class="linkedin"><img src="<?php echo get_template_directory_uri(); ?>./img/icon-linkedin.png" alt="LinkedIn"></a>
                 </div>
             </div>                           
-        </div>
-    </div>
-    <div class="ctt-container">
+        </div>	
+	</article>
+	
+	<!-- Parte do formulário e info de contato -->
+	<div class="ctt-container">
+		<!-- Informações de contato -->
 		<div class="ctt-info">
 			<h2>Contatos</h2>
 			
@@ -89,11 +112,9 @@ get_header();
 		</div>
     </div>
     
-    		<!-- Parte de últimas notícias -->
-		<section class="ultimas_noticias">
-		
-		<div class="ultimas_noticias_wrapper">
-			
+   	<!-- Parte de últimas notícias -->
+	<section class="ultimas_noticias">
+		<div class="ultimas_noticias_wrapper">			
 			<div class="ultimas_noticias_title">
 				<p>BLOG</p>
 				<h2>Últimas notícias</h2>
@@ -111,7 +132,7 @@ get_header();
 					
 						<div class="card">					
 							<div class="card_img">
-								<img src="img/img-ntc.png" alt="">
+								<?php the_post_thumbnail('full'); ?>
 								<div class="card_img_data">
 									<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>
 									<p class="dia_semana"> <?php echo get_the_date('M', $post); ?> </p>
@@ -133,10 +154,11 @@ get_header();
 				<?php endif; ?>
 				
 			</div>
-		
+
 			<button class="ultimas_noticias_btn" role="button"><a href="/MBA/Noticias">Ver todas as postagens</a></button>
 		</div>
-    
-    </section>
-	</div>
+
+	</section>
+
+</div>
 <?php get_footer(); ?>

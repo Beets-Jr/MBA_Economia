@@ -10,27 +10,37 @@ get_header();
         </span>
         <h1>Notícias</h1>
     </div>
+    
     <div class="sbr-corpo-docente-title">
         <div class="sbr-linha-titulo"></div>
         <h2>Todas as postagens</h2>
-   </div>
+	</div>
    
-   <section class="container-nts">
-	   
+   <section class="listagem_noticias">
+	   <div class="listagem_noticias_container">
 	   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	   
-	   			<article class="card-nts">	
-					<img class="card-nts-imagem" src="<?php echo get_template_directory_uri(); ?>./img/img-ntc.png" alt="Imagem Exemplo">
-					<div class="card-nts-content">
-						<h1 class="card-nts-title">  <?php the_title() ?>  </h1>
-						<p> <?php echo get_the_date('j \d\e F \d\e Y'); ?> </p>
-						<div class="card-nts-text">
-							<p> <?php the_excerpt(); ?>  </p> 
-						</div>
-						<a href=" <?php the_permalink(); ?> " class="btn">Ler mais</a>
+			<article class="noticia">					
+				<div class="noticia_img">
+					<?php the_post_thumbnail('full'); ?>
+				</div>
+				
+				<div class="noticia_conteudo">
+					<div class="noticia_header">
+						<h2> <?php echo $post->post_title; ?> </h2>
+						<p class="noticia_data"> <?php echo get_the_date(); ?> </p>
 					</div>
-				</article>
+					
+					<p>
+						<?php the_excerpt(); ?>	
+					</p>	
+					
+					<a href=" <?php echo get_permalink($post->ID); ?> "><button class="noticia_btn" role="button">Leia mais</button></a>
+				</div>			
+				
+			</article>
 		<?php endwhile;?>
+		</div>
 		
 		<!-- Navegação para posts antigos e novos -->
 		<div class="nav-blog">

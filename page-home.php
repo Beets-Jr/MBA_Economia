@@ -170,7 +170,7 @@ get_header();
 					
 						<div class="card">					
 							<div class="card_img">
-								<img src="img/img-ntc.png" alt="">
+								<?php the_post_thumbnail('full'); ?>
 								<div class="card_img_data">
 									<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>
 									<p class="dia_semana"> <?php echo get_the_date('M', $post); ?> </p>
