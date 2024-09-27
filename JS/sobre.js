@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
   // Swiper JS
+document.addEventListener('DOMContentLoaded', function() {
   let swiperCards = new Swiper('.sbr-card-content', {
   loop: false,
   spaceBetween: 0,
@@ -46,3 +47,4 @@ document.addEventListener('DOMContentLoaded', function () {
   
   slideActiveClass: 'swiper-slide-active',
   });
+});
