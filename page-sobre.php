@@ -4,24 +4,33 @@
  */
 get_header();
 ?>
+    <?php 
+		$bg_image = get_post_meta( get_the_ID(), 'sb_custom_bg_image', true ); 
+	?>
+
+	<style>
+		.sbr-img-header {
+		background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
+			url('<?php echo esc_url( $bg_image ); ?>');
+		}
+	</style>
     <div class="sbr-img-header">
         <h1>Sobre</h1>
     </div>
     <div class="sbr-corpo-docente-title">
         <div class="sbr-linha-titulo"></div>
-        <h2>MBA Economia & Negócios</h2>
+        <h2><?php echo get_post_meta(get_the_ID(), 'titulo_inicial', true); ?></h2>
    </div>
     <div class="ins-content">
         <div class="ins-initial-text">
-            <p>O MBA em Economia e Negócios da UFSCar é um programa de pós-graduação que integra a tradição acadêmica da universidade com as práticas mais modernas do mercado. Nosso objetivo é formar líderes capazes de compreender e atuar nas complexas relações econômicas que influenciam os negócios no Brasil e no mundo. Com uma abordagem interdisciplinar e focada na aplicação prática, o curso oferece ferramentas essenciais para a tomada de decisões estratégicas em diferentes setores da economia.
-            </p>
+            <p><?php echo get_post_meta(get_the_ID(), 'texto_inicial', true); ?></p>
         </div>
     </div>
     <!-- Corpo Docente -->
      <div class="sbr-corpo-docente">
          <div class="sbr-corpo-docente-title">
              <div class="sbr-linha-titulo"></div>
-             <h2><?php echo get_post_meta(get_the_ID(), 'titulo_introducao', true); ?></h2>
+             <h2>Corpo Docente</h2>
         </div>
         <div class="sbr-corpo-docente-mobile">
             <div class="sbr-slides">
@@ -52,8 +61,7 @@ get_header();
                     <div class="swiper-wrapper">
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
-
+                            <img src="<?php echo get_template_directory_uri(); ?>./img/prof-adelson.png" alt="Adelson Figueiredo">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/adelson-figueiredo-87b98496/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>

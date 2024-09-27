@@ -6,7 +6,7 @@ function mba_scripts() {
     wp_register_script('mba-script', get_template_directory_uri() . '/js/script.js', array(), false, true);
     wp_register_script('mba-sobre', get_template_directory_uri() . '/js/sobre.js', array(), false, true);
     wp_register_script('mba-curso', get_template_directory_uri() . '/js/curso.js', array(), false, true);
-    wp_register_script('mba-swiper', get_template_directory_uri() . '/js/swiper-bundle-min.js', array(), false, true);
+    wp_register_script('mba-swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), false, true);
     wp_register_script('mba-inscreva-se', get_template_directory_uri() . '/js/inscreva-se.js', array(), false, true);
 
     // Enfileirar os scripts
@@ -324,32 +324,13 @@ function cmb2_fields_sobre() {
 
     $cmb->add_field([
         'name' => 'Título Introdução',
-        'id'   => 'titulo_introducao',
+        'id'   => 'titulo_inicial',
         'type' => 'text',
     ]);
 
-    $conteudo = $cmb->add_field([
-        'name' => 'Conteúdo',
-        'id'   => 'conteudo',
-        'type' => 'group',
-        'repeatable' => true,
-        'options' => [
-                'group_title' => 'Conteúdo {#}',
-                'add_button' => 'Adicionar Conteúdo',
-                'remove_button' => 'Remover Conteúdo',
-                'sortable' => true,
-        ]
-    ]); 
-
-    $cmb->add_group_field($conteudo, [
-        'name' => 'Título Conteúdo',
-        'id'   => 'titulo_conteudo',
-        'type' => 'text',
-    ]);
-    
-    $cmb->add_group_field($conteudo, [
-        'name' => 'Texto Conteúdo',
-        'id'   => 'texto_conteudo',
+    $cmb->add_field([
+        'name' => 'Texto Objetivo',
+        'id'   => 'texto_inicial',
         'type' => 'textarea',
     ]);
 
@@ -408,6 +389,26 @@ function cmb2_fields_curso() {
             'value' => 'page-curso.php',
         ],
     ]);
+
+    $cmb->add_field( array(
+        'name' => __( 'Imagem de fundo', 'cmb2' ),
+        'id'   => 'crs_custom_bg_image',
+        'type' => 'file',
+        'desc' => 'Imagem que aparece ao fundo da primeira seção',
+        'options' => array(
+            'url' => false,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium',
+    ));
 
     // Campo para a introdução
     $cmb->add_field([
@@ -615,7 +616,7 @@ function cmb2_fields_noticias() {
         'object_types' => ['page'],
         'show_on'      => [
             'key'   => 'page-template',
-            'value' => 'page-noticias.php',
+            'value' => 'home.php',
         ],
     ]);
 
@@ -639,5 +640,318 @@ function cmb2_fields_noticias() {
         'preview_size' => 'medium',
     ));
 }
+
+//INSCREVA-SE
+add_action('cmb2_admin_init', 'cmb2_fields_inscreva_se');
+
+function cmb2_fields_inscreva_se() {
+    $cmb = new_cmb2_box([
+        'id'           => 'inscreva_se_box',
+        'title'        => 'Inscreva-se',
+        'object_types' => ['page'],
+        'show_on'      => [
+            'key'   => 'page-template',
+            'value' => 'page-inscreva-se.php',
+        ],
+    ]);
+
+    $cmb->add_field( array(
+        'name' => __( 'Imagem de fundo', 'cmb2' ),
+        'id'   => 'ins_custom_bg_image',
+        'type' => 'file',
+        'desc' => 'Imagem que aparece ao fundo da primeira seção',
+        'options' => array(
+            'url' => false,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium',
+    ));
+
+    $cmb->add_field([
+        'name' => 'Título',
+        'id'   => 'ins_page_title',
+        'type' => 'text',
+        'desc' => 'Título para a página'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Subtítulo',
+        'id'   => 'ins_page_subtitle',
+        'type' => 'textarea_small',
+        'desc' => 'Subtítulo para a página (texto embaixo do título)'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto Inicial',
+        'id'   => 'ins_texto_inicial',
+        'type' => 'textarea',
+        'desc' => 'Texto que aparece logo no início da página',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Segundo Texto Inicial',
+        'id'   => 'ins_texto_inicial02',
+        'type' => 'textarea',
+        'desc' => 'Segundo paragráfo do texto inicial',
+    ]);
+}
+
+//MATRICULA
+add_action('cmb2_admin_init', 'cmb2_fields_matricula');
+
+function cmb2_fields_matricula() {
+    $cmb = new_cmb2_box([
+        'id'           => 'matricula_box',
+        'title'        => 'Matricula',
+        'object_types' => ['page'],
+        'show_on'      => [
+            'key'   => 'page-template',
+            'value' => 'page-matricula.php',
+        ],
+    ]);
+
+    $cmb->add_field( array(
+        'name' => __( 'Imagem de fundo', 'cmb2' ),
+        'id'   => 'mat_custom_bg_image',
+        'type' => 'file',
+        'desc' => 'Imagem que aparece ao fundo da primeira seção',
+        'options' => array(
+            'url' => false,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium',
+    ));
+
+    $cmb->add_field([
+        'name' => 'Título',
+        'id'   => 'mat_page_title',
+        'type' => 'text',
+        'desc' => 'Título para a página'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Subtítulo',
+        'id'   => 'mat_page_subtitle',
+        'type' => 'textarea_small',
+        'desc' => 'Subtítulo para a página (texto embaixo do título)'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto Inicial',
+        'id'   => 'mat_texto_inicial',
+        'type' => 'textarea',
+        'desc' => 'Texto que aparece logo no início da página',
+    ]);
+}
+
+//OUTROCURSO
+add_action('cmb2_admin_init', 'cmb2_fields_outrocurso');
+
+function cmb2_fields_outrocurso() {
+    $cmb = new_cmb2_box([
+        'id'           => 'outro_curso_box',
+        'title'        => 'Outro Curso',
+        'object_types' => ['page'],
+        'show_on'      => [
+            'key'   => 'page-template',
+            'value' => 'page-outrocurso.php',
+        ],
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Título',
+        'id'   => 'out_page_title',
+        'type' => 'text',
+        'desc' => 'Título para a página'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Video',
+        'id'   => 'out_video',
+        'type' => 'oembed',
+        'desc' => 'Link do vídeo',
+    ]);
+
+    
+    $cmb->add_field([
+        'name' => 'Subtítulo',
+        'id'   => 'out_page_subtitle',
+        'type' => 'textarea_small',
+        'desc' => 'Subtítulo'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto Inicial',
+        'id'   => 'out_texto_inicial',
+        'type' => 'textarea',
+        'desc' => 'Texto que aparece logo no início da página',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto Inicial',
+        'id'   => 'out_texto_inicial02',
+        'type' => 'textarea',
+        'desc' => 'Texto que aparece logo no início da página',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo da lista 01',
+        'id'   => 'out_title_list1',
+        'type' => 'text',
+        'desc' => 'Titulo da lista 01'
+    ]);
+
+    $topicos1 = $cmb->add_field([
+        'name'        => 'Tópicos',
+        'id'          => 'out_lista01',
+        'type'        => 'group',
+        'repeatable'  => true,
+        'options'     => [
+            'group_title'   => 'Tópico {#}',
+            'add_button'    => 'Adicionar Tópico',
+            'remove_button' => 'Remover Tópico',
+            'sortable'      => true,
+        ],
+    ]);
+
+    $cmb->add_group_field($topicos1, [
+        'name' => 'nome do tópico',
+        'id'   => 'out_titulo_topico',
+        'type' => 'text',
+        'description' => 'Tópico da lista',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo da lista 02',
+        'id'   => 'out_title_list2',
+        'type' => 'text',
+        'desc' => 'Titulo da lista 02'
+    ]);
+
+    $topicos2 = $cmb->add_field([
+        'name'        => 'Tópicos',
+        'id'          => 'out_lista02',
+        'type'        => 'group',
+        'repeatable'  => true,
+        'options'     => [
+            'group_title'   => 'Tópico {#}',
+            'add_button'    => 'Adicionar Tópico',
+            'remove_button' => 'Remover Tópico',
+            'sortable'      => true,
+        ],
+    ]);
+
+    $cmb->add_group_field($topicos2, [
+        'name' => 'nome do tópico',
+        'id'   => 'out_titulo_topico',
+        'type' => 'text',
+        'description' => 'Tópico da lista',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo de um texto',
+        'id'   => 'out_page_subtitle02',
+        'type' => 'text',
+        'desc' => 'Titulo de um texto'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto ',
+        'id'   => 'out_texto02',
+        'type' => 'textarea',
+        'desc' => 'Texto para as turmas e outras informações',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo de um texto',
+        'id'   => 'out_texto02',
+        'type' => 'text',
+        'desc' => 'Titulo de um texto'
+    ]);
+
+    $turmas_group_id = $cmb->add_field( array(
+        'id'          => 'opcoes_turmas',
+        'type'        => 'group',
+        'description' => 'Adicione as informações das turmas e/ou',
+        'options'     => array(
+            'group_title'   => 'Turma {#}',
+            'add_button'    => 'Adicionar Turma',
+            'remove_button' => 'Remover Turma',
+            'sortable'      => true,
+        ),
+    ) );
+    
+    // Campo para o nome da turma
+    $cmb->add_group_field( $turmas_group_id, array(
+        'name' => 'Nome da Turma',
+        'id'   => 'nome_turma',
+        'type' => 'text',
+    ) );
+    
+    // Campo para a data da turma
+    $cmb->add_group_field( $turmas_group_id, array(
+        'name' => 'Informações da Turma',
+        'id'   => 'data_turma',
+        'type' => 'textarea_small', 
+        'description' => 'Data, horário e local da turma',
+    ) );
+
+    $cmb->add_field([
+        'name' => 'Titulo professores',
+        'id'   => 'out_texto_prof',
+        'type' => 'text',
+        'desc' => 'Titulo professores'
+    ]);
+
+    $professores_group_id = $cmb->add_field( array(
+        'id'          => 'opcoes_professores',
+        'type'        => 'group',
+        'description' => 'Adicione as informações dos professores',
+        'options'     => array(
+            'group_title'   => 'Professor {#}',
+            'add_button'    => 'Adicionar Professor',
+            'remove_button' => 'Remover Professor',
+            'sortable'      => true,
+        ),
+    ) );
+    
+    // Campo para o nome do professor
+    $cmb->add_group_field( $professores_group_id, array(
+        'name' => 'Nome do Professor',
+        'id'   => 'nome_professor',
+        'type' => 'text',
+    ) );
+    
+    // Campo para o e-mail do professor
+    $cmb->add_group_field( $professores_group_id, array(
+        'name' => 'Informações professor',
+        'id'   => 'email_professor',
+        'type' => 'text', 
+    ) );
+
+    $cmb->add_field([
+        'name' => 'Outras Informações',
+        'id'   => 'out_texto_info',
+        'type' => 'textarea',
+        'desc' => 'Outras Informações'
+    ]);
+}
+
 ?>
 

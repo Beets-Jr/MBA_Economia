@@ -3,7 +3,15 @@
  * Template Name: Curso
  */
 get_header();
-?>
+$bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true ); 
+?>  
+	<style>
+		.crs-img-header  {
+		background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
+			url('<?php echo esc_url( $bg_image ); ?>');
+		}
+	</style>
+    
     <div class="crs-img-header">
         <span>
             MBA em

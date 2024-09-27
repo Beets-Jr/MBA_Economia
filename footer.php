@@ -1,3 +1,9 @@
+<a target="_blank" href="https://wa.me//5515981760011?text=Olá. Quero saber mais sobre o MBA.">
+		<button type="button" class="btn_whatsapp" role="button">
+			<img src="<?php echo get_template_directory_uri(); ?>./img/icon-whatsapp.svg" alt="Logo do WhatsApp">
+			<p>Entre em contato</p>
+		</button>
+</a>
 <footer>
 		<div class="container">	
 			<div class="row">

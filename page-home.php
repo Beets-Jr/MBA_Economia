@@ -3,6 +3,14 @@
  * Template Name: Home
  */
 get_header();
+
+function limit_text_by_characters($text, $limit) {
+    if (strlen($text) > $limit) {
+        return substr($text, 0, $limit) . '...';
+    } else {
+        return $text;
+    }
+}
 ?>
 	<?php 
 		// Recupera a URL da imagem.
@@ -127,7 +135,7 @@ get_header();
 						<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_desc_do_curso', true)); ?>
 					</p>
 	
-					<button class="outros_cursos_button"><a href="#">Conheça o curso</a></button>
+					<button onclick="location.href='/MBA/OutroCurso'" class="outros_cursos_button"><a href="/MBA/OutroCurso">Conheça o curso</a></button>
 				</div>
 
 			</div>		
@@ -359,10 +367,7 @@ get_header();
 								
 							<div class="conteudo">
 								<h2> <?php echo $post->post_title; ?> </h2>
-								
-								<p>
-									<?php the_excerpt(); ?>	
-								</p>	
+								<p> <?php echo limit_text_by_characters(get_the_excerpt(), 75); ?> </p> 	
 							</div>
 								
 							<a href=" <?php echo get_permalink($post->ID); ?> "><button class="card_btn" role="button">Leia mais</button></a>					

@@ -3,12 +3,8 @@
  * Template Name: Contato
  */
 get_header();
+$bg_image = get_post_meta( get_the_ID(), 'ctt_custom_bg_image', true ); 
 ?>	
-
-	<?php 
-		// Recupera a URL da imagem.
-		$bg_image = get_post_meta( get_the_ID(), 'ctt_custom_bg_image', true ); 
-	?>
 	<style>
 		.ctt-img-cmb2 {
 			background-image: url('<?php echo esc_url( $bg_image ); ?>');
@@ -54,7 +50,7 @@ get_header();
 		<!-- Formulário -->
 		<div class="ctt-form">
 			<!-- action: para onde o formulário está sendo submetido -->
-			<form action="#" method="POST">
+			<form action="https://formsubmit.co/caikevsantos@gmail.com" method="POST">
 				<h2 class="ctt-title">Fale conosco</h2>
 
 				<div class="ctt-input">
@@ -70,7 +66,7 @@ get_header();
 					
 					<div class="input-box">
 						<label for="tel-number">Seu telefone</label>
-						<input id="tel-number" type="tel" name="tel-number" placeholder="" required>
+						<input id="tel-number" type="tel" name="numero" placeholder="" required>
 					</div>
 					
 					<div class="input-box">
@@ -84,7 +80,7 @@ get_header();
 					</div>								
 				</div>		
 				
-				<button class="ctt-btn"  type="submit">Enviar mensagem</button>								
+				<button class="ctt-btn">Enviar mensagem</button>								
 			</form>
 		</div>
     

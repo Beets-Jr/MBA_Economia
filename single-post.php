@@ -5,7 +5,13 @@
 get_header();
 
 remove_filter('the_content', 'wpautop');
-
+function limit_text_by_characters($text, $limit) {
+    if (strlen($text) > $limit) {
+        return substr($text, 0, $limit) . '...';
+    } else {
+        return $text;
+    }
+}
 
 ?>
 	<div class="ntc">
@@ -61,7 +67,7 @@ remove_filter('the_content', 'wpautop');
 		<!-- Formulário -->
 		<div class="ctt-form">
 			<!-- action: para onde o formulário está sendo submetido -->
-			<form action="#" method="POST">
+			<form action="https://formsubmit.co/caikevsantos@gmail.com" method="POST">
 				<h2 class="ctt-title">Fale conosco</h2>
 
 				<div class="ctt-input">
@@ -77,7 +83,7 @@ remove_filter('the_content', 'wpautop');
 					
 					<div class="input-box">
 						<label for="tel-number">Seu telefone</label>
-						<input id="tel-number" type="tel" name="tel-number" placeholder="" required>
+						<input id="tel-number" type="tel" name="numero" placeholder="" required>
 					</div>
 					
 					<div class="input-box">
@@ -91,7 +97,7 @@ remove_filter('the_content', 'wpautop');
 					</div>								
 				</div>		
 				
-				<button class="ctt-btn"  type="submit">Enviar mensagem</button>								
+				<button class="ctt-btn">Enviar mensagem</button>								
 			</form>
 		</div>
     </div>
@@ -131,10 +137,7 @@ remove_filter('the_content', 'wpautop');
 								
 							<div class="conteudo">
 								<h2> <?php echo $post->post_title; ?> </h2>
-								
-								<p>
-									<?php the_excerpt(); ?>	
-								</p>	
+								<p> <?php echo limit_text_by_characters(get_the_excerpt(), 75); ?> </p> 	
 							</div>
 								
 							<a href=" <?php echo get_permalink($post->ID); ?> "><button class="card_btn" role="button">Leia mais</button></a>					
