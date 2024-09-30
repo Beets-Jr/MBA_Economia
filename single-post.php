@@ -3,7 +3,7 @@
  * Template Name: Noticia
  */
 get_header();
-
+$contato = get_page_by_title('contato')->ID; 
 remove_filter('the_content', 'wpautop');
 function limit_text_by_characters($text, $limit) {
     if (strlen($text) > $limit) {
@@ -29,9 +29,9 @@ function limit_text_by_characters($text, $limit) {
 			<div class="ntc_social-share">
 				<p class="ntc_Share">Siga nas redes sociais</p>
 				<div class="ntc_icons">
-					<a href="#" class="facebook"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.png" alt="Facebook"></a>
-					<a href="#" class="instagram"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-instagram.png" alt="Instagram"></a>
-					<a href="#" class="linkedin"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.png" alt="LinkedIn"></a>
+					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_facebook', true)); ?>" target="_blank" class="facebook"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.png" alt="Facebook"></a>
+					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_instagram', true)); ?>" target="_blank" class="instagram"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-instagram.png" alt="Instagram"></a>
+					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_linkedin', true)); ?>" target="_blank"" class="linkedin"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.png" alt="LinkedIn"></a>
 				</div>
 			</div>
 		</div>
@@ -64,41 +64,10 @@ function limit_text_by_characters($text, $limit) {
 			</div>
 		</div>
 		
-		<!-- Formulário -->
 		<div class="ctt-form">
+			<h2 class="ctt-title">Fale conosco</h2>
 			<!-- action: para onde o formulário está sendo submetido -->
-			<form action="https://formsubmit.co/caikevsantos@gmail.com" method="POST">
-				<h2 class="ctt-title">Fale conosco</h2>
-
-				<div class="ctt-input">
-					<div class="input-box">
-						<label for="name">Seu nome (obrigatório)</label>
-						<input id="name" type="text" name="name" placeholder="" required>
-					</div>
-					
-					<div class="input-box">
-						<label for="email">Seu e-mail (obrigatório)</label>
-						<input id="email" type="email" name="email" placeholder="" required>
-					</div>
-					
-					<div class="input-box">
-						<label for="tel-number">Seu telefone</label>
-						<input id="tel-number" type="tel" name="numero" placeholder="" required>
-					</div>
-					
-					<div class="input-box">
-						<label for="assunto">Assunto</label>
-						<input id="assunto" type="text" name="assunto" placeholder="">
-					</div>
-										
-					<div class="input-box">
-						<label for="mensagem">Sua mensagem</label>
-						<textarea id="mensagem" name="mensagem"></textarea>
-					</div>								
-				</div>		
-				
-				<button class="ctt-btn">Enviar mensagem</button>								
-			</form>
+			<?php echo do_shortcode('[contact-form-7 id="4850eec" title="Contato"]'); ?>
 		</div>
     </div>
     
@@ -148,9 +117,9 @@ function limit_text_by_characters($text, $limit) {
 				
 			</div>
 		
-			<button class="ultimas_noticias_btn" role="button"><a href="/MBA/Noticias">Ver todas as postagens</a></button>
+			<button class="ultimas_noticias_btn" role="button"><a href="/Noticias">Ver todas as postagens</a></button>
 		</div>
     
-    </section>
+    </section> 
 	</div>
 <?php get_footer(); ?>

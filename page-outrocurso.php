@@ -101,31 +101,7 @@ get_header();
     </div>
 	<div class="ins-content">
         <div class="ins-forms">
-            <div class="ins-personal-forms">
-                <div class="ins-title-line"></div>
-                <h2>Inscreva-se</h2>
-				<form class="forms_otc" action="https://formsubmit.co/caikevsantos@gmail.com" method="POST">
-					<div class="ins-form">
-						<span>Nome completo*</span>
-						<input type="text" name="Name" required />
-					</div>
-					<div class="ins-form" id="ins-email">
-						<span>Email*</span>
-						<input type="email" name="Email" required />
-					</div>
-					<div class="ins-row">
-						<div class="ins-form" id="ins-phone">
-							<span>Telefone*</span>
-							<input type="tel" name="Telefone" required />
-						</div>
-						<div class="ins-form" id="ins-position">
-							<span>Cargo*</span>
-							<input type="text" name="Cargo" required />
-						</div>
-					</div>
-					<button class="ins-send-button">Enviar</button>
-				</form>
-            </div>
+            <?php echo do_shortcode('[contact-form-7 id="6e04b45" title="OutroCurso"]'); ?>
         </div>
     </div>
 </div>

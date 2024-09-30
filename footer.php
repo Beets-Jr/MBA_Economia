@@ -1,3 +1,5 @@
+<?php $contato = get_page_by_title('contato')->ID; ?>
+
 <a target="_blank" href="https://wa.me//5515981760011?text=Olá. Quero saber mais sobre o MBA.">
 		<button type="button" class="btn_whatsapp" role="button">
 			<img src="<?php echo get_template_directory_uri(); ?>./img/icon-whatsapp.svg" alt="Logo do WhatsApp">
@@ -19,8 +21,8 @@
 					<div class="footerNav">
 						<h4>Contatos:</h4>
 			             <ul>
-				                 <li><p><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_phone', true)); ?></p></li>
-				                 <li><p><?php echo esc_html(get_post_meta(get_the_ID(), 'ctt_email', true)); ?></p></li>
+				                 <li><p><?php echo esc_html(get_post_meta($contato, 'ctt_phone', true)); ?></p></li>
+				                 <li><p><?php echo esc_html(get_post_meta($contato, 'ctt_email', true)); ?></p></li>
 				                 
 			             </ul>
 		            </div>
@@ -29,11 +31,11 @@
 					<div class="footerNav">
 						<h4>Links Rapidos:</h4>
 			             <ul>
-				                 <li><a href="">Sobre</a></li>
-				                 <li><a href="">Curso</a></li>
-				                 <li><a href="">Noticia</a></li>
-				                 <li><a href="">Contato</a></li>
-				                 <li><a href="">Inscreva-se</a></li>
+				                 <li><a href="/Sobre">Sobre</a></li>
+				                 <li><a href="/Curso">Curso</a></li>
+				                 <li><a href="/Noticias">Noticia</a></li>
+				                 <li><a href="/Contato">Contato</a></li>
+				                 <li><a href="/Inscreva-se">Inscreva-se</a></li>
 			             </ul>
 		            </div>
 		        </div>
@@ -41,13 +43,13 @@
 	    </div>
 		
 		<div class="medias">
-			<a href="">
+			<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_linkedin', true)); ?>" target="_blank">
 				<img src="<?php echo get_template_directory_uri(); ?>./img/icon-linkedin.png" alt="Icone Linkedin">
 			</a>
-			<a href="">
+			<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_facebook', true)); ?>" target="_blank">
 				<img src="<?php echo get_template_directory_uri(); ?>./img/icon-facebook.png" alt="Icone Facebook">
 			</a>
-			<a href="">
+			<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_instagram', true)); ?>" target="_blank">
 				<img src="<?php echo get_template_directory_uri(); ?>./img/icon-instagram.png" alt="Icone Instagram">
 			</a>			
 		</div>

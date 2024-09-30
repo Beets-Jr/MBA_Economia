@@ -23,33 +23,17 @@ $bg_image = get_post_meta( get_the_ID(), 'ins_custom_bg_image', true );
         <div class="ins-initial-text">
             <p><?php echo esc_html(get_post_meta(get_the_ID(), 'ins_texto_inicial', true)); ?> </p>
             <P><br><?php echo esc_html(get_post_meta(get_the_ID(), 'ins_texto_inicial02', true)); ?><br><br></P>
-            <a class="botaocomentario" href="/MBA/Matricula">Matricule-se já</a>
+            <a class="botaocomentario" href="/Matricula">Matricule-se já</a>
         </div>
         <br>
         <!-- Informacoes Pessoais -->
         <div class="ins-forms">
-            <div class="ins-personal-forms">
-                <div class="ins-title-line"></div>
-                <h2>Informações Pessoais</h2>
-                <form class="ins-form" action="https://formsubmit.co/caikevsantos@gmail.com" method="POST">
-                    <div class="ins-form" id="ins-name">
-                        <span>Nome completo*</span>
-                        <input type="text" name="ins-name" />
-                    </div>
-                    <div class="ins-form" id="ins-email">
-                        <span>Email*</span>
-                        <input type="email" name="ins-email" />
-                    </div>
-                    <div class="ins-form" id="ins-phone">
-                        <span>Telefone*</span>
-                        <input type="tel" name="ins-phone" />
-                    </div>
-                    <button class="ins-send-button">Enviar</button>
-                </form>
-
+            <div class="ins-title-line"></div>
+            <h2>Informações Pessoais</h2>
+            <?php echo do_shortcode('[contact-form-7 id="f6fd305" title="Inscreva-se"]'); ?>
         </div>
     </div>
     <script src="JS/inscreva-se.js"></script>
     <script>console.log('script inline');</script>
 </body>
-<php get_footer(); ?>
+<?php get_footer(); ?>

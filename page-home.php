@@ -30,7 +30,7 @@ function limit_text_by_characters($text, $limit) {
 
     <div class="hm-seu-futuro hm-seu-futuro-img">
         <h2 class="hm-seu-futuro-title"><?php echo esc_html(get_post_meta(get_the_ID(), 'frase_inicial', true)); ?></h2>
-        <button type="button" class="hm-seu-futuro-button" ><a href="./Inscreva-se.html">Inscreva-se</a></button>
+        <button type="button" class="hm-seu-futuro-button" ><a href="/Inscreva-se">Inscreva-se</a></button>
     </div>
     <section class="hero">
 		<div class="hero-content">
@@ -44,7 +44,7 @@ function limit_text_by_characters($text, $limit) {
 					<?php echo esc_html(get_post_meta(get_the_ID(), 'descricao_introducao_2', true)); ?>
                 </div>
             </div>
-            <a href="/MBA/sobre" class="btn">Sobre o MBA</a>
+            <a href="/sobre" class="btn">Sobre o MBA</a>
         </div>
         <div class="hero-video">
             <iframe width="560" height="315" src="<?php echo esc_html(get_post_meta(get_the_ID(), 'video_introducao', true)); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -135,7 +135,7 @@ function limit_text_by_characters($text, $limit) {
 						<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_desc_do_curso', true)); ?>
 					</p>
 	
-					<button onclick="location.href='/MBA/OutroCurso'" class="outros_cursos_button"><a href="/MBA/OutroCurso">Conheça o curso</a></button>
+					<button onclick="location.href='/OutroCurso'" class="outros_cursos_button"><a href="/OutroCurso">Conheça o curso</a></button>
 				</div>
 
 			</div>		
@@ -378,7 +378,7 @@ function limit_text_by_characters($text, $limit) {
 				
 			</div>
 		
-			<button class="ultimas_noticias_btn" role="button"><a href="/MBA/Noticias">Ver todas as postagens</a></button>
+			<button class="ultimas_noticias_btn" role="button"><a href="/Noticias">Ver todas as postagens</a></button>
 		</div>
     
     </section>

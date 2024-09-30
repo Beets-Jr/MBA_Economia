@@ -373,7 +373,105 @@ function cmb2_fields_sobre() {
         'id'   => 'nomedoprof',
         'type' => 'text',
     ]);
+
+    $cmb->add_field([
+        'name' => 'Imagem do primeiro bloco',
+        'id'   => 'imagem_bloco01',
+        'type' => 'file',
+        'options' => [
+            'url' => true,
+        ],
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo do primeiro bloco',
+        'id'   => 'titulo_bloco01',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto do primeiro bloco',
+        'id'   => 'texto_bloco01',
+        'type' => 'textarea',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Imagem do segundo bloco',
+        'id'   => 'imagem_bloco02',
+        'type' => 'file',
+        'options' => [
+            'url' => true,
+        ],
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo do segundo bloco',
+        'id'   => 'titulo_bloco02',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto do segundo bloco',
+        'id'   => 'texto_bloco02',
+        'type' => 'textarea',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Imagem do terceiro bloco',
+        'id'   => 'imagem_bloco03',
+        'type' => 'file',
+        'options' => [
+            'url' => true,
+        ],
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Titulo do terceiro bloco',
+        'id'   => 'titulo_bloco03',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto do terceiro bloco',
+        'id'   => 'texto_bloco03',
+        'type' => 'textarea',
+    ]);
     
+    $cmb->add_field([
+        'name' => 'Titulo do primeiro card',
+        'id'   => 'sb_titulo_card01',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto do primeiro card',
+        'id'   => 'sb_texto_card01',
+        'type' => 'textarea',
+    ]);
+    
+    $cmb->add_field([
+        'name' => 'Titulo do segundo card',
+        'id'   => 'sb_titulo_card02',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto do segundo card',
+        'id'   => 'sb_texto_card02',
+        'type' => 'textarea',
+    ]); 
+
+    $cmb->add_field([
+        'name' => 'Titulo do terceiro card',
+        'id'   => 'sb_titulo_card03',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto do terceiro card',
+        'id'   => 'sb_texto_card03',
+        'type' => 'textarea',
+    ]); 
 }
 
 //CURSO
@@ -604,6 +702,28 @@ function cmb2_fields_contato() {
         'type' => 'text',
         'desc' => 'Telefone disponível para contato'
     ]);
+    
+    $cmb->add_field([
+        'name' => 'Link do Linkedin',
+        'id'   => 'ctt_linkedin',
+        'type' => 'text_url',
+        'desc' => 'Link do Linkedin'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Link do Facebook',
+        'id'   => 'ctt_facebook',
+        'type' => 'text_url',
+        'desc' => 'Link do Facebook'
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Link do Instagram',
+        'id'   => 'ctt_instagram',
+        'type' => 'text_url',
+        'desc' => 'Link do Instagram'
+    ]);
+
 }
 
 //NOTICIAS
