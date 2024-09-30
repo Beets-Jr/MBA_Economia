@@ -61,7 +61,7 @@ get_header();
                     <div class="swiper-wrapper">
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>./img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-adelson.png" alt="Adelson Figueiredo">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/adelson-figueiredo-87b98496/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -73,7 +73,7 @@ get_header();
                         </article>                        
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-adriana.png" alt="Adriana Estela Sanjuan Montebello">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/adriana-estela-sanjuan-montebello-293a4028a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -86,7 +86,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-alexandre.jpg" alt="Alexandre Lopes Gomes">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/alg-ufscar/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -99,7 +99,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-alex.png" alt="Alex Souza Bertoldi">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -112,7 +112,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-aniela.png" alt="Aniela Carrara">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/aniela-carrara-9a33a13a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -125,7 +125,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-antonio.png" alt="Antonio Carlos Diegues">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/danilo-r-d-aguiar-8402ab8a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -138,7 +138,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prof-adelson.png" alt="Adelson Figueiredo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-danilo.png" alt="Danilo Rolim Dias de Aguiar">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/danilo-r-d-aguiar-8402ab8a/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -151,7 +151,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-.png" alt="José Adrian Payeras">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-jose-r.png" alt="José Adrian Payeras">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -163,7 +163,7 @@ get_header();
                         </article>
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-jose-r.png" alt="Jose Eduardo Roselino Junior">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-jose-r.png" alt="Jose Eduardo Roselino Junior">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -176,7 +176,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-luciano.png" alt="Luciano de Souza Cunha">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-luciano.png" alt="Luciano de Souza Cunha">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -189,7 +189,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-naja.png" alt="Naja B Santana">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-naja.png" alt="Naja B Santana">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -202,7 +202,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-paulo.png" alt="Paulo Camargo">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-paulo.png" alt="Paulo Camargo">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/patamaca/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -215,7 +215,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-ricardo.png" alt="Ricardo Coser Mergulhão">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-ricardo.png" alt="Ricardo Coser Mergulhão">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/rcmergulhao/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -228,7 +228,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-rodrigo.png" alt="Rodrigo V. Rodrigues">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-rodrigo.png" alt="Rodrigo V. Rodrigues">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -241,7 +241,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-rogerio.png" alt="Rogério Aparecido">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-rogerio.png" alt="Rogério Aparecido">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -254,7 +254,7 @@ get_header();
                         
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-rosane.png" alt="Rosane N. de Faria">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-rosane.png" alt="Rosane N. de Faria">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href=""><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
@@ -266,7 +266,7 @@ get_header();
                         </article>
                         <article class="sbr-card-article swiper-slide">
                             <div class="sbr-card-image">
-                                <img src="img/prof-tiago.png" alt="Tiago Almeida">
+                                <img src="<?php echo get_template_directory_uri(); ?>./img/prof-tiago.png" alt="Tiago Almeida">
                             </div>
                             <div class="sbr-card-icons">
                                 <a href="https://www.linkedin.com/in/talmeida-ufscar/"><img src="<?php echo get_template_directory_uri(); ?>./img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
