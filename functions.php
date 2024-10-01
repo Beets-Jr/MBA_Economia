@@ -3,11 +3,11 @@ add_theme_support('post-thumbnails');
 
 // Função para registrar e enfileirar scripts
 function mba_scripts() {
-    wp_register_script('mba-script', get_template_directory_uri() . '/js/script.js', array(), false, true);
-    wp_register_script('mba-sobre', get_template_directory_uri() . '/js/sobre.js', array(), false, true);
-    wp_register_script('mba-curso', get_template_directory_uri() . '/js/curso.js', array(), false, true);
-    wp_register_script('mba-swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), false, true);
-    wp_register_script('mba-inscreva-se', get_template_directory_uri() . '/js/inscreva-se.js', array(), false, true);
+    wp_register_script('mba-script', get_template_directory_uri() . '/JS/script.js', array(), false, true);
+    wp_register_script('mba-sobre', get_template_directory_uri() . '/JS/sobre.js', array(), false, true);
+    wp_register_script('mba-curso', get_template_directory_uri() . '/JS/curso.js', array(), false, true);
+    wp_register_script('mba-swiper', get_template_directory_uri() . '/JS/swiper-bundle.min.js', array(), false, true);
+    wp_register_script('mba-inscreva-se', get_template_directory_uri() . '/JS/inscreva-se.js', array(), false, true);
 
     // Enfileirar os scripts
     wp_enqueue_script('mba-script');
@@ -322,6 +322,26 @@ function cmb2_fields_sobre() {
         ],
     ]);
 
+    $cmb->add_field( array(
+        'name' => __( 'Imagem de fundo', 'cmb2' ),
+        'id'   => 'sb_custom_bg_image',
+        'type' => 'file',
+        'desc' => 'Imagem que aparece ao fundo',
+        'options' => array(
+            'url' => false,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium',
+    ));
+
     $cmb->add_field([
         'name' => 'Título Introdução',
         'id'   => 'titulo_inicial',
@@ -329,8 +349,20 @@ function cmb2_fields_sobre() {
     ]);
 
     $cmb->add_field([
-        'name' => 'Texto Objetivo',
-        'id'   => 'texto_inicial',
+        'name' => 'Texto Objetivo primeiro paragrafo',
+        'id'   => 'texto_inicial01',
+        'type' => 'textarea',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto Objetivo segundo paragrafo',
+        'id'   => 'texto_inicial02',
+        'type' => 'textarea',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto Objetivo terceiro paragrafo',
+        'id'   => 'texto_inicial03',
         'type' => 'textarea',
     ]);
 
@@ -411,8 +443,50 @@ function cmb2_fields_sobre() {
     ]);
 
     $cmb->add_field([
-        'name' => 'Texto do segundo bloco',
-        'id'   => 'texto_bloco02',
+        'name' => 'Texto inicio do bloco 02',
+        'id'   => 'sb_bloco02_txtinicio',
+        'type' => 'textarea',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Primeiro topico do terceiro bloco',
+        'id'   => 'sb_bloco02_01',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Segundo topico do terceiro bloco',
+        'id'   => 'sb_bloco02_02',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Terceiro topico do terceiro bloco',
+        'id'   => 'sb_bloco02_03',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Primeiro topico do terceiro bloco',
+        'id'   => 'sb_bloco02_04',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Segundo topico do terceiro bloco',
+        'id'   => 'sb_bloco02_05',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Terceiro topico do terceiro bloco',
+        'id'   => 'sb_bloco02_06',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto final do bloco 02',
+        'id'   => 'sb_bloco02_txtfinal',
         'type' => 'textarea',
     ]);
 
@@ -432,10 +506,23 @@ function cmb2_fields_sobre() {
     ]);
 
     $cmb->add_field([
-        'name' => 'Texto do terceiro bloco',
-        'id'   => 'texto_bloco03',
+        'name' => 'Primeiro topico do terceiro bloco',
+        'id'   => 'sb_bloco03_01',
         'type' => 'textarea',
     ]);
+
+    $cmb->add_field([
+        'name' => 'Segundo topico do terceiro bloco',
+        'id'   => 'sb_bloco03_02',
+        'type' => 'textarea',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Terceiro topico do terceiro bloco',
+        'id'   => 'sb_bloco03_03',
+        'type' => 'textarea',
+    ]);
+
     
     $cmb->add_field([
         'name' => 'Titulo do primeiro card',
@@ -512,13 +599,6 @@ function cmb2_fields_curso() {
     $cmb->add_field([
         'name' => 'Texto Introdução',
         'id'   => 'crs_introducao-text',
-        'type' => 'text',
-    ]);
-
-    // Campo para o título da introdução
-    $cmb->add_field([
-        'name' => 'Título Introdução',
-        'id'   => 'crs_titulo_introducao1',
         'type' => 'text',
     ]);
 
@@ -625,9 +705,14 @@ function cmb2_fields_curso() {
         'type' => 'textarea_small',
     ]);
 
-    // Novo campo para o texto da seção "In Company"
     $cmb->add_field([
-        'name' => 'Texto In Company',
+        'name' => 'TItulo ultimo bloco',
+        'id'   => 'crs_incompany_titulo',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Texto ultimo bloco',
         'id'   => 'crs_incompany_texto',
         'type' => 'textarea',
     ]);
@@ -724,41 +809,6 @@ function cmb2_fields_contato() {
         'desc' => 'Link do Instagram'
     ]);
 
-}
-
-//NOTICIAS
-add_action('cmb2_admin_init', 'cmb2_fields_noticias');
-
-function cmb2_fields_noticias() {
-    $cmb = new_cmb2_box([
-        'id'           => 'noticias_box',
-        'title'        => 'noticias',
-        'object_types' => ['page'],
-        'show_on'      => [
-            'key'   => 'page-template',
-            'value' => 'home.php',
-        ],
-    ]);
-
-    $cmb->add_field( array(
-        'name' => __( 'Imagem de fundo', 'cmb2' ),
-        'id'   => 'ntcs_custom_bg_image',
-        'type' => 'file',
-        'desc' => 'Imagem que aparece ao fundo',
-        'options' => array(
-            'url' => false,
-        ),
-        'text'    => array(
-            'add_upload_file_text' => 'Adicionar Imagem de Fundo'
-        ),
-        'query_args' => array(
-            'type' => array(
-                'image/jpeg',
-                'image/png',
-            ),
-        ),
-        'preview_size' => 'medium',
-    ));
 }
 
 //INSCREVA-SE
@@ -1026,10 +1076,17 @@ function cmb2_fields_outrocurso() {
     
     // Campo para a data da turma
     $cmb->add_group_field( $turmas_group_id, array(
-        'name' => 'Informações da Turma',
+        'name' => 'Dia da Turma',
         'id'   => 'data_turma',
         'type' => 'textarea_small', 
-        'description' => 'Data, horário e local da turma',
+        'description' => 'Data, horário',
+    ) );
+
+    $cmb->add_group_field( $turmas_group_id, array(
+        'name' => 'Informações da Turma',
+        'id'   => 'info_turma',
+        'type' => 'textarea_small', 
+        'description' => 'Informações da turma',
     ) );
 
     $cmb->add_field([
@@ -1060,16 +1117,28 @@ function cmb2_fields_outrocurso() {
     
     // Campo para o e-mail do professor
     $cmb->add_group_field( $professores_group_id, array(
-        'name' => 'Informações professor',
+        'name' => 'Email',
         'id'   => 'email_professor',
         'type' => 'text', 
+    ) );
+
+    $cmb->add_group_field( $professores_group_id, array(
+        'name' => 'Linkedin',
+        'id'   => 'linkedin_professor',
+        'type' => 'text', 
+    ) );
+
+    $cmb->add_group_field( $professores_group_id, array(
+        'name' => 'Informações professor',
+        'id'   => 'info_professor',
+        'type' => 'textarea', 
     ) );
 
     $cmb->add_field([
         'name' => 'Outras Informações',
         'id'   => 'out_texto_info',
         'type' => 'textarea',
-        'desc' => 'Outras Informações'
+        'desc' => 'Outras Informações',
     ]);
 }
 

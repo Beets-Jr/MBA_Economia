@@ -17,17 +17,17 @@
     <header>
 		<div class="inner_header">
 			<div class="header_logo">
-				<a href="/Home"> 
-					<img src="<?php echo get_template_directory_uri(); ?>./img/header_logo.png" alt="Logo do MBA Economia & Negócios UFSCar com uma elipse embaixo com um ponto laranja"> 
+				<a href="http://mbaufscar.com.br/"> 
+					<img src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Logo do MBA Economia & Negócios UFSCar com uma elipse embaixo com um ponto laranja"> 
 				</a>
 			</div>
 			<nav>							
 				<div class="links_menu">
-					<a href="/Sobre">Sobre</a>
-					<a href="/Curso">Curso</a>
-					<a href="/Noticias">Notícias</a>
-					<a href="/Contato">Contato</a>
-					<a href="/Inscreva-se"><button class="header_button_cta" role="button">Inscreva-se</button></a>
+					<a href="/sobre/">Sobre</a>
+					<a href="/curso/">Curso</a>
+					<a href="/noticias/">Notícias</a>
+					<a href="/contato/">Contato</a>
+					<a href="/inscreva-se/"><button class="header_button_cta" role="button">Inscreva-se</button></a>
 				</div>
 
 				<!-- Burger do mobile -->

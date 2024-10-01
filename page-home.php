@@ -30,7 +30,7 @@ function limit_text_by_characters($text, $limit) {
 
     <div class="hm-seu-futuro hm-seu-futuro-img">
         <h2 class="hm-seu-futuro-title"><?php echo esc_html(get_post_meta(get_the_ID(), 'frase_inicial', true)); ?></h2>
-        <button type="button" class="hm-seu-futuro-button" ><a href="/Inscreva-se">Inscreva-se</a></button>
+        <button type="button" class="hm-seu-futuro-button" ><a href="/inscreva-se/">Inscreva-se</a></button>
     </div>
     <section class="hero">
 		<div class="hero-content">
@@ -44,7 +44,7 @@ function limit_text_by_characters($text, $limit) {
 					<?php echo esc_html(get_post_meta(get_the_ID(), 'descricao_introducao_2', true)); ?>
                 </div>
             </div>
-            <a href="/sobre" class="btn">Sobre o MBA</a>
+            <a href="/sobre/" class="btn">Sobre o MBA</a>
         </div>
         <div class="hero-video">
             <iframe width="560" height="315" src="<?php echo esc_html(get_post_meta(get_the_ID(), 'video_introducao', true)); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -55,22 +55,22 @@ function limit_text_by_characters($text, $limit) {
     <section class="details">
         <div class="detail-items">
             <div class="detail-item">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/clock_icon.png" class="detail-icon"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/clock_icon.png" class="detail-icon"> 
                 <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_horas_aula', true)); ?></span>
                 <span class="detail-label">Horas de aula</span>
             </div>
             <div class="detail-item">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/disciplina_icon.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/disciplina_icon.png" class="detail-icon">
                 <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_num_disc', true)); ?></span>
                 <span class="detail-label">Disciplinas</span>
             </div>
             <div class="detail-item">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/calendario_icon.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/calendario_icon.png" class="detail-icon">
                 <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_anos', true)); ?></span>
                 <span class="detail-label">Anos</span>
             </div>
             <div class="detail-item">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/turma.png" class="detail-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/turma.png" class="detail-icon">
                 <span class="detail-value"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_num_turma', true)); ?></span>
                 <span class="detail-label">Turma</span>
             </div>
@@ -112,7 +112,7 @@ function limit_text_by_characters($text, $limit) {
 				
 			</div>
 		</div>
-		<button class="botaocomentario">Conhe&ccedil;a nosso cursos</button>
+		<button onclick="location.href='/curso/'" class="botaocomentario">Conhe&ccedil;a nosso cursos</button>
 
 	</div>
     <section class="outros_cursos">
@@ -135,7 +135,7 @@ function limit_text_by_characters($text, $limit) {
 						<?php echo esc_html(get_post_meta(get_the_ID(), 'hm_desc_do_curso', true)); ?>
 					</p>
 	
-					<button onclick="location.href='/OutroCurso'" class="outros_cursos_button"><a href="/OutroCurso">Conheça o curso</a></button>
+					<button onclick="location.href='/outro-curso/'" class="outros_cursos_button"><a href="/outro-curso/">Conheça o curso</a></button>
 				</div>
 
 			</div>		
@@ -148,8 +148,8 @@ function limit_text_by_characters($text, $limit) {
 		<div class="hm-crs-card">
             <div class="hm-crs-card-question">
 				<span><?php echo esc_html(get_post_meta(get_the_ID(), 'pergunta_geral_01', true)); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
 			<div class="hm-crs-card-answer">
 				<?php
@@ -161,7 +161,7 @@ function limit_text_by_characters($text, $limit) {
 							echo '<div class="hm-crs-subcard">';
 							echo '<div class="hm-crs-subcard-question">';
 							echo '<span>' . esc_html($pergunta['sub_pergunta_01']) . '</span>';
-							echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+							echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
 							echo '</div>';
 							echo '<div class="hm-crs-subcard-answer">';
 							
@@ -179,8 +179,8 @@ function limit_text_by_characters($text, $limit) {
 		<div class="hm-crs-card">
             <div class="hm-crs-card-question">
 				<span><?php echo esc_html(get_post_meta(get_the_ID(), 'pergunta_geral_02', true)); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
 			<div class="hm-crs-card-answer">
 				<?php
@@ -192,7 +192,7 @@ function limit_text_by_characters($text, $limit) {
 							echo '<div class="hm-crs-subcard">';
 							echo '<div class="hm-crs-subcard-question">';
 							echo '<span>' . esc_html($pergunta['sub_pergunta_02']) . '</span>';
-							echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+							echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
 							echo '</div>';
 							echo '<div class="hm-crs-subcard-answer">';
 							
@@ -210,8 +210,8 @@ function limit_text_by_characters($text, $limit) {
 		<div class="hm-crs-card">
             <div class="hm-crs-card-question">
 				<span><?php echo esc_html(get_post_meta(get_the_ID(), 'pergunta_geral_03', true)); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
 			<div class="hm-crs-card-answer">
 				<?php
@@ -223,7 +223,7 @@ function limit_text_by_characters($text, $limit) {
 							echo '<div class="hm-crs-subcard">';
 							echo '<div class="hm-crs-subcard-question">';
 							echo '<span>' . esc_html($pergunta['sub_pergunta_03']) . '</span>';
-							echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+							echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
 							echo '</div>';
 							echo '<div class="hm-crs-subcard-answer">';
 							
@@ -241,8 +241,8 @@ function limit_text_by_characters($text, $limit) {
 		<div class="hm-crs-card">
             <div class="hm-crs-card-question">
 				<span><?php echo esc_html(get_post_meta(get_the_ID(), 'pergunta_geral_04', true)); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
 			<div class="hm-crs-card-answer">
 				<?php
@@ -254,7 +254,7 @@ function limit_text_by_characters($text, $limit) {
 							echo '<div class="hm-crs-subcard">';
 							echo '<div class="hm-crs-subcard-question">';
 							echo '<span>' . esc_html($pergunta['sub_pergunta_04']) . '</span>';
-							echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+							echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
 							echo '</div>';
 							echo '<div class="hm-crs-subcard-answer">';
 							
@@ -272,8 +272,8 @@ function limit_text_by_characters($text, $limit) {
 		<div class="hm-crs-card">
             <div class="hm-crs-card-question">
 				<span><?php echo esc_html(get_post_meta(get_the_ID(), 'pergunta_geral_05', true)); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
 			<div class="hm-crs-card-answer">
 				<?php
@@ -285,7 +285,7 @@ function limit_text_by_characters($text, $limit) {
 							echo '<div class="hm-crs-subcard">';
 							echo '<div class="hm-crs-subcard-question">';
 							echo '<span>' . esc_html($pergunta['sub_pergunta_05']) . '</span>';
-							echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+							echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
 							echo '</div>';
 							echo '<div class="hm-crs-subcard-answer">';
 							
@@ -303,8 +303,8 @@ function limit_text_by_characters($text, $limit) {
 		<div class="hm-crs-card">
             <div class="hm-crs-card-question">
 				<span><?php echo esc_html(get_post_meta(get_the_ID(), 'pergunta_geral_06', true)); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
 			<div class="hm-crs-card-answer">
 				<?php
@@ -316,7 +316,7 @@ function limit_text_by_characters($text, $limit) {
 							echo '<div class="hm-crs-subcard">';
 							echo '<div class="hm-crs-subcard-question">';
 							echo '<span>' . esc_html($pergunta['sub_pergunta_06']) . '</span>';
-							echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+							echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
 							echo '</div>';
 							echo '<div class="hm-crs-subcard-answer">';
 							
@@ -357,7 +357,7 @@ function limit_text_by_characters($text, $limit) {
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail(); ?>
 								<?php else : ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png" alt="Imagem logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem logo">
 								<?php endif; ?>
 								<div class="card_img_data">
 									<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>
@@ -378,7 +378,7 @@ function limit_text_by_characters($text, $limit) {
 				
 			</div>
 		
-			<button class="ultimas_noticias_btn" role="button"><a href="/Noticias">Ver todas as postagens</a></button>
+			<button class="ultimas_noticias_btn" role="button"><a href="/noticias/">Ver todas as postagens</a></button>
 		</div>
     
     </section>

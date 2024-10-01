@@ -26,8 +26,8 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Objetivo</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -41,8 +41,8 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Ementa</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <?php
@@ -54,7 +54,7 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
                         echo '<div class="hm-crs-subcard">';
                         echo '<div class="hm-crs-subcard-question">';
                         echo '<span>' . esc_html($disciplina['crs_disciplina_nome_horas']) . '</span>';
-                        echo '<img src="' . get_template_directory_uri() . '/img/arrow_orange.svg" class="hm-crs-arrow-orange">';
+                        echo '<img src="' . get_template_directory_uri() . '/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">';
                         echo '</div>';
                         echo '<div class="hm-crs-subcard-answer">';
                         
@@ -72,8 +72,8 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Corpo Docente</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -94,8 +94,8 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Local</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -110,8 +110,8 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Periodicidade</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
@@ -125,8 +125,8 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
                 <span>Investimento</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="tabs">
@@ -178,16 +178,13 @@ $bg_image = get_post_meta( get_the_ID(), 'crs_custom_bg_image', true );
             </div>
         <div class="hm-crs-card">
             <div class="hm-crs-card-question">
-                <span>In Company</span>
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange.svg" class="hm-crs-arrow-orange">
-                <img src="<?php echo get_template_directory_uri(); ?>./img/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
+                <span><?php echo esc_html(get_post_meta(get_the_ID(), 'crs_incompany_titulo', true)); ?></span>
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange.svg" class="hm-crs-arrow-orange">
+                <img src="<?php echo get_template_directory_uri(); ?>/IMG/arrow_orange_desktop.svg" class="hm-crs-arrow-orange-desktop">
             </div>
             <div class="hm-crs-card-answer">
                 <div class="hm-crs-card-answer-content">
-                    <<?php
-                        $texto = get_post_meta(get_the_ID(), 'crs_incompany_texto', true);
-                        echo nl2br(esc_html($texto));
-                    ?>
+                    <p><?php echo esc_html(get_post_meta(get_the_ID(), 'crs_incompany_texto', true)); ?></p>
                 </div>
             </div>
         </div>

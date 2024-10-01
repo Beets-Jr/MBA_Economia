@@ -10,7 +10,7 @@ get_header();
             <h1 class="white"><?php echo esc_html(get_post_meta(get_the_ID(), 'out_page_title', true)); ?></h1>
 			<div class="video-wrapper">
 				<div class="video-container">
-					<iframe src="<?php echo esc_html(get_post_meta(get_the_ID(), 'video_introducao', true)); ?>" width="640" height="480" allow="autoplay"></iframe>
+					<iframe width="640" height="480" src="<?php echo esc_html(get_post_meta(get_the_ID(), 'out_video', true)); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>				
 			</div><br><br>
 			<h2><?php echo esc_html(get_post_meta(get_the_ID(), 'out_page_subtitle', true)); ?></h2>
@@ -24,7 +24,6 @@ get_header();
 				$topicos1 = get_post_meta(get_the_ID(), 'out_lista01', true);
 
 				if (is_array($topicos1) && !empty($topicos1)) {
-					echo '<ul class="lista_ponto">';
 
 					foreach ($topicos1 as $topico) {
 						if (!empty($topico['out_titulo_topico'])) {
@@ -32,7 +31,6 @@ get_header();
 						}
 					}
 
-					echo '</ul>';
 				}
 			?>
 			</ul>
@@ -43,7 +41,7 @@ get_header();
 				$topicos2 = get_post_meta(get_the_ID(), 'out_lista02', true);
 
 				if (is_array($topicos2) && !empty($topicos2)) {
-					echo '<ul class="lista_ponto">';
+					
 
 					foreach ($topicos2 as $topico) {
 						if (!empty($topico['out_titulo_topico'])) {
@@ -51,7 +49,7 @@ get_header();
 						}
 					}
 
-					echo '</ul>';
+					
 				}
 			?>
 			</ul>
@@ -70,7 +68,11 @@ get_header();
 						}
 
 						if (!empty($turma['data_turma'])) {
-							echo '<p>(' . esc_html($turma['data_turma']) . ')<hr></p>';
+							echo '<p>' . esc_html($turma['data_turma']) . ')</p>';
+						}
+
+						if (!empty($turma['info_turma'])) {
+							echo '<p>' . esc_html($turma['info_turma']) . ')<hr></p>';
 						}
 					}
 				}
@@ -90,6 +92,14 @@ get_header();
 						echo '<p>' . esc_html($professor['email_professor']) . '</p>';
 					}
 
+					if (!empty($professor['linkedin_professor'])) {
+						echo '<p>' . esc_html($professor['linkedin_professor']) . '</p>';
+					}
+
+					if (!empty($professor['info_professor'])) {
+						echo '<p>' . esc_html($professor['info_professor']) . '</p>';
+					}
+
 					echo '<hr>'; // Linha horizontal após cada professor
 				}
 			}
@@ -101,7 +111,7 @@ get_header();
     </div>
 	<div class="ins-content">
         <div class="ins-forms">
-            <?php echo do_shortcode('[contact-form-7 id="6e04b45" title="OutroCurso"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="385" title="OutroCurso"]'); ?>
         </div>
     </div>
 </div>

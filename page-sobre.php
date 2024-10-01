@@ -23,7 +23,9 @@ get_header();
    </div>
     <div class="ins-content">
         <div class="ins-initial-text">
-            <p><?php echo get_post_meta(get_the_ID(), 'texto_inicial', true); ?></p>
+            <p><?php echo get_post_meta(get_the_ID(), 'texto_inicial01', true); ?></p>
+            <p><?php echo get_post_meta(get_the_ID(), 'texto_inicial02', true); ?></p>
+            <p><?php echo get_post_meta(get_the_ID(), 'texto_inicial03', true); ?></p>
         </div>
     </div>
     <!-- Corpo Docente -->
@@ -41,8 +43,8 @@ get_header();
                 ?>
                             <div class="sbr-slide" style="background-image: url('<?php echo $docente['imagemdoprof']; ?>');">
                                 <div class="sbr-card-icons">
-                                    <a href="<?php echo $docente['linkedindoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                                    <a href="<?php echo $docente['lattesdoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
+                                    <a href="<?php echo $docente['linkedindoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
+                                    <a href="<?php echo $docente['lattesdoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
                                 </div>
                                 <h3 style="padding-bottom: 10px;"><?php echo $docente['nomedoprof']; ?></h3>
                             </div>
@@ -69,8 +71,8 @@ get_header();
                                             <img src="<?php echo $docente['imagemdoprof']; ?>" alt="<?php echo $docente['nomedoprof']; ?>">
                                         </div>
                                         <div class="sbr-card-icons">
-                                            <a href="<?php echo $docente['linkedindoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                                            <a href="<?php echo $docente['lattesdoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
+                                            <a href="<?php echo $docente['linkedindoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
+                                            <a href="<?php echo $docente['lattesdoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
                                         </div>
                                         <div class="sbr-card-data">
                                             <h3 class="sbr-card-name"><?php echo $docente['nomedoprof']; ?></h3>
@@ -121,7 +123,16 @@ get_header();
                 <h1><?php echo esc_html(get_post_meta(get_the_ID(), 'titulo_bloco02', true)); ?></h1>
                 <div class="secao">
                     <div class="secaotext">
-                        <p><?php echo esc_html(get_post_meta(get_the_ID(), 'texto_bloco02', true)); ?></p>
+                        <p><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_txtinicio', true)); ?></p>
+                        <ul class="lista_ponto">
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_01', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_02', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_03', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_04', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_05', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_06', true)); ?></li>
+                        </ul>
+                        <p><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco02_txtfinal', true)); ?></p>
                     </div>
                     <div class="secaoimagem">
                         <?php 
@@ -148,7 +159,11 @@ get_header();
                         ?>
                     </div>
                     <div class="secaotext">
-                         <p><?php echo esc_html(get_post_meta(get_the_ID(), 'texto_bloco03', true)); ?></p>
+                        <ul class="lista_ponto">
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco03_01', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco03_02', true)); ?></li>
+                            <li><?php echo esc_html(get_post_meta(get_the_ID(), 'sb_bloco03_03', true)); ?></li>
+                        </ul>
                     </div>
                 </div>
              </div>
@@ -183,5 +198,6 @@ get_header();
                 </div>
 			</div>
 		</div>
+    </div>
     </div>
 <?php get_footer(); ?>

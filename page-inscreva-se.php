@@ -23,14 +23,14 @@ $bg_image = get_post_meta( get_the_ID(), 'ins_custom_bg_image', true );
         <div class="ins-initial-text">
             <p><?php echo esc_html(get_post_meta(get_the_ID(), 'ins_texto_inicial', true)); ?> </p>
             <P><br><?php echo esc_html(get_post_meta(get_the_ID(), 'ins_texto_inicial02', true)); ?><br><br></P>
-            <a class="botaocomentario" href="/Matricula">Matricule-se já</a>
+            <a class="botaocomentario" href="/matricula/">Matricule-se já</a>
         </div>
         <br>
         <!-- Informacoes Pessoais -->
         <div class="ins-forms">
             <div class="ins-title-line"></div>
             <h2>Informações Pessoais</h2>
-            <?php echo do_shortcode('[contact-form-7 id="f6fd305" title="Inscreva-se"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="386" title="Inscreva-se"]'); ?>
         </div>
     </div>
     <script src="JS/inscreva-se.js"></script>

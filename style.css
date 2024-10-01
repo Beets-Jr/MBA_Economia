@@ -3105,25 +3105,32 @@ input:focus, textarea:focus, select:focus {
   column-gap: 10%;
 }
 
+.visao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-missao{
   width: 400px;
   height: 500px;
   border-radius: 20px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border: solid 2px var(--blue-logo);
-
+  text-align: center;
+  display: flex;
+  
 }
+
 .missao-text{
   font-family: 'Poppins', sans-serif;
   font-size: var(--font-size-text-desktop);
   color: black;
   max-width: 435px;
   margin: 30px 40px;
-  text-align: justify;
 }
+
 .missao h2{
   color: #E07629;
   font-size: var(--font-size-title-desktop);
@@ -3136,6 +3143,7 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
   margin-bottom: 10px;
 }
+
 
 @media(max-width: 950px){
   .card-missao{

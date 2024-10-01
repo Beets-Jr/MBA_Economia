@@ -22,16 +22,16 @@ function limit_text_by_characters($text, $limit) {
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail('full', array('class' => 'ntc_img')); ?>
 			<?php else : ?>
-				<img class="ntc_img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png" alt="Imagem Exemplo">
+				<img class="ntc_img" src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem Exemplo">
 			<?php endif; ?>
 			<?php the_content(); ?>
 			<hr>
 			<div class="ntc_social-share">
 				<p class="ntc_Share">Siga nas redes sociais</p>
 				<div class="ntc_icons">
-					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_facebook', true)); ?>" target="_blank" class="facebook"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.png" alt="Facebook"></a>
-					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_instagram', true)); ?>" target="_blank" class="instagram"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-instagram.png" alt="Instagram"></a>
-					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_linkedin', true)); ?>" target="_blank"" class="linkedin"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.png" alt="LinkedIn"></a>
+					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_facebook', true)); ?>" target="_blank" class="facebook"><img src="<?php echo get_template_directory_uri(); ?>/IMG/icon-facebook.png" alt="Facebook"></a>
+					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_instagram', true)); ?>" target="_blank" class="instagram"><img src="<?php echo get_template_directory_uri(); ?>/IMG/icon-instagram.png" alt="Instagram"></a>
+					<a href="<?php echo esc_html(get_post_meta($contato, 'ctt_linkedin', true)); ?>" target="_blank"" class="linkedin"><img src="<?php echo get_template_directory_uri(); ?>/IMG/icon-linkedin.png" alt="LinkedIn"></a>
 				</div>
 			</div>
 		</div>
@@ -43,7 +43,7 @@ function limit_text_by_characters($text, $limit) {
 			
 			<div class="ctt-info-card">
 				<div class="ctt-info-img">
-					<img src="<?php echo get_template_directory_uri(); ?>./img/ctt-mail.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/IMG/ctt-mail.svg">
 				</div>
 				
 				<div class="ctt-info-content">
@@ -54,7 +54,7 @@ function limit_text_by_characters($text, $limit) {
 			
 			<div class="ctt-info-card">
 				<div class="ctt-info-img">
-					<img src="<?php echo get_template_directory_uri(); ?>./img/ctt-phone.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/IMG/ctt-phone.svg">
 				</div>
 				
 				<div class="ctt-info-content">
@@ -67,7 +67,7 @@ function limit_text_by_characters($text, $limit) {
 		<div class="ctt-form">
 			<h2 class="ctt-title">Fale conosco</h2>
 			<!-- action: para onde o formulário está sendo submetido -->
-			<?php echo do_shortcode('[contact-form-7 id="4850eec" title="Contato"]'); ?>
+			<?php echo do_shortcode('[contact-form-7 id="384" title="Contato"]'); ?>
 		</div>
     </div>
     
@@ -96,7 +96,7 @@ function limit_text_by_characters($text, $limit) {
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail(); ?>
 								<?php else : ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png" alt="Imagem logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem logo">
 								<?php endif; ?>
 								<div class="card_img_data">
 									<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>

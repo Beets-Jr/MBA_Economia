@@ -15,7 +15,7 @@ function limit_text_by_characters($text, $limit) {
 	<style>
 		.nts-img-header {
     		background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5)),
-        	url('<?php echo esc_url(get_template_directory_uri() . './img/nts-img-header-bg.jpg'); ?>');
+        	url('<?php echo esc_url(get_template_directory_uri() . '/IMG/nts-img-header-bg.jpg'); ?>');
 		}
 
 	</style>
@@ -39,7 +39,7 @@ function limit_text_by_characters($text, $limit) {
 				   <?php if ( has_post_thumbnail() ) : ?>
 						<?php the_post_thumbnail('full', array('class' => 'card-nts-imagem')); ?>
 					<?php else : ?>
-						<img class="card-nts-imagem" src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png" alt="Imagem Exemplo">
+						<img class="card-nts-imagem" src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem Exemplo">
 					<?php endif; ?>
 					<div class="card-nts-content">
 						<h1 class="card-nts-title">  <?php the_title() ?>  </h1>

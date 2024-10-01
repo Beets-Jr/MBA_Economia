@@ -23,7 +23,7 @@ $bg_image = get_post_meta( get_the_ID(), 'mat_custom_bg_image', true );
             <p><?php echo esc_html(get_post_meta(get_the_ID(), 'mat_texto_inicial', true)); ?> </p>
         </div>
         <div class="ins-forms">
-            <?php echo do_shortcode('[contact-form-7 id="7025dbc" title="Matricula"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="387" title="Matricula"]'); ?>
         </div>
     </div>
 <?php get_footer(); ?>
