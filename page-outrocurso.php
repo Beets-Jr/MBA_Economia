@@ -68,11 +68,11 @@ get_header();
 						}
 
 						if (!empty($turma['data_turma'])) {
-							echo '<p>' . esc_html($turma['data_turma']) . ')</p>';
+							echo '<p>' . esc_html($turma['data_turma']) . '</p>';
 						}
 
 						if (!empty($turma['info_turma'])) {
-							echo '<p>' . esc_html($turma['info_turma']) . ')<hr></p>';
+							echo '<p>' . esc_html($turma['info_turma']) . '<hr></p>';
 						}
 					}
 				}
