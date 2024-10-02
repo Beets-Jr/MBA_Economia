@@ -86,7 +86,7 @@ function limit_text_by_characters($text, $limit) {
 					</div>
 					<div class="cmt_cardtitulo">
 						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_name_1', true)); ?></h3>
-						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_1', true)); ?></h3>
+						<h3 class="card_prof"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_1', true)); ?></h3>
 					</div>
 				</div>
 				<div class="cmt_card">
@@ -96,7 +96,7 @@ function limit_text_by_characters($text, $limit) {
 					</div>
 					<div class="cmt_cardtitulo">
 						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_name_2', true)); ?></h3>
-						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_2', true)); ?></h3>
+						<h3 class="card_prof"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_2', true)); ?></h3>
 					</div>
 				</div>
 				<div class="cmt_card">
@@ -106,7 +106,7 @@ function limit_text_by_characters($text, $limit) {
 					</div>
 					<div class="cmt_cardtitulo">
 						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_name_3', true)); ?></h3>
-						<h3><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_3', true)); ?></h3>
+						<h3 class="card_prof"><?php echo esc_html(get_post_meta(get_the_ID(), 'hm_turma_3', true)); ?></h3>
 					</div>
 				</div>
 				

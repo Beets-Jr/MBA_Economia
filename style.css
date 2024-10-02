@@ -720,6 +720,7 @@ header nav .links_menu.nav_active {
     font-size: var(--font-size-text-mobile);
     width: 340px;
   }
+
 }
 .hm-crs {
   display: flex;
@@ -785,7 +786,7 @@ header nav .links_menu.nav_active {
 }
 
 
-.hm-crs .hm-crs-card-answer{
+.hm-crs .hm-crs-card-answer {
   font-size: var(--font-size-text-mobile);
   color: var(--blue-logo);
   background-color: var(--subcolor);
@@ -930,6 +931,10 @@ header nav .links_menu.nav_active {
   .hm-crs-card-answer li {
     font-size: var(--font-size-text-mobile); /* Tamanho de fonte adequado para dispositivos móveis */
     margin-bottom: 6px; /* Diminui o espaçamento inferior entre os itens da lista */
+  }
+
+  .hm-crs-subcard-answer{
+    font-size: var(--font-size-text-mobile);
   }
 }
 
@@ -1189,7 +1194,7 @@ iframe {
     align-items: center; /* Centraliza verticalmente */
     flex-direction: column; /* Alinha o conteúdo em coluna */
     text-align: center;
-    padding: 3em;
+    padding: 5px;
     background-color: var(--background);
     color: var(--black);
     margin-bottom: 1em;
@@ -1199,6 +1204,7 @@ iframe {
     font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto */
     width: 100%;
     padding-bottom: 1em;
+    padding-right: 0px;
   }
 
   .hero-content {
@@ -1225,7 +1231,6 @@ iframe {
   .hero-texts {
     font-size: var(--font-size-text-desktop);
     margin-bottom: 1.5em; /* Diminua a margem inferior */
-    margin-right: 4em;
   }
 
   .detail-items {
@@ -1520,9 +1525,7 @@ iframe {
 	.outros_cursos_wrapper {
 		flex-direction: column;
 		align-items: center;
-		
-		background: linear-gradient(180deg, rgba(19,19,19,0.8) 0%, rgba(19,19,19,0.5) 100%),
-					url("../IMG/pessoa-estudando.jpg");
+		background: linear-gradient(180deg, #0568AF 0%, rgba(5, 104, 175, 0.2) 100%);
 					
 		/* Posicionando a imagem no lugar desejado */
 		background-position: 10% 90%;
@@ -2556,7 +2559,7 @@ input:focus, textarea:focus, select:focus {
     font-size: var(--font-size-subtitle-mobile);
   }
   
-  .ntc_container p {
+  .ntc_container p, .ntc_container li{
     font-size: var(--font-size-text-mobile);
   }
   
@@ -3343,19 +3346,24 @@ input:focus, textarea:focus, select:focus {
 
 .cmt_cardtitulo {
   align-items: end;
-  padding: 20px 50px;
+  padding: 10px 10px;
 }
 .cmt_card-text {
   margin-top: 5%;
   border-bottom: 1px solid #343439;
   height: 360px;
 }
+
 .cmt_cardtitulo h3{
   font-family: 'Poppins', sans-serif;
   font-size: var(--font-size-text-desktop);
   color: black;
-  width: 460px;
 }
+
+.card_prof {
+  font-weight: 400;
+}
+
 
 .cmt_card-text p{
   font-family: 'Poppins', sans-serif;
