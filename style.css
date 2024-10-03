@@ -240,8 +240,21 @@ header nav a:last-child{
 	transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 1100px) {
+	/*Header*/
+	header {
+		/* Reduzir a altura do header */
+		height: 75px;		
+	}
+
+	.header_button_cta, header nav a {
+		/* Reduzir o tamanho da fonte */
+		font-size: 18px;
+	}		
+}
+
 /* Responsividade do header para tablet */
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1040px) {
 	/*Header*/
 	header {
 		/* Reduzir a altura do header */
@@ -271,7 +284,7 @@ header nav a:last-child{
 }
 
 /* Responsividade do header para mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
 	body {
 		overflow-x: hidden;
 	}
@@ -734,9 +747,14 @@ header nav .links_menu.nav_active {
   font-weight: 500;
 }
 
-.hm-crs .hm-crs-text {
-  width: 60%;
-  text-align: left; /* Alinha o texto à esquerda */
+.hm-crs-card-answer-content{
+  text-align: justify;
+}
+
+.hm-crs-text {
+  width: 1200px;
+  padding: 0px 32px;
+  text-align: justify; /* Alinha o texto à esquerda */
   font-size: var(--font-size-text-mobile);
   color: var(--black);
   margin: 2em 0px;
@@ -2094,6 +2112,10 @@ iframe {
   font-family: var(--font-size-text-mobile);
 }
 
+.ins-initial-text p{
+  padding: 10px 0px;
+}
+
 .forms_otc{
   display: block;
   justify-content: center;
@@ -2317,8 +2339,8 @@ input:focus, textarea:focus, select:focus {
 
 @media (min-width: 1251px) {
   .ins-initial-text, .ins-forms {
-    margin-top: 64px;
-    font-size: var(--font-size-text-desktop);
+    margin-top: 20px;
+    font-size: 19px;
     width: 1200px;
   }
 
@@ -2496,7 +2518,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 .ntc_img {
-  width: 500px;
+  max-width: 400px;
+  max-height: 400px;
   height: auto;
   display: block;
   margin: 20px auto;
@@ -2550,6 +2573,13 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .ntc_img {
+    max-width: 325px;
+    max-height: 325px;
+  }
+}
+
 @media (max-width: 768px) {
   .ntc_container h1 {
     font-size: var(--font-size-title-mobile);
@@ -2561,6 +2591,11 @@ input:focus, textarea:focus, select:focus {
   
   .ntc_container p, .ntc_container li{
     font-size: var(--font-size-text-mobile);
+  }
+
+  .ntc_img {
+    max-width: 250px;
+    max-height: 250px;
   }
   
 }
@@ -2761,6 +2796,7 @@ input:focus, textarea:focus, select:focus {
 
 .sbr-corpo-docente-title h2 {
   color: var(--blue-logo);
+  font-size: 28px;
 }
 
 .sbr-slides {
@@ -2791,8 +2827,8 @@ input:focus, textarea:focus, select:focus {
 .sbr-slide {
   background-size: cover;
   background-position: center;
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   color: var(--subcolor);
   display: flex;
   flex-direction: column;
@@ -2825,8 +2861,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 .sbr-card-list .sbr-slide {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
 
 }
@@ -2850,7 +2886,7 @@ input:focus, textarea:focus, select:focus {
   }
 
   .sbr-card-icons img{
-    width: 50px;
+    width: 40px;
   }
 }
 
@@ -2867,6 +2903,7 @@ input:focus, textarea:focus, select:focus {
   .sbr-linha-titulo {
     width: 150px;
   }
+
 
   .sbr-corpo-docente {
     padding-top: 32px;
@@ -2894,20 +2931,20 @@ input:focus, textarea:focus, select:focus {
   }
 
   .sbr-card-article {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
     position: relative;
   }
   
   .sbr-card-image {
     position: relative;
-    width: 300px;
+    width: 250px;
   }
   
   .sbr-card-image img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
   }
 
@@ -3019,14 +3056,14 @@ input:focus, textarea:focus, select:focus {
   color: #0568AF;
 }
 .secao{
-  height: 320px;
+  height: 460px;
   width: 1200px;
   margin: 40px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: var(--font-size-text-desktop);
+  font-size: 19px;
 }
 
 .secaoimagem img{
@@ -3039,6 +3076,10 @@ input:focus, textarea:focus, select:focus {
   color: black;
   padding: 10px;
   text-align: justify;
+}
+
+.lista_ponto li{
+  padding: 5px 0px;
 }
 
 
@@ -3115,13 +3156,17 @@ input:focus, textarea:focus, select:focus {
   justify-content: center;
 }
 
+.visao h2{
+  height: 100px;
+}
+
 .card-missao{
   width: 400px;
   height: 500px;
   border-radius: 20px;
   background-color: white;
   border: solid 2px var(--blue-logo);
-  text-align: center;
+  text-align: justify;
   display: flex;
   
 }
@@ -3161,6 +3206,10 @@ input:focus, textarea:focus, select:focus {
   .missao-text{
     font-size: var(--font-size-text-mobile);
     margin: 20px 20px;
+  }
+
+  .visao h2{
+    height: 60px;
   }
 }
 
@@ -3470,6 +3519,10 @@ ul{
    flex-direction: column;
    row-gap: 40px;
     
+  }
+
+  .visao h2{
+    height: 60px;
   }
 }
 

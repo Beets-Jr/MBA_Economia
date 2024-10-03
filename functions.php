@@ -599,7 +599,7 @@ function cmb2_fields_curso() {
     $cmb->add_field([
         'name' => 'Texto Introdução',
         'id'   => 'crs_introducao-text',
-        'type' => 'text',
+        'type' => 'textarea',
     ]);
 
     // Campo para a descrição do objetivo

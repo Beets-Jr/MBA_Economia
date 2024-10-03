@@ -23,6 +23,7 @@
 			</div>
 			<nav>							
 				<div class="links_menu">
+					<a href="http://mbaufscar.com.br/">Home</a>
 					<a href="/sobre/">Sobre</a>
 					<a href="/curso/">Curso</a>
 					<a href="/noticias/">Notícias</a>
