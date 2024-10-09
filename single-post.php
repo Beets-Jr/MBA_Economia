@@ -15,16 +15,32 @@ function limit_text_by_characters($text, $limit) {
 
 ?>
 	<div class="ntc">
-    <div class="ntc_wrapper">
+	
+	<!-- Notícia -->	
+    <article class="ntc_wrapper">
+		
+		<div class="ntc_title_date">
+			<div class="ntc_title_date_wrapper">
+				<h1 class="ntc_title"><?php the_title(); ?></h1>
+				<p class="ntc_date"><?php echo get_the_date('j \d\e F \d\e Y'); ?></p>	
+			</div>
+		</div>
+		
 		<div class="ntc_container">
-			<h1 class="white"><?php the_title(); ?></h1>
-			<p class="white"><?php echo get_the_date('j \d\e F \d\e Y'); ?></p>
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail('full', array('class' => 'ntc_img')); ?>
-			<?php else : ?>
-				<img class="ntc_img" src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem Exemplo">
-			<?php endif; ?>
-			<?php the_content(); ?>
+			
+			<div class="ntc_img">			
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail('full'); ?>
+				<?php else : ?>
+					<img class="ntc_img" src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem Exemplo">
+				<?php endif; ?>			
+			</div>
+			
+			<div class="ntc_content">
+				<?php the_content(); ?>
+			</div>
+			
+			
 			<hr>
 			<div class="ntc_social-share">
 				<p class="ntc_Share">Siga nas redes sociais</p>
@@ -35,7 +51,7 @@ function limit_text_by_characters($text, $limit) {
 				</div>
 			</div>
 		</div>
-	</div>
+	</article>
 
     <div class="ctt-container">
 		<div class="ctt-info">
@@ -71,7 +87,7 @@ function limit_text_by_characters($text, $limit) {
 		</div>
     </div>
     
-    		<!-- Parte de últimas notícias -->
+    <!-- Parte de últimas notícias -->
 	<section class="ultimas_noticias">
 		
 		<div class="ultimas_noticias_wrapper">

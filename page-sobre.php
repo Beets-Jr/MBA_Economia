@@ -71,8 +71,8 @@ get_header();
                                             <img src="<?php echo $docente['imagemdoprof']; ?>" alt="<?php echo $docente['nomedoprof']; ?>">
                                         </div>
                                         <div class="sbr-card-icons">
-                                            <a href="<?php echo $docente['linkedindoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
-                                            <a href="<?php echo $docente['lattesdoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
+                                            <a target="_blank" href="<?php echo $docente['linkedindoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-linkedin.svg" alt="LinkedIn" class="sbr-icon-img"></a>
+                                            <a target="_blank" href="<?php echo $docente['lattesdoprof']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/IMG/sbr-lattes.png" alt="Lattes" class="sbr-icon-img"></a>
                                         </div>
                                         <div class="sbr-card-data">
                                             <h3 class="sbr-card-name"><?php echo $docente['nomedoprof']; ?></h3>
