@@ -354,19 +354,21 @@ function limit_text_by_characters($text, $limit) {
 					
 						<div class="card">					
 							<div class="card_img">
-								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail(); ?>
-								<?php else : ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem logo">
-								<?php endif; ?>
-								<div class="card_img_data">
-									<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>
-									<p class="dia_semana"> <?php echo get_the_date('M', $post); ?> </p>
-								</div>
+								<a href=" <?php echo get_permalink($post->ID); ?> ">
+									<?php if ( has_post_thumbnail() ) : ?>
+										<?php the_post_thumbnail(); ?>
+									<?php else : ?>
+										<img src="<?php echo get_template_directory_uri(); ?>/IMG/header_logo.png" alt="Imagem logo">
+									<?php endif; ?>
+									<div class="card_img_data">
+										<p class="dia"> <?php echo get_the_date('d', $post); ?> </p>
+										<p class="dia_semana"> <?php echo get_the_date('M', $post); ?> </p>
+									</div>
+								</a>
 							</div>
 								
 							<div class="conteudo">
-								<h2> <?php echo $post->post_title; ?> </h2>
+								<h2> <a href=" <?php echo get_permalink($post->ID); ?> "> <?php echo $post->post_title; ?> </a> </h2>
 								<p> <?php echo limit_text_by_characters(get_the_excerpt(), 75); ?> </p> 	
 							</div>
 								

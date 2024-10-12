@@ -1843,7 +1843,11 @@ iframe {
 
 .ultimas_noticias .card .conteudo {
 	/* Para o botão "Leia mais" ficar alinhado */
-	min-height: 150px;
+	min-height: 200px;
+}
+
+.ultimas_noticias .card .conteudo h2 a {
+	color: var(--background);
 }
 
 .ultimas_noticias .card .card_img {
@@ -2708,7 +2712,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .nts-img-header h1 {
-  font-size: 48px;
+  font-size: var(--font-size-title-banner);
   margin-bottom: 160px;
 }
 
@@ -2735,113 +2739,157 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
+/* Listagem de notícias */
 .container-nts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin: 20px 0px;
+	background-color: var(--background);
 }
 
 .card-nts {
-  width: 1200px;
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  background-color: var(--background);
-  color: var(--blue-post);
-  margin-bottom: 1em;
-  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	/* Separação entre cartões */
+	margin: 30px 0;
+	flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+	
+	/* Estilização da fonte */
+	color: var(--black);
+	font-size: var(--font-size-text-desktop);
+	font-family: var(--font-family);
 }
 
 .card-nts-content {
-  position: relative;
-  width: 700px;
-  margin-left: 2.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+	width: 40%;
+	text-align: justify;
 }
 
-.card-nts-title {
-  font-size: var(--font-size-title-desktop);
-  margin-bottom: 0px;
-  color: var(--orange);
+.card-nts-content .card-nts-title-date {
+	font-family: 'Poppins', sans-serif;	
 }
 
-.card-nts-text {
-  font-size: var(--font-size-text-desktop);
-  margin-bottom: 2.5em;
+.card-nts-content .card-nts-title-date .card-nts-title {
+	font-size: var(--font-size-subtitle-desktop); 
+	font-weight: 600;
+	color: var(--orange-logo);
+	text-align: left;
 }
 
-.btn {
-  padding: 1em 5em;
-  background-color: var(--orange-logo);
-  color: var(--subcolor);
-  text-decoration: none;
-  border-radius: 5px;
+.card-nts-content .card-nts-title-date .card-nts-date {
+	color: var(--black);
+}
+
+.card-nts-content .card-nts-text {
+	font-size: var(--font-size-text-desktop);
 }
 
 .card-nts-imagem {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  width: 400px; 
-  height: 220px;
-  object-fit: cover;
-  position: relative;
-  border-radius: 1em; 
-  overflow: hidden; 
+	object-fit: cover;
+	border-radius: 8px; 
+	width: 400px; 
+	height: 220px;
+	overflow: hidden;	
 }
 
 .card-nts-imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
-/* Estilo para dispositivos móveis */
-@media (max-width: 975px) {
-  .card-nts {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Alinha o conteúdo em coluna */
-    text-align: center;
-    padding: 2em; /* Ajusta o padding para dispositivos móveis */
-    background-color: var(--background);
-    color: var(--blue-post);
-    margin-bottom: 1em;
-  }
-
-  .card-nts-content {
-    max-width: 100%; /* Aumenta a largura máxima */
-    margin-left: 0; /* Remove a margem à esquerda */
-    margin-bottom: 2em; /* Adiciona margem inferior para separar os elementos */
-  }
-
-  .card-nts-title {
-    font-size: var(--font-size-title-mobile); /* Ajusta o tamanho da fonte */
-    margin-top: 0.5em; /* Diminui a margem inferior */
-    margin-bottom: 0.5em; /* Diminui a margem inferior */
-    color: var(--orange);
-  }
-
-  .card-nts-text {
-    font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto */
-    margin-bottom: 2em; /* Diminui a margem inferior */
-  }
-
-  .btn {
-    width: 100%; /* Faz o botão ocupar a largura total */
-    padding: 0.75em 5em; /* Ajusta o padding para o botão */
-    font-size: var(--font-size-text-mobile); /* Ajusta o tamanho do texto no botão */
-    margin-top: 1em; /* Adiciona uma margem superior para separar do conteúdo */
-  }
-
-  .card-nts-imagem {
-    width: 70%; /* Aumenta conforme necessário */
-    margin-top: 2em; /* Adiciona uma margem superior para separar da imagem */
-  }
+/* Estilização botão leia mais */
+.card-nts-btn {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 12px 24px;
+	border: 0;
+	color: #3a4149;
+	background: #e7ebee;
+	line-height: 1.15;
+	font-size: var(--font-size-text-desktop);    
+	font-family: 'Poppins';
+	width: fit-content;                         
 }
+                
+.card-nts-btn:hover {
+	transition: all .1s ease;
+	background: var(--white);
+}
+                
+/* Estilo para tablets */
+@media (max-width: 1000px) {
+	.card-nts {
+		/* Estilização da fonte */
+		font-size: var(--font-size-text-mobile);
+		justify-content: space-around;
+		width: 90%;
+	}
+	
+	.card-nts-content {
+		width: 50%;
+	}
+
+	.card-nts-content .card-nts-title {
+		text-align: justify;
+	}
+	
+	.card-nts-content .card-nts-title-date .card-nts-title {
+		font-size: var(--font-size-subtitle-mobile); 
+	}
+	
+	/* Estilização botão leia mais */
+	.card-nts-btn {
+		padding: 10px 22px;
+		font-size: var(--font-size-text-mobile);                         
+	}
+}
+
+/* Estilo para mobile 1 */
+@media (max-width: 850px) {
+	.card-nts {
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+	}
+	
+	.card-nts-content {
+		gap: 20px;
+		width: 400px;
+	}
+}
+
+/* Estilo para mobile 2 */
+@media (max-width: 500px) {
+	.card-nts {
+		flex-direction: column;
+		gap: 30px;
+	}
+	
+	.card-nts-imagem {
+		width: 100vw;
+		aspect-ratio: 16/9;
+		border-radius: 0px;
+	}
+	
+	.card-nts-content {
+		width: 80%;
+	}
+}
+
+
 /*End Noticias*/
 
 
