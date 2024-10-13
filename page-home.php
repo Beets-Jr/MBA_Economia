@@ -112,7 +112,7 @@ function limit_text_by_characters($text, $limit) {
 				
 			</div>
 		</div>
-		<button onclick="location.href='/curso/'" class="botaocomentario">Conhe&ccedil;a nosso cursos</button>
+		<button onclick="location.href='/curso/'" class="botaocomentario">Conhe&ccedil;a nossos cursos</button>
 
 	</div>
     <section class="outros_cursos">
