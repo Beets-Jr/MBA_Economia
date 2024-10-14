@@ -30,7 +30,6 @@ function limit_text_by_characters($text, $limit) {
 
     <div class="hm-seu-futuro hm-seu-futuro-img">
         <h2 class="hm-seu-futuro-title"><?php echo esc_html(get_post_meta(get_the_ID(), 'frase_inicial', true)); ?></h2>
-        <button type="button" class="hm-seu-futuro-button" ><a href="/inscreva-se/">Inscreva-se</a></button>
     </div>
     <section class="hero">
 		<div class="hero-content">
