@@ -115,4 +115,10 @@ get_header();
         </div>
     </div>
 </div>
+<a id="botao_wpp_t" target="_blank" href="https://wa.me//<?php echo esc_html(get_post_meta(get_the_ID(), 'out_num_wths', true)); ?>">
+		<button type="button" class="btn_whatsapp" role="button">
+			<img src="<?php echo get_template_directory_uri(); ?>/IMG/icon-whatsapp.svg" alt="Logo do WhatsApp">
+			<p>Entre em contato</p>
+		</button>
+</a>
 <?php get_footer(); ?>

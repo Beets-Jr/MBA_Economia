@@ -1323,7 +1323,11 @@ iframe {
     margin-top: auto;
     
     font-size: var(--font-size-title-banner);
-    padding: 250px 0 0 0;
+    padding: 200px 0 0 0;
+  }
+
+  .hm-seu-futuro-title {
+    margin-bottom: 50px;
   }
 }
 
@@ -1607,7 +1611,6 @@ iframe {
   z-index: 2;
   cursor: pointer;
   gap: 16px;
-  //box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hm-faq .hm-faq-card-answer{
@@ -1626,7 +1629,6 @@ iframe {
   align-items: center;
   margin-top: -10px;
   z-index: 1;
-  //box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hm-faq .hm-faq-card-answer span{
@@ -2408,7 +2410,7 @@ input:focus, textarea:focus, select:focus {
   width: 100%;
   max-width: 600px;
   height: auto;
-  margin: 0 auto;
+  margin: 30px auto;
   background: #000;
 }
 
@@ -2495,7 +2497,7 @@ input:focus, textarea:focus, select:focus {
 	width: 80%;
 	margin: 0 auto;
 	/* Separa o título do post */
-	margin-top: 60px;
+	margin-top: 45px;
 	
 	/* Estilização da fonte */
 	font-size: var(--font-size-text-desktop);
@@ -2503,10 +2505,14 @@ input:focus, textarea:focus, select:focus {
 	text-align: justify;
 }
 
+
 .ntc_container .ntc_content {
-	width: 70%;
-	margin: 0 auto;
+  width: 70%;
+	margin: 30px auto 0 auto;
 }
+
+
+
 
 .ntc_container .ntc_content p, .ntc_container .ntc_content li {
 	line-height: 1.25em;
@@ -2524,6 +2530,10 @@ input:focus, textarea:focus, select:focus {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: cover;
+}
+
+.ntc_content{
+  margin-top: 30px;
 }
 
 /* Responsividade tablet */
@@ -2776,8 +2786,8 @@ input:focus, textarea:focus, select:focus {
 	border-radius: 3px;
 	padding: 12px 24px;
 	border: 0;
-	color: #3a4149;
-	background: #e7ebee;
+	color: black;
+	background: var(--orange-logo);
 	line-height: 1.15;
 	font-size: var(--font-size-text-desktop);    
 	font-family: 'Poppins';
@@ -2785,8 +2795,9 @@ input:focus, textarea:focus, select:focus {
 }
                 
 .card-nts-btn:hover {
-	transition: all .1s ease;
-	background: var(--white);
+	transition: all .3s ease;
+	background: var(--blue-logo);
+  color: white;
 }
                 
 /* Estilo para tablets */

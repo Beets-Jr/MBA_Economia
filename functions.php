@@ -1140,6 +1140,13 @@ function cmb2_fields_outrocurso() {
         'type' => 'textarea',
         'desc' => 'Outras Informações',
     ]);
+
+    $cmb->add_field([
+        'name' => 'Numero do Whatsapp',
+        'id'   => 'out_num_wths',
+        'type' => 'text', 
+        'desc' => 'Colocar no formato abaixo 15912345678'
+    ]) ;
 }
 
 ?>

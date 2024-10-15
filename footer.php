@@ -1,11 +1,14 @@
 <?php $contato = get_page_by_title('contato')->ID; ?>
 
-<a target="_blank" href="https://wa.me//5515981760011?text=Olá. Quero saber mais sobre o MBA.">
+<?php if (!is_page('outrocurso')) : ?>
+<a id="botao_wpp_t" target="_blank" href="https://wa.me//5515981760011?text=Olá. Quero saber mais sobre o MBA.">
 		<button type="button" class="btn_whatsapp" role="button">
 			<img src="<?php echo get_template_directory_uri(); ?>/IMG/icon-whatsapp.svg" alt="Logo do WhatsApp">
 			<p>Entre em contato</p>
 		</button>
 </a>
+<?php endif; ?>
+
 <footer>
 		<div class="container">	
 			<div class="row">
