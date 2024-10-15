@@ -1021,7 +1021,7 @@ header nav .links_menu.nav_active {
   }
 
   .hm-crs-subcard-question {
-    font-size: var(--font-size-text-desktop);
+    font-size: 22px;
     padding: 20px 40px;
   }
 
@@ -1090,7 +1090,7 @@ header nav .links_menu.nav_active {
   }
 
   .hm-crs-subcard-question {
-    font-size: 24px;
+    font-size: var(--font-size-text-desktop);
     padding: 25px 72px;
   }
 

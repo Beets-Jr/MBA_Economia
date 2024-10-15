@@ -1,6 +1,7 @@
 <?php $contato = get_page_by_title('contato')->ID; ?>
 
-<?php if (!is_page('outrocurso')) : ?>
+<?php
+if (!is_page_template('page-outrocurso.php')) : ?>
 <a id="botao_wpp_t" target="_blank" href="https://wa.me//5515981760011?text=Olá. Quero saber mais sobre o MBA.">
 		<button type="button" class="btn_whatsapp" role="button">
 			<img src="<?php echo get_template_directory_uri(); ?>/IMG/icon-whatsapp.svg" alt="Logo do WhatsApp">
